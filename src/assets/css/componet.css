@@ -1,0 +1,124 @@
+﻿ @utility primary-btn {
+     @apply px-2 md:px-4 py-1 cursor-pointer md:py-2 rounded-xl text-white bg-brand dark:text-white-fixed font-medium flex gap-2 justify-center items-center transition-all duration-500 ease-in-out;
+
+     &:hover {
+         transform: translateY(-3px);
+
+     }
+
+     &:active {
+         transform: scale(0.95);
+         transition-duration: 100ms;
+     }
+ }
+
+ @utility primary-btn-md {
+     @apply px-2 md:px-3 cursor-pointer py-1 md:py-2 min-w-[110px] rounded-xl text-black dark:text-white-fixed font-normal flex gap-2 justify-center items-center transition-all duration-500 ease-in-out bg-brand hover:bg-brand/70;
+ }
+
+ @utility secondary-btn {
+     @apply px-2 md:px-3 py-1 md:py-2 border border-black/15 dark:border-white/10 rounded-xl text-black dark:text-white font-medium flex gap-2 justify-center items-center hover:bg-brand/10 cursor-pointer;
+ }
+
+ @utility secondary-btn-md {
+     @apply px-2 md:px-3 py-1 md:py-2 border text-sm min-w-[110px] border-black/15 dark:border-white/15 rounded-xl text-black dark:text-white font-normal flex gap-2 justify-center items-center hover:bg-brand/10 cursor-pointer;
+ }
+
+
+ @utility badge {
+     @apply py-1 px-3 text-sm font-normal rounded-md flex items-center gap-1.5 border border-transparent;
+ }
+
+ @utility status-badge {
+     @apply py-0.5 px-3 text-sm font-normal rounded-full flex items-center gap-1.5 border border-transparent;
+ }
+
+ /* Custom Reusable Form Switcher */
+ @utility form-switch {
+     @apply relative inline-block transition-all duration-300;
+     width: 44px;
+     height: 24px;
+
+     & input {
+         @apply opacity-0 w-0 h-0;
+     }
+
+     & .slider {
+         @apply absolute cursor-pointer inset-0 transition-all duration-300 bg-gray dark:bg-white/10;
+         border-radius: 34px;
+
+         &::before {
+             @apply absolute content-[''] transition-all duration-300 bg-white-fixed;
+             height: 20px;
+             width: 20px;
+             left: 2px;
+             bottom: 2px;
+             border-radius: 50%;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+         }
+     }
+
+     & input:checked+.slider {
+         @apply bg-blue;
+
+         &::before {
+             transform: translateX(20px);
+         }
+     }
+ }
+
+ /* ==========================================================================
+    Reusable Form Input Component (Tailwind System)
+    ========================================================================== */
+
+ @utility form-group {
+     @apply mb-3 md:mb-4;
+ }
+
+ @utility form-label {
+     @apply block font-medium mb-2 transition-colors duration-300 text-xs text-black dark:text-white/90;
+
+     & .required {
+         @apply ml-1 text-red-400;
+     }
+ }
+
+ @utility form-control {
+     @apply w-full outline-none transition-all duration-300 py-2 md:py-3 px-3 md:px-4 rounded-xl border border-black/15 dark:border-white/15 bg-white dark:bg-gray text-sm md:text-base text-black dark:text-white-fixed;
+
+     &:focus {
+         @apply border-brand;
+     }
+
+     &.is-invalid {
+         @apply border-red;
+     }
+
+     &.is-valid {
+         @apply border-green;
+     }
+
+     &:disabled {
+         @apply opacity-60 cursor-not-allowed bg-black/5 dark:bg-white/2;
+     }
+ }
+
+ .form-control::placeholder {
+     @apply text-black/40;
+ }
+
+ .dark .form-control::placeholder {
+     @apply text-white/50;
+ }
+
+ @utility error-message {
+     @apply block mt-1 text-xs text-red-400;
+ }
+
+ @utility success-message {
+     @apply block mt-1 text-xs text-green-400;
+ }
+
+ @utility info-message {
+     @apply block mt-1 text-xs text-yellow-400;
+ }

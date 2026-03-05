@@ -1,0 +1,374 @@
+ @custom-variant dark (&:where(.dark, .dark *));
+
+ /* active-item */
+ /* active-child */
+ @theme {
+   /* Site Base Colors */
+   --color-brand: var(--brand-main);
+   --color-white: var(--white);
+   --color-white-fixed: var(--white-fixed);
+   --color-black: var(--black);
+   --color-dark-green: var(--dark-green);
+   --color-dark-black: var(--dark-black);
+   --color-body: var(--body);
+   --color-gray: var(--gray);
+   --color-red: var(--red);
+   --color-green: var(--green);
+   --color-blue: var(--blue);
+   --color-yellow: var(--yellow);
+   --color-purple: var(--purple);
+   --color-sidebar: var(--sidebar);
+   --color-sidebar-light: var(--sidebar-white);
+   --color-sidebar-dark-green: var(--sidebar-dark-green);
+   --color-sidebar-white: var(--sidebar-white);
+   --color-sidebar-black: var(--sidebar-black);
+   --font-body: var(--font-family);
+   --text-base: 15px;
+ }
+
+ :root {
+   --font-family: "DM Sans", sans-serif;
+   /* Base Colors */
+   --white: #FFFFFF;
+   --soft-white: #F5F5F5;
+   --white-fixed: #FFFFFF;
+   --black: #000000;
+   --dark-green: #0C1110;
+   --dark-black: #050A08;
+   --body: #050A08;
+   --gray: #0F1514;
+   --red: #E02424;
+   --green: #13A10E;
+   --blue: #004FD4;
+   --yellow: #E88000;
+   --purple: #B314C8;
+   /* layout colors */
+   --sidebar: #0C1110;
+   --sidebar-dark-green: #0C1110;
+   --sidebar-white: #FFFFFF;
+   --sidebar-black: #000000;
+ }
+
+ /* Base style for logo visibility based on dark class */
+ :root .logo-dark {
+   display: none !important;
+ }
+
+ :root .logo-light {
+   display: block !important;
+ }
+
+ :root.dark .logo-light {
+   display: none !important;
+ }
+
+ :root.dark .logo-dark {
+   display: block !important;
+ }
+
+ @layer base {
+
+   h1 {
+     @apply font-bold xl:text-5xl lg:text-4xl text-3xl text-black dark:text-white;
+   }
+
+   h2 {
+     @apply font-bold xl:text-[38px] lg:text-3xl text-2xl leading-tight text-black dark:text-white;
+   }
+
+   h3 {
+     @apply font-semibold xl:text-[32px] lg:text-[26px] text-xl leading-relaxed text-black dark:text-white;
+   }
+
+   h4 {
+     @apply font-semibold leading-tight xl:text-[24px] text-[20px] text-black dark:text-white;
+   }
+
+   h5 {
+     @apply font-semibold lg:leading-tight xl:leading-relaxed xl:text-[20px] text-[18px] text-black dark:text-white;
+   }
+
+   h6 {
+     @apply font-medium xl:text-[18px] lg:text-[16px] text-base text-black dark:text-white;
+   }
+
+   p {
+     @apply font-normal leading-relaxed lg:text-[18px] text-[15px] m-0;
+   }
+ }
+
+ body {
+   @apply text-black dark:text-white;
+   font-family: var(--font-body);
+   font-size: var(--text-base);
+   line-height: 1.6;
+   overflow-x: hidden;
+   transition: background-color 0.3s ease, color 0.3s ease;
+ }
+
+ .container {
+   max-width: 1320px;
+   padding-left: 12px;
+   padding-right: 12px;
+   margin: auto;
+   z-index: 30;
+   position: relative;
+ }
+
+
+
+ @utility sidebar-link {
+   @apply flex items-center gap-2.5 px-3 py-2 text-sidebar-black/60 dark:text-sidebar-white/50 transition-all duration-300 hover:text-brand/60 rounded-xl flex-nowrap relative w-full cursor-pointer;
+ }
+
+ /* Sidebar Logical Transitions */
+ #sidebar {
+   @apply transition-all duration-300;
+   z-index: 50;
+ }
+
+ /* Default (Mobile): Hidden towards the start edge */
+ #sidebar {
+   translate: -100% 0;
+   /* Moves left in LTR */
+ }
+
+ [dir="rtl"] #sidebar {
+   translate: 100% 0;
+   /* Moves right in RTL */
+ }
+
+ /* Sidebar Visible (Toggled or Desktop) */
+ #sidebar.sidebar-visible {
+   translate: 0 0 !important;
+ }
+
+ @media (min-width: 1280px) {
+   #sidebar {
+     translate: 0 0 !important;
+   }
+ }
+
+ @utility icon-box {
+   @apply flex;
+ }
+
+ .active-item {
+   @apply text-brand font-semibold bg-brand/15 rounded-xl;
+
+   & i {
+     @apply text-brand;
+   }
+ }
+
+ /* Dropdown Styles */
+ .dropdown-content {
+   display: grid;
+   grid-template-rows: 0fr;
+   transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
+   opacity: 0;
+   margin-top: 0;
+ }
+
+ .dropdown-content.show {
+   grid-template-rows: 1fr;
+   opacity: 1;
+   margin-top: 4px;
+ }
+
+ .dropdown-inner {
+   overflow: hidden;
+   @apply space-y-1 ml-2;
+ }
+
+ .dropdown-item {
+   @apply relative flex items-center gap-3 px-3 py-2 text-black/50 dark:text-white/50 transition-all duration-300 hover:text-brand hover:bg-black/5 dark:hover:bg-white/2 rounded-md text-sm;
+ }
+
+
+ .dropdown-arrow {
+   @apply transition-transform duration-300;
+   transform: rotate(-90deg);
+ }
+
+ .dropdown-arrow.dropdown-open {
+   transform: rotate(0deg);
+ }
+
+ .active-child {
+   @apply text-black dark:text-white;
+
+   &::after {
+     content: '';
+     @apply absolute right-3 top-1/2 -translate-y-1/2 w-2 h-2 bg-brand rounded-full transition-all duration-300;
+   }
+ }
+
+ @utility dropdown-menu-open {
+   @apply max-h-[500px] py-2;
+ }
+
+ @utility main-content {
+   @apply flex-1 flex flex-col min-h-screen min-w-0 transition-all duration-300;
+ }
+
+ @utility dashboard-container {
+   @apply flex min-h-screen font-body;
+ }
+
+ /* Notification Popup Styles start */
+ .notification-wrapper {
+   @apply relative;
+ }
+
+ .notification-popup {
+   @apply absolute top-[calc(100%+15px)] -right-[60px] sm:right-0 w-[300px] sm:w-[400px] bg-sidebar-light dark:bg-sidebar-dark-green rounded-2xl shadow-2xl p-4 sm:p-5 z-50 transition-all duration-300 ease-out transform scale-95 opacity-0 invisible origin-top-right;
+ }
+
+ .notification-wrapper:hover .notification-popup {
+   @apply scale-100 opacity-100 visible;
+ }
+
+
+ .notification-item {
+   @apply flex gap-3 p-3 rounded-xl transition-all cursor-pointer relative items-start hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5;
+ }
+
+ .notification-icon {
+   @apply w-10 h-10 shrink-0 rounded-xl bg-black/5 dark:bg-sidebar-white/5 flex items-center justify-center border border-black/10 dark:border-sidebar-white/10;
+ }
+
+ .notification-content {
+   @apply flex-1 pt-0.5;
+ }
+
+ .notification-title {
+   @apply text-[13px] font-semibold text-black dark:text-white block;
+ }
+
+ .notification-desc {
+   @apply text-[11px] text-black/50 dark:text-white/50 block mt-1;
+ }
+
+ .notification-time {
+   @apply text-[11px] text-black/30 dark:text-white/30 block mt-1;
+ }
+
+ /* Notification Popup Styles end */
+
+ .comment-tab-button.tab-button.active-tab {
+   @apply border-b-2 border-brand;
+ }
+
+ .bg-gradient {
+   background: linear-gradient(to right,
+       var(--color-brand),
+       var(--color-brand));
+ }
+
+ /* Start accordion css */
+ .transition-max-height {
+   transition: max-height 0.5s ease-in-out;
+ }
+
+ .transition-max-height {
+   transition: max-height 0.5s ease-in-out;
+ }
+
+ .icon-closed,
+ .icon-open {
+   transition: opacity 0.4s ease, transform 0.4s ease;
+ }
+
+ .icon-closed.active,
+ .icon-open.active {
+   opacity: 1;
+   transform: scale(1);
+ }
+
+ .icon-closed,
+ .icon-open {
+   opacity: 0;
+   transform: scale(0.8);
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .icon-wrapper {
+   position: relative;
+   width: 28px;
+   height: 28px;
+ }
+
+ .default-arrow {
+   transition: transform 0.4s ease-in-out;
+ }
+
+ .accordion-header {
+   cursor: pointer;
+ }
+
+ .accordion-header[aria-expanded="true"] {
+   @apply bg-brand/20;
+ }
+
+ /* end accordion css */
+ /* start modal css */
+ .modal-backdrop {
+   transition: opacity 0.3s ease-in-out;
+ }
+
+ .modal-content {
+   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+ }
+
+ .modal-content.scale {
+   transform: scale(0.9);
+   opacity: 0;
+ }
+
+ .modal-content.scale.show {
+   transform: scale(1);
+   opacity: 1;
+ }
+
+ .modal-content.slide-top {
+   transform: translateY(-50px);
+   opacity: 0;
+ }
+
+ .modal-content.slide-top.show {
+   transform: translateY(0);
+   opacity: 1;
+ }
+
+ .modal-content.fade {
+   opacity: 0;
+ }
+
+ .modal-content.show {
+   opacity: 1;
+   transform: scale(1);
+ }
+
+ .modal-content.fade.show {
+   opacity: 1;
+ }
+
+ /* Custom SimpleBar Styles */
+ .simplebar-track.simplebar-vertical {
+   width: 8px;
+   background-color: transparent;
+ }
+
+ .simplebar-scrollbar::before {
+   background-color: var(--color-brand);
+   border-radius: 10px;
+ }
+
+ .simplebar-track.simplebar-horizontal {
+   height: 6px;
+ }

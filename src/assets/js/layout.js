@@ -12,7 +12,7 @@ function initTheme() {
     applyTheme(savedTheme);
 
     window.toggleTheme = () => {
-        const currentTheme = html.getAttribute('data-theme');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         applyTheme(newTheme);
         localStorage.setItem('theme', newTheme);
@@ -23,7 +23,13 @@ function applyTheme(theme) {
     const html = document.documentElement;
     const themeIcon = document.getElementById('theme-icon');
 
-    html.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+        html.classList.add('dark');
+        html.setAttribute('data-theme', 'dark');
+    } else {
+        html.classList.remove('dark');
+        html.setAttribute('data-theme', 'light');
+    }
 
     if (themeIcon) {
         if (theme === 'light') {
@@ -60,7 +66,6 @@ function initSidebar() {
         }
     });
 
-
     window.toggleDropdown = function (btn) {
         const dropdownContent = btn.nextElementSibling;
         const arrow = btn.querySelector('.dropdown-arrow');
@@ -92,7 +97,6 @@ function initSidebar() {
         }
     };
 }
-
 // Mobile Sidebar Logic
 // Mobile Sidebar Logic
 window.toggleSidebar = () => {
