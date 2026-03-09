@@ -12,6 +12,10 @@
      }
  }
 
+ @utility row {
+     @apply grid grid-cols-1 md:grid-cols-12 gap-2 lg:gap-4
+ }
+
  @utility primary-btn-md {
      @apply px-2 md:px-3 cursor-pointer py-1 md:py-2 min-w-[110px] rounded-xl text-black dark:text-white-fixed font-normal flex gap-2 justify-center items-center transition-all duration-500 ease-in-out bg-brand hover:bg-brand/70;
  }
@@ -26,7 +30,7 @@
 
 
  @utility badge {
-     @apply py-1 px-3 text-sm font-normal rounded-md flex items-center gap-1.5 border border-transparent;
+     @apply py-1.5 px-4 text-sm font-medium rounded-2xl flex items-center gap-1.5 border dark:bg-white/2 dark:border-white/2 border-black/5;
  }
 
  @utility status-badge {

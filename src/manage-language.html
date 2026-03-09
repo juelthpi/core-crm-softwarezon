@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -425,17 +425,17 @@
         <!-- page info -->
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
-            <h5 class="text-xl text-black font-semibold dark:text-white">Logo & Appearance</h5>
+            <h5 class="text-xl text-black font-semibold dark:text-white">Manage Language</h5>
 
             <!-- breadcrumb -->
             <ul class="flex gap-2 items-center">
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Logo &
-                  Appearance</a></li>
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">General
+                  Settings</a></li>
               <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Logo &
-                  Appearance</a></li>
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Manage
+                  Language</a></li>
             </ul>
             <!-- end breadcrumb -->
           </div>
@@ -445,344 +445,234 @@
 
           </div>
         </div>
-        <div class="mt-4 grid grid-cols-12 gap-4">
-          <div
-            class="col-span-12 md:col-span-7 lg:col-span-8 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
-            <div class="mb-4">
-              <h6 class="text-base text-black font-semibold dark:text-white">Logo & Assets</h6>
-              <p class="text-black/60 text-sm dark:text-white/60">Basic website settings and preferences</p>
+
+        <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 space-y-4">
+          <div>
+            <h6 class="text-base text-black font-semibold dark:text-white">List of language</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>#SL</th>
+                  <th>Flag</th>
+                  <th>Name</th>
+                  <th>Code</th>
+                  <th>Direction</th>
+                  <th>Font Name</th>
+
+                  <th>Default</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <span class="h-9 w-9 shrink-0 dark:bg-white/5 rounded-lg flex items-center justify-center">
+                      <img src="assets/images/flags/united-states.png" alt="Flag" class="w-full h-full object-cover">
+                    </span>
+                  </td>
+                  <td>English</td>
+                  <td><span class="badge">en</span></td>
+                  <td>
+                    <div class="flex items-center gap-2 uppercase">ltr <i class="sz-chevron-double-right text-lg"></i>
+                    </div>
+                  </td>
+                  <td>
+                    Poppins
+                  </td>
+                  <td>
+                    <div class="status-badge bg-brand/10 text-brand border-brand/15">Yes</div>
+                  </td>
+
+                  <td>
+                    <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
+                        class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
+                  </td>
+                  <td>
+                    <div class="relative group">
+                      <button><i class="sz-dots-line"></i></button>
+                      <div
+                        class="absolute top-full mt-2 end-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+                        <div class="p-2 space-y-1">
+                          <a href="#"
+                            class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                            <i class="sz-translate text-lg"></i>
+                            Translate
+                          </a>
+                          <a href="#"
+                            class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                            <i class="sz-setting text-lg"></i>
+                            Repair
+                          </a>
+                          <a href="#"
+                            class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                            <i class="sz-pencil-alt text-lg"></i>
+                            Edit
+                          </a>
+                          <a href="#"
+                            class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                            <i class="sz-trash text-lg"></i>
+                            Delete
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- plugin edit offcanvas code start -->
+      <!-- Offcanvas overlay -->
+      <div id="offcanvas-overlay"
+        class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0 cursor-pointer"
+        onclick="closeOffcanvas()"></div>
+
+      <!-- Offcanvas content -->
+      <div id="pluginOffcanvas"
+        class="fixed inset-y-0 end-0 z-70 w-full max-w-md bg-white dark:bg-dark-green transform translate-x-full rtl:-translate-x-full border-l border-black/10 dark:border-white/10 transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-4 md:p-6 border-b border-black/10 dark:border-white/10">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-white dark:bg-white flex items-center justify-center p-1 shrink-0 overflow-hidden">
+              <img src="assets/images/plugin-logo/tawk.png" alt="Tawk.to" class="w-full h-full object-cover">
             </div>
-            <div class="space-y-4">
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Website Logo (Dark)</span>
+            <div class="space-y-1">
+              <h5 class="text-base font-bold text-black dark:text-white">Google Analytics</h5>
+              <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
+                  class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button data-modal="videoModal"
+              class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-black dark:text-white bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+              <i class="sz-play"></i> Tutorial Video
+            </button>
+            <button onclick="closeOffcanvas()"
+              class="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer shrink-0">
+              <i class="sz-close"></i>
+            </button>
+          </div>
+        </div>
 
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2 ">
+        <!-- Body -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
+          <!-- Section 1 -->
+          <div>
+            <h6 class="text-sm font-semibold text-black dark:text-white mb-2">Overview</h6>
+            <p class="text-xs text-black/60 dark:text-white/60 leading-relaxed">
+              Google Analytics integration enables comprehensive tracking of user behavior, page views, and conversion
+              events across your application. Gain insights into your audience and optimize user experiences.
+            </p>
+          </div>
 
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Website Logo (Dark)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Max 10MB • JPG, PNG, PDF
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Website Logo (Light)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Website Logo (Light)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Max 10MB • JPG, PNG, PDF
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
+          <!-- Section 2 -->
+          <div class="space-y-4">
+            <h6 class="text-sm font-semibold text-black dark:text-white">Basic Configuration</h6>
+            <div class="form-group">
+              <label class="form-label">Public Key</label>
+              <div class="relative">
+                <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
+                <button type="button"
+                  class="toggle-password absolute inset-y-0 end-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
+                  <i class="sz-eye text-lg"></i>
+                </button>
               </div>
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Favicon</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Favicon
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Admin Logo (Dark)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Admin Logo (Dark)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Admin panel branding
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Admin Logo (Light)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Admin Logo (Light)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Preloaded GIF</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Preloaded GIF
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
+            </div>
+            <div class="form-group">
+              <label class="form-label">Private Key</label>
+              <div class="relative">
+                <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
+                <button type="button"
+                  class="toggle-password absolute inset-y-0 end-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
+                  <i class="sz-eye text-lg"></i>
+                </button>
               </div>
             </div>
           </div>
-          <div
-            class="col-span-12 md:col-span-5 lg:col-span-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
 
-            <div class="mb-4">
-              <h6 class="text-base text-black font-semibold dark:text-white">Theme Colors & Typography</h6>
-              <p class="text-black/60 text-sm dark:text-white/60">Manage security features and user access</p>
-            </div>
-
-            <div class="space-y-4">
-              <!-- item -->
-              <div class="color-field space-y-2">
-                <span class="form-label">Primary Color</span>
-                <div class="flex items-center gap-3 rounded-xl border dark:border-white/5 border-black/5
-           dark:bg-white/2 bg-black/5 px-3 py-2">
-
-                  <div class="color-preview shrink-0 w-8 h-8 rounded-lg" style="background:#008658">
-                  </div>
-                  <input type="text" value="#008658"
-                    class="color-hex bg-transparent outline-none dark:text-white text-black w-full">
-                  <input type="color" value="#008658" class="color-picker w-8 h-8 opacity-0 absolute cursor-pointer">
-                </div>
-
-                <p class="text-end text-xs dark:text-white/60 text-black/60">
-                  Used for primary actions and accents
-                </p>
-
+          <!-- Section 3 -->
+          <div>
+            <h6 class="text-sm font-semibold text-black dark:text-white mb-3">Status</h6>
+            <div class="flex items-center gap-3">
+              <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
+                  class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
+              <div class="status-badge border-red-500/20 text-red-500 bg-red-500/10">
+                <i class="sz-minus"></i> Deactivated
               </div>
-              <!-- item -->
-              <div class="color-field space-y-2">
-                <span class="form-label">Secondary Color</span>
-                <div class="flex items-center gap-3 rounded-xl border dark:border-white/5 border-black/5
-           dark:bg-white/2 bg-black/5 px-3 py-2">
-
-                  <div class="color-preview shrink-0 w-8 h-8 rounded-lg" style="background:#004FD4">
-                  </div>
-                  <input type="text" value="#004FD4"
-                    class="color-hex bg-transparent outline-none dark:text-white text-black w-full">
-                  <input type="color" value="#004FD4" class="color-picker w-8 h-8 opacity-0 absolute cursor-pointer">
-                </div>
-
-                <p class="text-end text-xs dark:text-white/60 text-black/60">
-                  Used for primary buttons, links, and highlights
-                </p>
-
-              </div>
-              <!-- item -->
-              <div class="form-group">
-                <span class="form-label">Fallback Font</span>
-                <select name="" id="font" placeholder="Search and Select Font...">
-                  <option value="DM Sans">DM Sans</option>
-                  <option value="Poppins">Poppins</option>
-                  <option value="Roboto">Roboto</option>
-                  <option value="Inter">Inter</option>
-                  <option value="Open Sans">Open Sans</option>
-                </select>
-
-              </div>
-
-
             </div>
           </div>
 
         </div>
 
+        <!-- Footer -->
+        <div class="p-4 md:p-6 border-t border-black/10 dark:border-white/10 flex items-center justify-end gap-3">
+          <button class="secondary-btn" onclick="closeOffcanvas()">Cancel</button>
+          <button class="primary-btn"><i class="sz-check"></i> Save Changes</button>
+        </div>
+      </div>
+      <!-- plugin edit offcanvas code end -->
+      <!-- video modal start -->
+      <div id="videoModal"
+        class="modal fixed inset-0 z-100 hidden [&:not(.hidden)]:flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="modal-backdrop fixed inset-0 bg-black/50 transition-opacity duration-300 opacity-0 cursor-pointer">
+        </div>
+        <div
+          class="modal-content relative w-full max-w-3xl my-auto mx-auto bg-white dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-2xl transform opacity-0 scale-95 transition-all duration-300 flex flex-col pointer-events-auto shadow-2xl">
+          <div class="p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-start mb-6 gap-4">
+              <div>
+                <h3 class="text-xl font-semibold text-black dark:text-white">How to Use Our Platform</h3>
+                <p class="text-sm text-black/80 dark:text-white/60 max-w-2xl leading-relaxed">Learn how to navigate and
+                  utilize the key featuresstief our prop trading platform step-by-step</p>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 shrink-0 p-1 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close text-base"></i>
+              </button>
+            </div>
+
+            <!-- Video Wrapper -->
+            <div
+              class="relative w-full overflow-hidden rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 aspect-video">
+              <iframe class="absolute top-0 left-0 w-full h-full rounded-xl"
+                src="https://www.youtube.com/embed/aSte18D2_YE?si=3hx5BXanJrXYc-ZL" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Footer Text and Button -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 p-4 rounded-xl bg-black/5 dark:bg-white/2 border border-black/5 dark:border-white/5">
+              <p class="text-xs text-black/80 dark:text-white/60">Video is dynamically loaded from YouTube UFL std
+                by
+                admin in backend</p>
+              <a href="https://www.youtube.com/watch?v=aSte18D2_YE" target="_blank" class="secondary-btn">
+                Watch on YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- video modal end -->
+    </main>
   </div>
-  </section>
-  </main>
-  </div>
-  <!-- tomselect -->
-  <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-  <script>
-    new TomSelect("#font", {
-      create: false,
-      sortField: { field: "text", direction: "asc" }
-    });
-  </script>
+
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script src="assets/js/modal.js">
+
+  </script>
   <!-- file upload -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -831,30 +721,65 @@
 
     });
   </script>
+
+
+  <!-- Offcanvas Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".color-field").forEach(field => {
+    function toggleOffcanvas(id) {
+      const offcanvas = document.getElementById(id);
+      const overlay = document.getElementById('offcanvas-overlay');
 
-        const preview = field.querySelector(".color-preview");
-        const hexInput = field.querySelector(".color-hex");
-        const picker = field.querySelector(".color-picker");
-        picker.addEventListener("input", () => {
-          hexInput.value = picker.value;
-          preview.style.background = picker.value;
-        });
-        hexInput.addEventListener("input", () => {
-          const value = hexInput.value;
+      if (offcanvas && overlay) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.remove('opacity-0');
+        }, 10);
 
-          if (/^#([0-9A-F]{3}){1,2}$/i.test(value)) {
-            picker.value = value;
-            preview.style.background = value;
+        offcanvas.classList.remove('translate-x-full', 'rtl:-translate-x-full');
+      }
+    }
+    function closeOffcanvas() {
+      const overlay = document.getElementById('offcanvas-overlay');
+
+      const offcanvas = document.getElementById('pluginOffcanvas');
+      if (offcanvas) {
+        offcanvas.classList.add('translate-x-full', 'rtl:-translate-x-full');
+      }
+
+      if (overlay) {
+        overlay.classList.add('opacity-0');
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+
+  </script>
+  <!-- password show hide -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.toggle-password').forEach(button => {
+        button.addEventListener('click', function () {
+          const input = this.closest('.relative').querySelector('input');
+          const icon = this.querySelector('i');
+
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('sz-eye');
+            icon.classList.add('sz-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('sz-eye-slash');
+            icon.classList.add('sz-eye');
           }
         });
-
       });
-
     });
   </script>
+
+
+
 </body>
 
 </html>

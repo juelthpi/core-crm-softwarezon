@@ -454,33 +454,71 @@
             </div>
             <div class="mt-4">
               <!-- Single Column Block -->
-              <div class="form-group">
-                <label class="form-label">Web Title <span class="required">*</span></label>
-                <input type="text" class="form-control" placeholder="Enter Web Title" value="Softwarezon">
+              <div class="row">
+                <div class="form-group md:col-span-12">
+                  <label class="form-label">Web Title <span class="required">*</span></label>
+                  <input type="text" class="form-control" placeholder="Enter Web Title" value="Softwarezon">
+                </div>
               </div>
 
               <!-- Two Column Grid -->
-              <div class="grid grid-cols-1 md:grid-cols-2  gap-4">
-                <div class="form-group">
+              <div class="row">
+                <div class="form-group md:col-span-6">
                   <label class="form-label">Email Address <span class="required">*</span></label>
                   <input type="email" class="form-control" placeholder="admin@example.com">
                 </div>
-                <div class="form-group">
+                <div class="form-group md:col-span-3">
+                  <label class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" class="form-control" placeholder="admin@example.com">
+                </div>
+                <div class="form-group md:col-span-3">
                   <label class="form-label">Phone Number</label>
                   <input type="text" class="form-control" placeholder="+1 234 567 890">
                 </div>
               </div>
               <!-- Two Column Grid -->
               <div class="grid grid-cols-1 md:grid-cols-2  gap-4">
-                <div class="">
+                <div class="form-group">
                   <label class="form-label">Choose Country</label>
 
-                  <select id="country" placeholder="Select country...">
-                    <option value="">Select...</option>
+                  <select id="country" placeholder="Search and Select country...">
+                    <option value="">Search and Select country...</option>
                     <option value="bd">Bangladesh</option>
                     <option value="in">India</option>
                     <option value="pk">Pakistan</option>
                     <option value="us">USA</option>
+                    <option>test 1</option>
+                    <option>test 2</option>
+                    <option>test 3</option>
+                    <option>test 4</option>
+                    <option>test 5</option>
+                    <option>test 6</option>
+                    <option>test 7</option>
+                    <option>test 8</option>
+                    <option>test 9</option>
+                    <option>test 10</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Choose tag</label>
+
+                  <select id="tag" placeholder="Search and Select tag...">
+                    <option value="">Search and Select tag...</option>
+                    <option value="bd">Bangladesh</option>
+                    <option value="in">India</option>
+                    <option value="pk">Pakistan</option>
+                    <option value="us">USA</option>
+                    <option>test 1</option>
+                    <option>test 2</option>
+                    <option>test 3</option>
+                    <option>test 4</option>
+                    <option>test 5</option>
+                    <option>test 6</option>
+                    <option>test 7</option>
+                    <option>test 8</option>
+                    <option>test 9</option>
+                    <option>test 10</option>
+
                   </select>
                 </div>
               </div>
@@ -600,18 +638,25 @@
   </div>
   <!-- Tom Select JS -->
   <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-  <script>
-    new TomSelect("#country", {
-      create: false,
-      sortField: {
-        field: "text",
-        direction: "asc"
-      }
-    });
-  </script>
+
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script>
+    new TomSelect("#country", {
+      create: true,
+      maxItems: 1,
+      sortField: { field: "text", direction: "asc" }
+    });
+  </script>
+  <script>
+    new TomSelect("#tag", {
+      plugins: ["remove_button"],
+      create: true,
+      maxItems: 3,
+      sortField: { field: "text", direction: "asc" }
+    });
+  </script>
 </body>
 
 </html>

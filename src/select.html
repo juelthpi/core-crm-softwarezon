@@ -27,6 +27,7 @@
   <!-- <link rel="stylesheet" href="assets/icons/iconly.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/select.css" />
 </head>
 
 <body class="bg-body-light dark:bg-body text-main font-body transition-colors duration-300">
@@ -425,13 +426,13 @@
         <!-- page info -->
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
-            <h5 class="text-xl text-black font-semibold dark:text-white">Logo & Appearance</h5>
+            <h5 class="text-xl text-black font-semibold dark:text-white">Basic Setting</h5>
 
             <!-- breadcrumb -->
             <ul class="flex gap-2 items-center">
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Logo &
-                  Appearance</a></li>
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">General
+                  Settings</a></li>
               <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
               <li><a href="#"
                   class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Logo &
@@ -440,421 +441,165 @@
             <!-- end breadcrumb -->
           </div>
           <div class="flex gap-2">
-            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to Home </button>
+            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
             <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
 
           </div>
         </div>
-        <div class="mt-4 grid grid-cols-12 gap-4">
-          <div
-            class="col-span-12 md:col-span-7 lg:col-span-8 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
-            <div class="mb-4">
-              <h6 class="text-base text-black font-semibold dark:text-white">Logo & Assets</h6>
-              <p class="text-black/60 text-sm dark:text-white/60">Basic website settings and preferences</p>
-            </div>
-            <div class="space-y-4">
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Website Logo (Dark)</span>
+        <div class="mt-8 space-y-12 max-w-4xl mx-auto pb-20">
 
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2 ">
+          <!-- Example 1: Basic Select (Single) -->
+          <div class="space-y-3">
+            <h6 class="text-sm font-semibold text-white/50 uppercase tracking-wider">Example 1: Basic Select (Single)
+            </h6>
+            <select id="country" placeholder="Search and Select country...">
+              <option value="">Search and Select country...</option>
+              <option value="bd">Bangladesh</option>
+              <option value="in">India</option>
+              <option value="pk">Pakistan</option>
+              <option value="us">USA</option>
+              <option>test 1</option>
+              <option>test 2</option>
+              <option>test 3</option>
+              <option>test 4</option>
+              <option>test 5</option>
+              <option>test 6</option>
+              <option>test 7</option>
+              <option>test 8</option>
+              <option>test 9</option>
+              <option>test 10</option>
 
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Website Logo (Dark)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Max 10MB • JPG, PNG, PDF
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Website Logo (Light)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Website Logo (Light)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Max 10MB • JPG, PNG, PDF
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Favicon</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Favicon
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Admin Logo (Dark)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Admin Logo (Dark)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          Admin panel branding
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- item -->
-              <div
-                class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Admin Logo (Light)</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Admin Logo (Light)
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!-- file upload start -->
-                <div class="upload-wrapper">
-                  <span class="form-label">Preloaded GIF</span>
-
-                  <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
-
-                    <!-- Upload Box -->
-                    <div class="upload-box relative py-6 border-2 border-dashed border-black/10
-             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
-
-                      <!-- File Input -->
-                      <input type="file" accept="image/*" class="upload-input hidden">
-
-                      <!-- Placeholder -->
-                      <div class="upload-placeholder space-y-1">
-                        <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
-                        <p class="text-sm text-black/60 dark:text-white/60">
-                          Preloaded GIF
-                        </p>
-                        <p class="text-xs text-black/40 dark:text-white/40">
-                          32x32 or 64x64
-                        </p>
-                      </div>
-
-                      <!-- Preview -->
-                      <div class="upload-preview hidden relative">
-                        <img class="preview-image max-h-28 mx-auto rounded-md" />
-
-                        <!-- Close Button -->
-                        <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
-                 w-6 h-6 rounded-full bg-red-500 text-white
-                 text-xs flex items-center justify-center">
-                          <i class="sz-trash text-xs"></i>
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+            </select>
           </div>
-          <div
-            class="col-span-12 md:col-span-5 lg:col-span-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
 
-            <div class="mb-4">
-              <h6 class="text-base text-black font-semibold dark:text-white">Theme Colors & Typography</h6>
-              <p class="text-black/60 text-sm dark:text-white/60">Manage security features and user access</p>
-            </div>
+          <!-- Example 2: Searchable Select -->
+          <div class="space-y-3">
+            <h6 class="text-sm font-semibold text-white/50 uppercase tracking-wider">Example 2: Searchable Select</h6>
+            <select id="search-select" placeholder="Search for a city...">
+              <option value="">Select City...</option>
+              <option value="dhaka">Dhaka</option>
+              <option value="london">London</option>
+              <option value="new-york">New York</option>
+              <option value="tokyo">Tokyo</option>
+              <option>test 1</option>
+              <option>test 2</option>
+              <option>test 3</option>
+              <option>test 4</option>
+              <option>test 5</option>
+              <option>test 6</option>
+              <option>test 7</option>
+              <option>test 8</option>
+              <option>test 9</option>
+              <option>test 10</option>
 
-            <div class="space-y-4">
-              <!-- item -->
-              <div class="color-field space-y-2">
-                <span class="form-label">Primary Color</span>
-                <div class="flex items-center gap-3 rounded-xl border dark:border-white/5 border-black/5
-           dark:bg-white/2 bg-black/5 px-3 py-2">
+            </select>
+          </div>
 
-                  <div class="color-preview shrink-0 w-8 h-8 rounded-lg" style="background:#008658">
-                  </div>
-                  <input type="text" value="#008658"
-                    class="color-hex bg-transparent outline-none dark:text-white text-black w-full">
-                  <input type="color" value="#008658" class="color-picker w-8 h-8 opacity-0 absolute cursor-pointer">
-                </div>
+          <!-- Example 3: Multi-Select with Remove Button -->
+          <div class="space-y-3">
+            <h6 class="text-sm font-semibold text-white/50 uppercase tracking-wider">Example 3: Multi-Select with Tags
+            </h6>
+            <select id="multi-select" multiple placeholder="Add skills...">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js" selected>JavaScript</option>
+              <option value="react" selected>React</option>
+              <option value="vue">Vue</option>
+              <option value="tailwind">Tailwind</option>
+            </select>
+          </div>
 
-                <p class="text-end text-xs dark:text-white/60 text-black/60">
-                  Used for primary actions and accents
-                </p>
-
-              </div>
-              <!-- item -->
-              <div class="color-field space-y-2">
-                <span class="form-label">Secondary Color</span>
-                <div class="flex items-center gap-3 rounded-xl border dark:border-white/5 border-black/5
-           dark:bg-white/2 bg-black/5 px-3 py-2">
-
-                  <div class="color-preview shrink-0 w-8 h-8 rounded-lg" style="background:#004FD4">
-                  </div>
-                  <input type="text" value="#004FD4"
-                    class="color-hex bg-transparent outline-none dark:text-white text-black w-full">
-                  <input type="color" value="#004FD4" class="color-picker w-8 h-8 opacity-0 absolute cursor-pointer">
-                </div>
-
-                <p class="text-end text-xs dark:text-white/60 text-black/60">
-                  Used for primary buttons, links, and highlights
-                </p>
-
-              </div>
-              <!-- item -->
-              <div class="form-group">
-                <span class="form-label">Fallback Font</span>
-                <select name="" id="font" placeholder="Search and Select Font...">
-                  <option value="DM Sans">DM Sans</option>
-                  <option value="Poppins">Poppins</option>
-                  <option value="Roboto">Roboto</option>
-                  <option value="Inter">Inter</option>
-                  <option value="Open Sans">Open Sans</option>
-                </select>
-
-              </div>
-
-
-            </div>
+          <!-- Example 4: Select with Icons & Descriptions -->
+          <div class="space-y-3">
+            <h6 class="text-sm font-semibold text-white/50 uppercase tracking-wider">Example 4: Custom Rendering (Icons
+              & Text)</h6>
+            <select id="icon-select" placeholder="Select Currency...">
+              <option value="usd" data-src="assets/images/flags/united-states.png" data-desc="United States Dollar">USD
+              </option>
+              <option value="sar" data-src="assets/images/flags/saudi-arabia.png" data-desc="Saudi Riyal">SAR</option>
+              <option value="bdt" data-src="assets/images/flags/bangladesh.png" data-desc="Bangladeshi Taka">BDT
+              </option>
+            </select>
           </div>
 
         </div>
-
+      </section>
+    </main>
   </div>
-  </section>
-  </main>
-  </div>
-  <!-- tomselect -->
+  <!-- Tom Select JS -->
   <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
   <script>
-    new TomSelect("#font", {
+    /**
+     * 1. Basic Select (Single) with Search
+     * - Allows typing to filter options
+     * - Custom arrow and design from select.css
+     */
+    new TomSelect("#country", {
+      create: true,
+      maxItems: 1,
+      sortField: { field: "text", direction: "asc" }
+    });
+
+    /**
+     * 2. Searchable Select
+     * - Allows user to type and search
+     */
+    new TomSelect("#search-select", {
       create: false,
       sortField: { field: "text", direction: "asc" }
+    });
+
+    /**
+     * 3. Multi-Select with Tags
+     * - Allows multiple selection
+     * - Uses 'remove_button' plugin to show (x) on tags
+     */
+    new TomSelect("#multi-select", {
+      plugins: ['remove_button'],
+      create: true, // Allow user to create new tags if they want
+      persist: false,
+      onDelete: function (values) {
+        return confirm(values.length > 1 ? 'Are you sure you want to remove these ' + values.length + ' items?' : 'Are you sure you want to remove "' + values[0] + '"?');
+      }
+    });
+
+    /**
+     * 4. Custom Rendering (Icons & Text)
+     * - Uses data-attributes (data-src, data-desc) to render complex UI
+     */
+    new TomSelect("#icon-select", {
+      valueField: 'value',
+      labelField: 'text',
+      searchField: ['text', 'description'],
+      options: [
+        { value: 'usd', text: 'USD', description: 'United States Dollar', src: 'assets/images/flags/united-states.png' },
+        { value: 'sar', text: 'SAR', description: 'Saudi Riyal', src: 'assets/images/flags/saudi-arabia.png' },
+        { value: 'bdt', text: 'BDT', description: 'Bangladeshi Taka', src: 'assets/images/flags/bangladesh.png' },
+      ],
+      render: {
+        option: function (data, escape) {
+          return `<div>
+                    <div class="ts-box">
+                      <img src="${escape(data.src)}" alt="${escape(data.text)}">
+                      <div>
+                        <span class="label">${escape(data.text)}</span>
+                        <span class="description">${escape(data.description)}</span>
+                      </div>
+                    </div>
+                  </div>`;
+        },
+        item: function (data, escape) {
+          return `<div class="ts-box">
+                    <img src="${escape(data.src)}" alt="${escape(data.text)}">
+                    <span class="label">${escape(data.text)}</span>
+                  </div>`;
+        }
+      }
     });
   </script>
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
-  <!-- file upload -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      document.querySelectorAll(".upload-box").forEach(box => {
-
-        const input = box.querySelector(".upload-input");
-        const placeholder = box.querySelector(".upload-placeholder");
-        const preview = box.querySelector(".upload-preview");
-        const img = box.querySelector(".preview-image");
-        const removeBtn = box.querySelector(".remove-file");
-
-        // click upload area
-        box.addEventListener("click", (e) => {
-          if (!e.target.closest(".remove-file")) {
-            input.click();
-          }
-        });
-
-        // preview image
-        input.addEventListener("change", () => {
-          const file = input.files[0];
-          if (!file) return;
-
-          const reader = new FileReader();
-
-          reader.onload = (e) => {
-            img.src = e.target.result;
-            placeholder.classList.add("hidden");
-            preview.classList.remove("hidden");
-          };
-
-          reader.readAsDataURL(file);
-        });
-
-        // remove file
-        removeBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          input.value = "";
-          img.src = "";
-          preview.classList.add("hidden");
-          placeholder.classList.remove("hidden");
-        });
-
-      });
-
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".color-field").forEach(field => {
-
-        const preview = field.querySelector(".color-preview");
-        const hexInput = field.querySelector(".color-hex");
-        const picker = field.querySelector(".color-picker");
-        picker.addEventListener("input", () => {
-          hexInput.value = picker.value;
-          preview.style.background = picker.value;
-        });
-        hexInput.addEventListener("input", () => {
-          const value = hexInput.value;
-
-          if (/^#([0-9A-F]{3}){1,2}$/i.test(value)) {
-            picker.value = value;
-            preview.style.background = value;
-          }
-        });
-
-      });
-
-    });
-  </script>
 </body>
 
 </html>
