@@ -118,7 +118,7 @@
 
 
  @utility sidebar-link {
-   @apply flex items-center gap-2.5 px-3 py-2 text-sidebar-black/60 dark:text-sidebar-white/50 transition-all duration-300 hover:text-brand/60 rounded-xl flex-nowrap relative w-full cursor-pointer;
+   @apply flex items-center gap-2.5 px-3 py-2 text-sidebar-black/60 dark:text-sidebar-white/70 transition-all duration-300 hover:text-brand/60 rounded-xl flex-nowrap relative w-full cursor-pointer;
  }
 
  /* Sidebar Logical Transitions */
@@ -266,6 +266,10 @@
        var(--color-brand));
  }
 
+ @utility bg-linear-gradient {
+   background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-brand) 30%, transparent) 0%, transparent 65%);
+ }
+
  /* Start accordion css */
  .transition-max-height {
    transition: max-height 0.5s ease-in-out;
@@ -372,3 +376,108 @@
  .simplebar-track.simplebar-horizontal {
    height: 6px;
  }
+
+ /* --- Mini Sidebar Start --- */
+ @media (min-width: 1280px) {
+
+   /* Transition for width */
+   #sidebar {
+     transition: width 0.3s ease, translate 0.3s ease !important;
+     overflow-x: hidden;
+     white-space: nowrap;
+   }
+
+   body.mini-sidebar #sidebar {
+     width: 80px;
+
+   }
+
+   body.mini-sidebar .main-content {
+     margin-inline-start: 80px;
+
+   }
+
+   body.mini-sidebar #sidebar:hover {
+     width: 16.5rem;
+
+   }
+
+   /* Hide texts smoothly */
+   body.mini-sidebar #sidebar:not(:hover) span.font-base,
+   body.mini-sidebar #sidebar:not(:hover) .sidebar-dropdown .dropdown-arrow,
+   body.mini-sidebar #sidebar:not(:hover) .user-profile-details,
+   body.mini-sidebar #sidebar:not(:hover) .px-3.py-1,
+   body.mini-sidebar #sidebar:not(:hover) a[title="Logout"] {
+     opacity: 0;
+     visibility: hidden;
+     display: none;
+   }
+
+   /* Specific transition handling */
+   #sidebar span.font-base,
+   #sidebar .sidebar-dropdown .dropdown-arrow,
+   #sidebar .px-3.py-1 {
+     transition: opacity 0.2s ease;
+   }
+
+   /* Adjust alignment in mini state */
+   body.mini-sidebar #sidebar:not(:hover) .sidebar-link {
+     justify-content: center;
+     padding-left: 0;
+     padding-right: 0;
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .icon-box {
+     margin: 0 auto;
+   }
+
+   /* Logo adjustment */
+   body.mini-sidebar #sidebar:not(:hover) .logo-dark {
+     content: url("../images/short-logo.png");
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .logo-light {
+     content: url("../images/short-logo-black.png");
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .logo-dark,
+   body.mini-sidebar #sidebar:not(:hover) .logo-light {
+     max-height: 28px;
+     margin: 0 auto;
+     object-fit: contain;
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .flex.items-center.justify-between.gap-3.border-b {
+     padding-left: 0.5rem;
+     padding-right: 0.5rem;
+     justify-content: center;
+   }
+
+   /* User profile box adjustment in mini mode */
+   body.mini-sidebar #sidebar:not(:hover) .p-4.mt-auto>div {
+     padding: 0.5rem;
+     justify-content: center;
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .p-4.mt-auto>div>div>div {
+     display: none;
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .p-4.mt-auto>div>div {
+     gap: 0;
+   }
+
+   /* Hide dropdown submenus when small */
+   body.mini-sidebar #sidebar:not(:hover) .dropdown-content.show {
+     grid-template-rows: 0fr !important;
+     opacity: 0 !important;
+     margin-top: 0 !important;
+   }
+
+   body.mini-sidebar #sidebar:not(:hover) .dropdown-inner {
+     opacity: 0;
+     transition: opacity 0.2s ease;
+   }
+ }
+
+ /* --- Mini Sidebar End --- */

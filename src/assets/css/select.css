@@ -173,12 +173,10 @@
 
 .ts-wrapper .ts-control input::placeholder {
     color: rgba(0, 0, 0, 0.4) !important;
-
 }
 
 :where(.dark, .dark *) .ts-wrapper .ts-control input::placeholder {
     color: rgba(255, 255, 255, 0.5) !important;
-
 }
 
 .ts-wrapper.single.dropdown-active .ts-control .item {

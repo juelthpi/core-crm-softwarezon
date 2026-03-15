@@ -38,7 +38,7 @@
     </div>
     <!-- Sidebar -->
     <aside id="sidebar" role="navigation" aria-label="Main Sidebar"
-      class="fixed inset-y-0 start-0 z-50 w-66 bg-sidebar-black/4 dark:bg-sidebar flex flex-col">
+      class="fixed inset-y-0 start-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
 
       <!-- Logo Branding -->
       <div
@@ -235,11 +235,10 @@
     <main class="main-content xl:ms-66 min-h-screen">
       <!-- Top Header -->
       <header
-        class="py-4  border-b border-black/4 dark:border-white/4 sticky top-0 z-40 bg-sidebar-black/4 dark:bg-sidebar-white/4 backdrop-blur-md  px-3 lg:px-6 flex items-center justify-between">
+        class="py-4  border-b border-black/4 dark:border-white/4 sticky top-0 z-40 bg-sidebar-black/4 dark:bg-sidebar-white/4 backdrop-blur-md  px-2 lg:px-4 flex items-center justify-between">
         <div class="flex items-center gap-4">
           <!-- Mobile Drawer Trigger -->
-          <button
-            class="xl:hidden  text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white cursor-pointer"
+          <button class="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white cursor-pointer"
             onclick="toggleSidebar()" aria-label="Toggle Mobile Sidebar">
             <i class="sz-bars text-3xl text-black dark:text-white"></i>
           </button>

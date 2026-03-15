@@ -13,6 +13,8 @@
       --brand-main: #008658;
     }
   </style>
+  <!-- Tom Select CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -251,8 +253,6 @@
         </div>
         <!-- Header Actions -->
         <div class="flex items-center gap-4">
-
-
           <!-- Language Dropdown -->
           <div class="relative group">
             <button
@@ -422,223 +422,127 @@
         <!-- page info -->
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
-            <h5 class="text-xl text-black font-semibold dark:text-white">General Settings</h5>
-            <p class="text-black/60 text-sm dark:text-white/60">Configure core application settings</p>
+            <h5 class="text-xl text-black font-semibold dark:text-white">Edit Profile</h5>
+
+            <!-- breadcrumb -->
+            <ul class="flex gap-2 items-center">
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">General
+                  Settings</a></li>
+              <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Edit
+                  Profile</a></li>
+            </ul>
+            <!-- end breadcrumb -->
           </div>
-          <!-- <div class="flex gap-2">
+          <div class="flex gap-2">
             <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
             <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
-          </div> -->
-        </div>
 
-        <div
-          class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          <!-- item 1 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-setting text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="general-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-12 gap-4">
+          <div class="col-span-12  dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
             <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Basic Setting</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Configured: site, CST time zone, preferences.</p>
+              <h6 class="text-base text-black font-semibold dark:text-white">Profile Information</h6>
+              <p class="text-black/60 text-sm dark:text-white/60">Manage your account details and personal preferences
+              </p>
+            </div>
+            <div class="mt-4">
+              <!-- Single Column Block -->
+              <div class="row">
+                <div class="form-group md:col-span-6">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter First Name">
+                </div>
+                <div class="form-group md:col-span-6">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Last Name">
+                </div>
+              </div>
+
+              <!-- Two Column Grid -->
+              <div class="row">
+
+                <div class="form-group md:col-span-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="admin@example.com">
+                </div>
+                <div class="form-group md:col-span-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="text" class="form-control" placeholder="+1 234 567 890">
+                </div>
+              </div>
+              <!-- file upload start -->
+              <div class="upload-wrapper">
+                <span class="form-label">Select Photo</span>
+
+                <div class="dark:border-white/5 border border-black/5 rounded-lg p-2">
+
+                  <!-- Upload Box -->
+                  <div class="upload-box relative py-6 border-2 border-dashed border-black/10
+             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
+
+                    <!-- File Input -->
+                    <input type="file" accept="image/*" class="upload-input hidden">
+
+                    <!-- Placeholder -->
+                    <div class="upload-placeholder space-y-1">
+                      <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
+                      <p class="text-sm text-black/60 dark:text-white/60">
+                        Profile Image
+                      </p>
+                      <p class="text-xs text-black/40 dark:text-white/40">
+                        1200x600px recommended
+                      </p>
+                    </div>
+
+                    <!-- Preview -->
+                    <div class="upload-preview hidden relative">
+                      <img class="preview-image max-h-28 mx-auto rounded-md" />
+
+                      <!-- Close Button -->
+                      <button type="button" class="cursor-pointer remove-file absolute -top-2 -right-2
+                 w-6 h-6 rounded-full bg-red-500 text-white
+                 text-xs flex items-center justify-center">
+                        <i class="sz-trash text-xs"></i>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-          <!-- item 2 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-photograph text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="logo-appearance.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Logo & Appearance</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Upload logos and customize visual identity</p>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cash text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="financial-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Financial Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Configure financial settings</p>
-            </div>
-          </div>
-          <!-- item 4 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-collection text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="gdpr-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">GDPR Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cube text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="maintenance-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Maintenance Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Enable/disable site maintenance mode</p>
-            </div>
-          </div>
-          <!-- item 6 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="seo-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">SEO Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Meta tags, sitemap, and optimization</p>
-            </div>
-          </div>
-          <!-- item 7 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-plugin-line text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="plugin-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Plugins Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
-          <!-- item 8 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-database text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cache-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Cache Manage</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
-          <!-- item 9 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-briefcase text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cron-job-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Cron Job Settings</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
-          <!-- item 10 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud-download text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="update-system.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Update System</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
-          <!-- item 11 -->
-          <div
-            class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-annotation text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="social-media-login.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Social Media Login</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Privacy compliance and cookie settings</p>
-            </div>
-          </div>
+
 
         </div>
       </section>
     </main>
   </div>
+  <!-- Tom Select JS -->
+  <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script>
+    new TomSelect("#country", {
+      create: true,
+      maxItems: 1,
+      sortField: { field: "text", direction: "asc" }
+    });
+  </script>
+  <script>
+    new TomSelect("#tag", {
+      plugins: ["remove_button"],
+      create: true,
+      maxItems: 3,
+      sortField: { field: "text", direction: "asc" }
+    });
+  </script>
 </body>
 
 </html>
