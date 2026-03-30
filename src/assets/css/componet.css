@@ -126,3 +126,77 @@
  @utility info-message {
      @apply block mt-1 text-xs text-yellow-400;
  }
+
+ /* new code here start */
+ @layer components {
+     .input-group {
+         display: flex;
+         align-items: stretch;
+     }
+
+     .input-group .input-group-text {
+         display: inline-flex;
+         align-items: center;
+         flex-shrink: 0;
+         padding-inline: 0.75rem;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+         color: color-mix(in srgb, var(--color-black) 60%, transparent);
+         background: color-mix(in srgb, var(--color-black) 5%, transparent);
+         border: 1px solid color-mix(in srgb, var(--color-black) 15%, transparent);
+     }
+
+     .dark .input-group .input-group-text {
+         color: color-mix(in srgb, var(--color-white) 60%, transparent);
+         background: color-mix(in srgb, var(--color-white) 5%, transparent);
+         border-color: color-mix(in srgb, var(--color-white) 15%, transparent);
+     }
+
+     @media (min-width: 768px) {
+         .input-group .input-group-text {
+             padding-inline: 1rem;
+         }
+     }
+
+     .input-group .input-group-text:first-child {
+         border-start-start-radius: 0.75rem;
+         border-end-start-radius: 0.75rem;
+         border-inline-end: 0;
+     }
+
+     .input-group .input-group-text:last-child {
+         border-start-end-radius: 0.75rem;
+         border-end-end-radius: 0.75rem;
+         border-inline-start: 0;
+     }
+
+     .input-group .form-control {
+         border-radius: 0 !important;
+     }
+
+     .input-group .form-control:first-child {
+         border-start-start-radius: 0.75rem !important;
+         border-end-start-radius: 0.75rem !important;
+         border-start-end-radius: 0 !important;
+         border-end-end-radius: 0 !important;
+     }
+
+     .input-group .form-control:last-child {
+         border-start-end-radius: 0.75rem !important;
+         border-end-end-radius: 0.75rem !important;
+         border-start-start-radius: 0 !important;
+         border-end-start-radius: 0 !important;
+     }
+
+     .input-group:focus-within .input-group-text {
+         border-color: var(--color-brand);
+     }
+
+     .input-group:focus-within .input-group-text:first-child {
+         border-inline-end: 0;
+     }
+
+     .input-group:focus-within .input-group-text:last-child {
+         border-inline-start: 0;
+     }
+ }

@@ -1722,11 +1722,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -3374,15 +3369,94 @@ body {
     color: color-mix(in oklab, var(--color-white) 50%, transparent);
   }
 }
+@layer components {
+  .input-group {
+    display: flex;
+    align-items: stretch;
+  }
+  .input-group .input-group-text {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-black);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in srgb, var(--color-black) 60%, transparent);
+    }
+    background: var(--color-black);
+    @supports (color: color-mix(in lab, red, red)) {
+      background: color-mix(in srgb, var(--color-black) 5%, transparent);
+    }
+    border: 1px solid var(--color-black);
+    @supports (color: color-mix(in lab, red, red)) {
+      border: 1px solid color-mix(in srgb, var(--color-black) 15%, transparent);
+    }
+  }
+  .dark .input-group .input-group-text {
+    color: var(--color-white);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in srgb, var(--color-white) 60%, transparent);
+    }
+    background: var(--color-white);
+    @supports (color: color-mix(in lab, red, red)) {
+      background: color-mix(in srgb, var(--color-white) 5%, transparent);
+    }
+    border-color: var(--color-white);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in srgb, var(--color-white) 15%, transparent);
+    }
+  }
+  @media (min-width: 768px) {
+    .input-group .input-group-text {
+      padding-inline: 1rem;
+    }
+  }
+  .input-group .input-group-text:first-child {
+    border-start-start-radius: 0.75rem;
+    border-end-start-radius: 0.75rem;
+    border-inline-end: 0;
+  }
+  .input-group .input-group-text:last-child {
+    border-start-end-radius: 0.75rem;
+    border-end-end-radius: 0.75rem;
+    border-inline-start: 0;
+  }
+  .input-group .form-control {
+    border-radius: 0 !important;
+  }
+  .input-group .form-control:first-child {
+    border-start-start-radius: 0.75rem !important;
+    border-end-start-radius: 0.75rem !important;
+    border-start-end-radius: 0 !important;
+    border-end-end-radius: 0 !important;
+  }
+  .input-group .form-control:last-child {
+    border-start-end-radius: 0.75rem !important;
+    border-end-end-radius: 0.75rem !important;
+    border-start-start-radius: 0 !important;
+    border-end-start-radius: 0 !important;
+  }
+  .input-group:focus-within .input-group-text {
+    border-color: var(--color-brand);
+  }
+  .input-group:focus-within .input-group-text:first-child {
+    border-inline-end: 0;
+  }
+  .input-group:focus-within .input-group-text:last-child {
+    border-inline-start: 0;
+  }
+}
 .ts-wrapper.single .ts-control, .ts-wrapper.multi .ts-control {
-  background-color: var(--white, #FFFFFF);
+  background-color: var(--white, #ffffff);
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
   color: var(--black, #000000);
   font-size: 15px;
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   background-image: none !important;
   min-height: 48px;
   display: flex !important;
@@ -3395,21 +3469,21 @@ body {
   box-shadow: none !important;
 }
 :where(.dark, .dark *) .ts-wrapper.single .ts-control, :where(.dark, .dark *) .ts-wrapper.multi .ts-control {
-  background-color: var(--gray, #0F1514);
+  background-color: var(--gray, #0f1514);
   border-color: rgba(255, 255, 255, 0.15);
-  color: var(--white-fixed, #FFFFFF);
+  color: var(--white-fixed, #ffffff);
 }
 .ts-wrapper.single.focus .ts-control, .ts-wrapper.multi.focus .ts-control, .ts-wrapper.single.dropdown-active .ts-control, .ts-wrapper.multi.dropdown-active .ts-control {
-  background-color: var(--white, #FFFFFF) !important;
+  background-color: var(--white, #ffffff) !important;
   border-color: var(--brand-main) !important;
   outline: none !important;
 }
 :where(.dark, .dark *) .ts-wrapper.single.focus .ts-control, :where(.dark, .dark *) .ts-wrapper.multi.focus .ts-control, :where(.dark, .dark *) .ts-wrapper.single.dropdown-active .ts-control, :where(.dark, .dark *) .ts-wrapper.multi.dropdown-active .ts-control {
-  background-color: var(--gray, #0F1514) !important;
+  background-color: var(--gray, #0f1514) !important;
   border-color: var(--brand-main) !important;
 }
 .ts-wrapper.single .ts-control::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 1.25rem;
   top: 50%;
@@ -3432,7 +3506,7 @@ body {
   opacity: 1;
 }
 .ts-dropdown {
-  background-color: var(--white, #FFFFFF);
+  background-color: var(--white, #ffffff);
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.75rem;
   margin-top: 0.5rem;
@@ -3442,7 +3516,7 @@ body {
   z-index: 50;
 }
 :where(.dark, .dark *) .ts-dropdown {
-  background-color: var(--gray, #0F1514);
+  background-color: var(--gray, #0f1514);
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
@@ -3500,6 +3574,8 @@ body {
   display: inline-block !important;
   background: transparent !important;
   border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
   width: auto !important;
@@ -3507,6 +3583,8 @@ body {
   min-width: 4px !important;
   opacity: 1 !important;
   outline: none !important;
+  line-height: 1.5 !important;
+  height: auto !important;
 }
 :where(.dark, .dark *) .ts-wrapper .ts-control input {
   color: var(--white-fixed) !important;
@@ -3520,6 +3598,12 @@ body {
 .ts-wrapper.single.dropdown-active .ts-control .item {
   display: none !important;
 }
+.ts-wrapper.multi .ts-control, .ts-wrapper.multi.has-items .ts-control {
+  min-height: 48px !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out !important;
+}
 .ts-wrapper.multi .ts-control .item {
   background-color: rgba(0, 134, 88, 0.1);
   border: 1px solid rgba(0, 134, 88, 0.2);
@@ -3527,7 +3611,7 @@ body {
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.375rem 0.625rem;
+  padding: 0.225rem 0.625rem !important;
   display: inline-flex !important;
   align-items: center;
   gap: 0.375rem;

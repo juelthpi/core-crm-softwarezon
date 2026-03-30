@@ -229,7 +229,6 @@
    @apply scale-100 opacity-100 visible;
  }
 
-
  .notification-item {
    @apply flex gap-3 p-3 rounded-xl transition-all cursor-pointer relative items-start hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5;
  }
