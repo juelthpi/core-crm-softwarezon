@@ -266,8 +266,20 @@
  }
 
  @utility bg-linear-gradient {
-   background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-brand) 30%, transparent) 0%, transparent 65%);
+   background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-brand) 70%, transparent) 0%, transparent 65%);
  }
+
+ @utility bg-linear-gradient-2 {
+   background:
+     linear-gradient(to right, var(--color-dark-green) 0%, transparent 30%),
+     linear-gradient(to bottom left, color-mix(in srgb, var(--color-brand) 40%, transparent) 0%, transparent 65%);
+ }
+
+ /* @utility bg-linear-gradient-2 {
+   background:
+     linear-gradient(to right, var(--color-dark-green) 0%, transparent 30%),
+
+ } */
 
  /* Start accordion css */
  .transition-max-height {

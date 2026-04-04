@@ -32,7 +32,6 @@
     <div
       class="bg-dark-green relative z-10 py-10 lg:py-16 px-4 hidden lg:flex lg:flex-col lg:justify-center lg:items-end">
       <div class="absolute inset-0 bg-linear-gradient -z-10 bg-no-repeat bg-cover"></div>
-
       <div class="flex justify-end">
         <div class="w-full max-w-[500px]">
           <div class="space-y-10 lg:pe-12">
@@ -40,7 +39,7 @@
             <img src="assets/images/thumbnails/login-thumbnails.png" alt="Login Thumbnails"
               class="w-full max-w-[367px] mx-auto block">
             <div class="space-y-2">
-              <h2 class="text-lg lg:text-3xl font-bold text-white leading-tight">Invest smarter, not harder, trade with
+              <h2 class="text-lg lg:text-2xl font-bold text-white leading-tight">Invest smarter, not harder, trade with
                 confidence.
               </h2>
               <p class="text-white/50 text-sm lg:text-base leading-relaxed">Lorem ipsum dolor sit amet consectetur.
@@ -54,84 +53,67 @@
     <div class="bg-black py-10 lg:py-16 flex justify-center lg:justify-start items-center px-4 md:px-10 relative">
       <div class="absolute h-full w-full inset-e-0 top-0 bg-linear-gradient-2 bg-no-repeat bg-cover"></div>
       <div
-        class="w-full max-w-[620px] dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-3 md:p-6 relative z-10">
-        <div class="space-y-5 ">
+        class="w-full max-w-[620px] relative z-10 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-3 md:p-6">
+        <div class="space-y-5">
           <div>
-            <h2 class="text-lg lg:text-2xl font-bold text-white leading-tight">Create an Account.
+            <h2 class="text-lg lg:text-3xl font-bold text-white leading-tight">Welcome Back
             </h2>
-            <p class="text-white/50 text-sm lg:text-base leading-relaxed">Enter Your Account Details</p>
+            <p class="text-white/50 text-sm lg:text-base leading-relaxed">Continue trading with powerful tools and
+              real-time insights.</p>
           </div>
           <form>
-            <div class="row">
-              <div class="form-group md:col-span-6">
-                <label class="form-label">First Name</label>
-                <input type="text" class="form-control" placeholder="Kadir">
-              </div>
-              <div class="form-group md:col-span-6">
-                <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" placeholder="Miye">
-              </div>
-
-
-            </div>
             <div class="row">
               <div class="form-group md:col-span-12">
                 <label class="form-label">Email Address</label>
                 <input type="email" class="form-control" placeholder="jhondoe@gmail.com">
               </div>
             </div>
-            <div class="row">
-              <div class="form-group md:col-span-12">
-                <label class="form-label">Phone Number</label>
-                <input type="text" class="form-control" placeholder="+ XX XXX XXXX XXXX">
-              </div>
-            </div>
+
             <div class="row">
               <div class="form-group md:col-span-12">
                 <label class="form-label">Password</label>
                 <div class="relative">
                   <input type="password" class="form-control pe-10" value="test">
                   <button type="button"
-                    class="toggle-password absolute inset-y-0 end-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
+                    class="toggle-password absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
                     <i class="sz-eye text-lg"></i>
                   </button>
                 </div>
               </div>
             </div>
+
             <div class="row">
-              <div class="form-group md:col-span-12">
-                <label class="form-label">Confirm password</label>
-                <div class="relative">
-                  <input type="password" class="form-control pe-10" value="test">
-                  <button type="button"
-                    class="toggle-password absolute inset-y-0 end-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
-                    <i class="sz-eye text-lg"></i>
-                  </button>
+              <div class="form-group md:col-span-12 flex items-center justify-between mt-2">
+                <div class="flex items-center gap-2">
+                  <input type="checkbox" id="remember" class="checkbox">
+                  <label for="remember" class="checkbox-text">Remember Me</label>
                 </div>
+                <a href="#" class="text-brand text-sm font-medium hover:text-brand/80 transition-colors">Forgot
+                  Password?</a>
               </div>
             </div>
-            <div class="row">
-              <div class="form-group md:col-span-12 flex items-center gap-2 mt-2">
-                <input type="checkbox" id="terms" class="checkbox">
-                <label for="terms" class="checkbox-text">I agree
-                  to
-                  Terms & Conditions</label>
-              </div>
-            </div>
+
             <div class="row">
               <div class="form-group md:col-span-12 mt-6">
                 <button type="submit" class="w-full primary-btn">
-                  Create Account
+                  Login
                 </button>
               </div>
             </div>
             <div class="row">
               <div class="form-group md:col-span-12 mt-6 text-center">
-                <p class="text-black/50 dark:text-white/80 text-sm">Already have an account? <a href="login.html"
-                    class="text-brand font-medium hover:text-brand/80 transition-colors">Login</a></p>
+                <p class="text-black/50 dark:text-white/80 text-sm">Don't have an account? <a href="register.html"
+                    class="text-brand font-medium hover:text-brand/80 transition-colors">Register</a></p>
               </div>
             </div>
 
+            <div class="row">
+              <div class="form-group md:col-span-12 mt-6">
+                <a href="email-verify.html">Email Verify</a> ||
+                <a href="otp-verify.html">Number Verify</a>
+              </div>
+
+            </div>
 
           </form>
         </div>

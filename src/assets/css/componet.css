@@ -37,6 +37,33 @@
      @apply py-0.5 px-3 text-sm font-normal rounded-full flex items-center gap-1.5 border border-transparent;
  }
 
+ @utility checkbox {
+     @apply w-4 h-4 rounded appearance-none border border-black/20 dark:border-white/20 bg-transparent checked:bg-brand checked:border-brand cursor-pointer relative after:content-[''] after:absolute after:hidden checked:after:block after:left-[4px] after:top-[1px] after:w-[6px] after:h-[10px] after:border-r-2 after:border-b-2 after:border-white after:rotate-45 transition-colors;
+ }
+
+ @utility checkbox-text {
+     @apply text-black/50 dark:text-white/50 text-sm cursor-pointer select-none;
+ }
+
+ @utility otp-input {
+     @apply w-8 h-10 lg:w-10 lg:h-12 text-center text-base font-medium caret-brand transition-all duration-200;
+
+     &:focus {
+         @apply outline-none border-brand;
+         box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 20%, transparent);
+     }
+
+     &.filled {
+         @apply border-brand text-white;
+         background-color: color-mix(in srgb, var(--color-brand) 8%, transparent);
+     }
+
+     &.error {
+         @apply border-red-500;
+         box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+     }
+ }
+
  /* Custom Reusable Form Switcher */
  @utility form-switch {
      @apply relative inline-block transition-all duration-300;
