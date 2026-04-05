@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="dark" dir="ltr">
+<!doctype html>
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,15 +13,13 @@
       --brand-main: #008658;
     }
   </style>
-  <!-- Tom Select CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <!-- Custom Icons & Styling -->
   <link href="https://dev.iconly.io/public/wFdRuZcL7WlO/iconly.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="assets/icons/iconly.css"> -->
@@ -33,23 +31,21 @@
   <div class="dashboard-container relative">
     <!-- Sidebar Overlay (Mobile) -->
     <div id="sidebar-overlay"
-      class="fixed inset-0 bg-side-light  dark:bg-side/60 backdrop-blur-md z-40 hidden transition-opacity duration-300 opacity-0 xl:hidden cursor-pointer"
-      onclick="toggleSidebar()">
-    </div>
+      class="fixed inset-0 bg-side-light dark:bg-side/60 backdrop-blur-md z-40 hidden transition-opacity duration-300 opacity-0 xl:hidden cursor-pointer"
+      onclick="toggleSidebar()"></div>
     <!-- Sidebar -->
     <aside id="sidebar" role="navigation" aria-label="Main Sidebar"
       class="fixed inset-y-0 start-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
-
       <!-- Logo Branding -->
       <div
         class="px-4 py-6 flex items-center justify-between gap-3 border-b border-sidebar-black/4 dark:border-sidebar-white/4 mb-4">
         <div class="flex items-center gap-3 w-full">
-          <img src="assets/images/logo.png" alt="Logo" class="max-h-8 w-auto logo-dark">
-          <img src="assets/images/logo-black.png" alt="Logo" class="max-h-8 w-auto logo-light hidden">
+          <img src="assets/images/logo.png" alt="Logo" class="max-h-8 w-auto logo-dark" />
+          <img src="assets/images/logo-black.png" alt="Logo" class="max-h-8 w-auto logo-light hidden" />
         </div>
         <!-- Mobile Close Icon -->
         <button
-          class="shrink-0 xl:hidden w-9 h-9  rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-main hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer"
+          class="shrink-0 xl:hidden w-9 h-9 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-main hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer"
           onclick="toggleSidebar()">
           <i class="sz-close text-sm"></i>
         </button>
@@ -57,14 +53,13 @@
 
       <!-- Navigation Menu -->
       <div data-simplebar class="flex-1 min-h-0 h-full w-full">
-        <nav class="space-y-1   px-3 pb-4">
-
+        <nav class="space-y-1 px-3 pb-4">
           <!-- MAIN MENU -->
           <div class="px-3 py-1">
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">MAIN
               MENU</span>
           </div>
-          <a href="index.html" class="sidebar-link  group" data-tooltip="Dashboard">
+          <a href="index.html" class="sidebar-link group" data-tooltip="Dashboard">
             <div class="icon-box transition-colors">
               <i class="sz-view-grid-add text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -207,7 +202,6 @@
             </div>
             <span class="font-base">Pages</span>
           </a>
-
         </nav>
       </div>
 
@@ -217,10 +211,14 @@
           class="bg-sidebar-black/2 dark:bg-sidebar-white/2 border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-2xl p-3 flex items-center justify-between gap-3 hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-colors cursor-pointer">
           <div class="flex items-center gap-3">
             <img src="assets/images/users/user-2.png" alt="Profile"
-              class="w-10 h-10 rounded-full object-cover bg-sidebar-black/10 dark:bg-sidebar-white/10">
+              class="w-10 h-10 rounded-full object-cover bg-sidebar-black/10 dark:bg-sidebar-white/10" />
             <div>
-              <h5 class="text-sidebar-black dark:text-sidebar-white text-sm font-semibold">Super Admin</h5>
-              <p class="text-sidebar-black/50 dark:text-sidebar-white/50 text-sm">Version 2.3.1</p>
+              <h5 class="text-sidebar-black dark:text-sidebar-white text-sm font-semibold">
+                Super Admin
+              </h5>
+              <p class="text-sidebar-black/50 dark:text-sidebar-white/50 text-sm">
+                Version 2.3.1
+              </p>
             </div>
           </div>
           <a href="#"
@@ -235,7 +233,7 @@
     <main class="main-content xl:ms-66 min-h-screen">
       <!-- Top Header -->
       <header
-        class="py-4  border-b border-black/4 dark:border-white/4 sticky top-0 z-40 bg-sidebar-black/4 dark:bg-sidebar-white/4 backdrop-blur-md  px-2 lg:px-4 flex items-center justify-between">
+        class="py-4 border-b border-black/4 dark:border-white/4 sticky top-0 z-40 bg-sidebar-black/4 dark:bg-sidebar-white/4 backdrop-blur-md px-2 lg:px-4 flex items-center justify-between">
         <div class="flex items-center gap-4">
           <!-- Mobile Drawer Trigger -->
           <button class="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white cursor-pointer"
@@ -248,42 +246,42 @@
                 class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
             </div>
             <input type="text" placeholder="Search Here"
-              class="w-full sm:w-76 bg-sidebar-black/3 dark:bg-sidebar-dark-green border border-sidebar-black/2 dark:border-sidebar-white/2 rounded-lg py-2.5 ps-11 pe-4 text-sm text-sidebar-black dark:text-sidebar-white  dark:placeholder:text-sidebar-white/60 placeholder:text-sidebar-black/80 hover:text-sidebar-black dark:hover:text-sidebar-white/80 focus:outline-none focus:border-brand/40 focus:bg-sidebar-black/8 dark:focus:bg-sidebar-white/8 transition-all">
+              class="w-full sm:w-76 bg-sidebar-black/3 dark:bg-sidebar-dark-green border border-sidebar-black/2 dark:border-sidebar-white/2 rounded-lg py-2.5 ps-11 pe-4 text-sm text-sidebar-black dark:text-sidebar-white dark:placeholder:text-sidebar-white/60 placeholder:text-sidebar-black/80 hover:text-sidebar-black dark:hover:text-sidebar-white/80 focus:outline-none focus:border-brand/40 focus:bg-sidebar-black/8 dark:focus:bg-sidebar-white/8 transition-all" />
           </div>
         </div>
         <!-- Header Actions -->
         <div class="flex items-center gap-4">
-
-
           <!-- Language Dropdown -->
           <div class="relative group">
             <button
               class="h-11 min-w-11 shrink-0 px-2 sm:px-3 rounded-xl bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center justify-center sm:gap-2 text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black dark:hover:text-sidebar-white hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-all cursor-pointer">
-              <img src="assets/images/flags/united-states.png" alt="English" class="w-5 h-5 rounded-full object-cover">
+              <img src="assets/images/flags/united-states.png" alt="English"
+                class="w-5 h-5 rounded-full object-cover" />
               <span class="text-sm font-medium hidden sm:block">English</span>
               <span class="hidden sm:block">
                 <i
-                  class="sz-angle-down text-xs ms-1 text-sidebar-black/60 dark:text-sidebar-white/50 transition-transform group-hover:rotate-180  dark:hover:text-sidebar-white"></i>
+                  class="sz-angle-down text-xs ms-1 text-sidebar-black/60 dark:text-sidebar-white/50 transition-transform group-hover:rotate-180 dark:hover:text-sidebar-white"></i>
               </span>
             </button>
             <div
-              class="absolute  top-full mt-2 start-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+              class="absolute top-full mt-2 start-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
                 <a href="#"
                   class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
                   <img src="assets/images/flags/united-states.png" alt="English"
-                    class="w-4 h-4 rounded-full object-cover">
+                    class="w-4 h-4 rounded-full object-cover" />
                   English
                 </a>
                 <a href="#"
                   class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
                   <img src="assets/images/flags/saudi-arabia.png" alt="Arabic"
-                    class="w-4 h-4 rounded-full object-cover">
+                    class="w-4 h-4 rounded-full object-cover" />
                   Arabic
                 </a>
                 <a href="#"
                   class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
-                  <img src="assets/images/flags/bangladesh.png" alt="Bengali" class="w-4 h-4 rounded-full object-cover">
+                  <img src="assets/images/flags/bangladesh.png" alt="Bengali"
+                    class="w-4 h-4 rounded-full object-cover" />
                   Bengali
                 </a>
               </div>
@@ -298,16 +296,19 @@
             <button aria-label="Notifications"
               class="w-11 h-11 shrink-0 rounded-xl bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center justify-center text-sidebar-black/70 dark:hover:text-sidebar-white/70 hover:text-sidebar-black hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-all cursor-pointer">
               <i class="sz-bell text-sidebar-black dark:text-white text-2xl"></i>
-              <span class="absolute top-2 end-2 w-2.5 h-2.5 bg-blue-500 rounded-full  "></span>
+              <span class="absolute top-2 end-2 w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
             </button>
             <!-- Notification Popup -->
             <div class="notification-popup">
               <div class="flex items-center justify-between mb-5">
-                <h3 class="text-base font-semibold text-sidebar-black dark:text-sidebar-white m-0">Notification</h3>
+                <h3 class="text-base font-semibold text-sidebar-black dark:text-sidebar-white m-0">
+                  Notification
+                </h3>
                 <div class="flex items-center gap-2">
                   <button
-                    class="px-3 py-1.5 bg-sidebar-black/5 dark:bg-white/5 border border-sidebar-black/10 dark:border-white/10 rounded-lg text-xs font-medium dark:text-sidebar-white/70 text-sidebar-black/70 dark:hover:text-sidebar-white/70 hover:text-sidebar-black hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-colors">Mark
-                    all as read</button>
+                    class="px-3 py-1.5 bg-sidebar-black/5 dark:bg-white/5 border border-sidebar-black/10 dark:border-white/10 rounded-lg text-xs font-medium dark:text-sidebar-white/70 text-sidebar-black/70 dark:hover:text-sidebar-white/70 hover:text-sidebar-black hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-colors">
+                    Mark all as read
+                  </button>
                   <button
                     class="w-8 h-8 flex items-center justify-center rounded-full bg-sidebar-black/5 dark:bg-white/5 border border-sidebar-black/10 dark:border-white/10 hover:bg-sidebar-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer">
                     <i class="sz-close text-xs dark:text-sidebar-white/70 text-sidebar-black/70"></i>
@@ -378,11 +379,13 @@
           <div class="relative group">
             <button
               class="h-11 min-w-11 shrink-0 px-3 rounded-lg bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center gap-3 text-sidebar-black dark:text-sidebar-white transition-all hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 cursor-pointer">
-              <img src="assets/images/users/user-2.png" alt="Profile" class="w-7 h-7 rounded-full object-cover">
+              <img src="assets/images/users/user-2.png" alt="Profile" class="w-7 h-7 rounded-full object-cover" />
               <div class="text-left hidden lg:block">
-                <h5 class="text-sm font-semibold leading-none">Super Admin</h5>
-                <p class="text-[11px] text-sidebar-black/50 dark:text-sidebar-white/50 mt-1 leading-none">System
-                  Administrator
+                <h5 class="text-sm font-semibold leading-none">
+                  Super Admin
+                </h5>
+                <p class="text-[11px] text-sidebar-black/50 dark:text-sidebar-white/50 mt-1 leading-none">
+                  System Administrator
                 </p>
               </div>
               <span class="hidden sm:block">
@@ -394,29 +397,28 @@
               class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
                 <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-pencil-alt text-lg"></i>
                   Edit Profile
                 </a>
                 <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-lock-open text-lg"></i>
                   Update Password
                 </a>
                 <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-user text-lg"></i>
                   Manage 2FA
                 </a>
                 <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
+                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-logout text-lg"></i>
                   Log Out
                 </a>
               </div>
             </div>
           </div>
-
         </div>
       </header>
       <!-- dashboard Content -->
@@ -424,210 +426,224 @@
         <!-- page info -->
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
-            <h5 class="text-xl text-black font-semibold dark:text-white">Plugins Settings</h5>
-
-            <!-- breadcrumb -->
+            <h5 class="text-xl text-black font-semibold dark:text-white">
+              Email Drivers
+            </h5>
+            <!-- Breadcrumb -->
             <ul class="flex gap-2 items-center">
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">General
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Notification
                   Settings</a></li>
               <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">GDPR &
-                  Plugins Settings</a></li>
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Email
+                  Drivers</a></li>
             </ul>
-            <!-- end breadcrumb -->
           </div>
           <div class="flex gap-2">
-            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to Home </button>
-            <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
-
+            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to Notification Settings </button>
           </div>
         </div>
+        <!-- alert -->
+        <div class="bg-red/10 border border-red rounded-xl lg:p-4 p-3 relative">
+          <div class="flex gap-2">
+            <i class="sz-exclamation text-red text-xl mt-1.5"></i>
+            <div>
+              <h5 class="text-black/80 dark:text-white font-semibold text-base">Only one driver can be active at a time
+              </h5>
+              <p class="text-sm text-black/80 dark:text-white/80">Activating a new driver will automatically deactivate
+                the current one.
+              </p>
+            </div>
+          </div>
+          <span class="absolute top-4 inset-e-4 duration-700 hover:text-red text-black/80 dark:text-white/80"><i
+              class="sz-close text-xl cursor-pointer"></i></span>
+        </div>
 
-        <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+        <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
           <div class="mb-4">
-            <h6 class="text-base text-black font-semibold dark:text-white">Plugin Settings</h6>
-            <p class="text-black/60 text-sm dark:text-white/60">Configure third-party integrations</p>
-          </div>
-          <div class="mt-4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- item 1 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/tawk.png" alt="Tawk.to" class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-                  <div class="status-badge border-red-500/20 text-red-500 bg-red-500/10">
-                    <i class="sz-minus"></i> Deactivated
-                  </div>
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Tawk.to</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Live chat widget</p>
-              </div>
-            </div>
-            <!-- item 2 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/google-analytics.png" alt="Google Analytics"
-                    class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Google Analytics</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Website analytics tracking</p>
-              </div>
-            </div>
-            <!-- item 3 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/recaptcha.png" alt="Google ReCaptcha"
-                    class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Google ReCaptcha</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Bot protection</p>
-              </div>
-            </div>
-            <!-- item 4 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/facebook.png" alt="Facebook" class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Facebook Pixel</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Conversion tracking</p>
-              </div>
-            </div>
-            <!-- item 5 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/hotjar.png" alt="Hotjar" class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Hotjar</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Heatmaps & recordings</p>
-              </div>
-            </div>
-            <!-- item 6 -->
-            <div
-              class=" bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-              <div class="flex items-start justify-between mb-4">
-                <div
-                  class="w-12 h-12 rounded-xl bg-black/80 p-1 dark:bg-white border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                  <img src="assets/images/plugin-logo/plausible-logo.png" alt="Plausible"
-                    class="w-full h-full object-cover">
-                </div>
-                <div class="flex items-center flex-wrap gap-2">
-                  <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                      class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
-                  <div onclick="toggleOffcanvas('pluginOffcanvas')"
-                    class="cursor-pointer px-4 py-1 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    <i class="sz-pencil-alt text-lg"></i>
-                    Edit
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">Plausible Analytics</h5>
-                <p class="text-sm text-black/60 dark:text-white/60">Privacy-friendly analytics</p>
-              </div>
-            </div>
+            <h6 class="text-base text-black font-semibold dark:text-white">Email Drivers</h6>
+            <p class="text-sm text-black/60 dark:text-white/60">Manage and configure your email drivers
+            </p>
 
           </div>
+          <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+            <div class="responsive-table-wrapper">
+              <table class="w-full text-left border-collapse custom-responsive-table">
+                <thead>
+                  <tr>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">#SL</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Driver Logo</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Driver Name</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Updated Date</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Status</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-black/8 dark:divide-white/8">
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/2.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">AWS SES</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-brand/10 text-brand border-brand/15 ">
+                          <span class="w-2 h-2 rounded-full bg-brand"></span> Activated
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/1.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">AWS SES</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-red/10 text-red border-red/15 ">
+                          <span class="w-2 h-2 rounded-full bg-red"></span> Inactive
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">3</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/2.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">AWS SES</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-brand/10 text-brand border-brand/15 ">
+                          <span class="w-2 h-2 rounded-full bg-brand"></span> Activated
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">4</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/1.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">AWS SES</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-red/10 text-red border-red/15 ">
+                          <span class="w-2 h-2 rounded-full bg-red"></span> Inactive
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">5</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/2.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">AWS SES</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-brand/10 text-brand border-brand/15 ">
+                          <span class="w-2 h-2 rounded-full bg-brand"></span> Activated
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">6</span></td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/1.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">SMTP</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-05 10:00:00</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-red/10 text-red border-red/15 ">
+                          <span class="w-2 h-2 rounded-full bg-red"></span> Inactive
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button onclick="toggleOffcanvas('driver-offcanvas')"> <i
+                          class="sz-edit-alt text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
 
+                </tbody>
+              </table>
+            </div>
+
+          </div>
         </div>
       </section>
-      <!-- plugin edit offcanvas code start -->
+      <!-- driver edit offcanvas code start -->
       <!-- Offcanvas overlay -->
       <div id="offcanvas-overlay"
         class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0 cursor-pointer"
         onclick="closeOffcanvas()"></div>
 
       <!-- Offcanvas content -->
-      <div id="pluginOffcanvas"
+      <div id="driver-offcanvas"
         class="fixed inset-y-0 inset-e-0 z-70 w-full max-w-md bg-white dark:bg-dark-green transform translate-x-full rtl:-translate-x-full border-l border-black/10 dark:border-white/10 transition-transform duration-300 ease-in-out flex flex-col">
         <!-- Header -->
         <div class="flex items-center justify-between p-4 md:p-6 border-b border-black/10 dark:border-white/10">
           <div class="flex items-center gap-3">
             <div
-              class="w-10 h-10 rounded-xl bg-white dark:bg-white flex items-center justify-center p-1 shrink-0 overflow-hidden">
-              <img src="assets/images/plugin-logo/tawk.png" alt="Tawk.to" class="w-full h-full object-cover">
+              class="w-12 h-12 rounded-xl bg-brand/15   border border-brand/15 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+              <i class="sz-edit-alt text-black dark:text-white text-2xl"></i>
             </div>
-            <div class="space-y-1">
-              <h5 class="text-base font-bold text-black dark:text-white">Google Analytics</h5>
-              <div class="status-badge bg-brand/10 text-brand border-brand/15"><span
-                  class="w-2 h-2 rounded-full bg-brand"></span> Activated</div>
+            <div>
+              <h5 class="text-base font-bold text-black dark:text-white">Edit Email Driver – AWS SES</h5>
+              <p class="text-sm text-black/60 dark:text-white/60">Set up a new page and customize its settings.</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <button data-modal="videoModal"
-              class="flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-black dark:text-white bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
-              <i class="sz-play"></i> Tutorial Video
-            </button>
+
             <button onclick="closeOffcanvas()"
               class="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer shrink-0">
               <i class="sz-close"></i>
@@ -637,20 +653,75 @@
 
         <!-- Body -->
         <div class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
-          <!-- Section 1 -->
-          <div>
-            <h6 class="text-sm font-semibold text-black dark:text-white mb-2">Overview</h6>
-            <p class="text-xs text-black/60 dark:text-white/60 leading-relaxed">
-              Google Analytics integration enables comprehensive tracking of user behavior, page views, and conversion
-              events across your application. Gain insights into your audience and optimize user experiences.
-            </p>
+
+          <!-- alert -->
+          <div class="bg-red/10 border border-red rounded-xl lg:p-3 p-2">
+            <div class="flex gap-2">
+              <i class="sz-exclamation text-red text-xl mt-1.5"></i>
+              <div>
+
+                <p class="text-sm text-black/80 dark:text-white/80">Activating this driver will deactivate the current
+                  active driver.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="dark:bg-white/2 bg-black/2 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4  ">
+            <!-- file upload start -->
+            <div class="upload-wrapper">
+              <span class="form-label">Driver Image</span>
+
+              <div class="dark:border-white/5 border border-black/5 rounded-lg p-2 ">
+
+                <!-- Upload Box -->
+                <div class="upload-box relative py-6 border-2 border-dashed border-black/10
+             text-center dark:bg-white/2 bg-black/2 rounded-lg p-2 cursor-pointer">
+
+                  <!-- File Input -->
+                  <input type="file" accept="image/*" class="upload-input hidden">
+
+                  <!-- Placeholder -->
+                  <div class="upload-placeholder space-y-1">
+                    <i class="sz-cloud-upload text-4xl text-black/60 dark:text-white/60"></i>
+                    <p class="text-sm text-black/60 dark:text-white/60">
+                      Driver Image
+                    </p>
+                    <p class="text-xs text-black/40 dark:text-white/40">
+                      Max 10MB • JPG, PNG, PDF
+                    </p>
+                  </div>
+
+                  <!-- Preview -->
+                  <div class="upload-preview hidden relative">
+                    <img class="preview-image max-h-28 mx-auto rounded-md" />
+
+                    <!-- Close Button -->
+                    <button type="button" class="cursor-pointer remove-file absolute -top-2 right-2
+                 w-6 h-6 rounded-full bg-red-500 text-white
+                 text-xs flex items-center justify-center">
+                      <i class="sz-trash text-xs"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Section 2 -->
           <div class="space-y-4">
-            <h6 class="text-sm font-semibold text-black dark:text-white">Basic Configuration</h6>
+
             <div class="form-group">
-              <label class="form-label">Public Key</label>
+              <label class="form-label">Driver Name</label>
+              <input type="text" class="form-control" placeholder="AWS SES">
+            </div>
+            <div class="form-group">
+              <label class="form-label"> Description </label>
+              <textarea name="" id="" class="form-control"
+                placeholder="Leading email delivery service trusted by companies worldwide"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">API Key</label>
               <div class="relative">
                 <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
                 <button type="button"
@@ -660,14 +731,12 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Private Key</label>
-              <div class="relative">
-                <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
-                <button type="button"
-                  class="toggle-password absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
-                  <i class="sz-eye text-lg"></i>
-                </button>
-              </div>
+              <label class="form-label">From Email</label>
+              <input type="email" class="form-control" placeholder="noreply@proptrade.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">From Name</label>
+              <input type="text" class="form-control" placeholder="PropTrade">
             </div>
           </div>
 
@@ -688,59 +757,44 @@
           <button class="primary-btn"><i class="sz-check"></i> Save Changes</button>
         </div>
       </div>
-      <!-- plugin edit offcanvas code end -->
-      <!-- video modal start -->
-      <div id="videoModal"
-        class="modal fixed inset-0 z-100 hidden [&:not(.hidden)]:flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div class="modal-backdrop fixed inset-0 bg-black/50 transition-opacity duration-300 opacity-0 cursor-pointer">
-        </div>
-        <div
-          class="modal-content relative w-full max-w-3xl my-auto mx-auto bg-white dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-2xl transform opacity-0 scale-95 transition-all duration-300 flex flex-col pointer-events-auto shadow-2xl">
-          <div class="p-6">
-            <!-- Header -->
-            <div class="flex justify-between items-start mb-6 gap-4">
-              <div>
-                <h3 class="text-xl font-semibold text-black dark:text-white">How to Use Our Platform</h3>
-                <p class="text-sm text-black/80 dark:text-white/60 max-w-2xl leading-relaxed">Learn how to navigate and
-                  utilize the key featuresstief our prop trading platform step-by-step</p>
-              </div>
-              <button
-                class="modal-close-btn w-8 h-8 shrink-0 p-1 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
-                <i class="sz-close text-base"></i>
-              </button>
-            </div>
-
-            <!-- Video Wrapper -->
-            <div
-              class="relative w-full overflow-hidden rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 aspect-video">
-              <iframe class="absolute top-0 left-0 w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/aSte18D2_YE?si=3hx5BXanJrXYc-ZL" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- Footer Text and Button -->
-            <div
-              class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 p-4 rounded-xl bg-black/5 dark:bg-white/2 border border-black/5 dark:border-white/5">
-              <p class="text-xs text-black/80 dark:text-white/60">Video is dynamically loaded from YouTube UFL std
-                by
-                admin in backend</p>
-              <a href="https://www.youtube.com/watch?v=aSte18D2_YE" target="_blank" class="secondary-btn">
-                Watch on YouTube
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- video modal end -->
+      <!-- driver edit offcanvas code end -->
     </main>
   </div>
-
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
-  <script src="assets/js/modal.js">
+  <script src="assets/js/table.js"></script>
+  <!-- Offcanvas Script -->
+  <script>
+    function toggleOffcanvas(id) {
+      const offcanvas = document.getElementById(id);
+      const overlay = document.getElementById('offcanvas-overlay');
+
+      if (offcanvas && overlay) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.remove('opacity-0');
+        }, 10);
+
+        offcanvas.classList.remove('translate-x-full', 'rtl:-translate-x-full');
+      }
+    }
+    function closeOffcanvas() {
+      const overlay = document.getElementById('offcanvas-overlay');
+
+      const offcanvas = document.getElementById('driver-offcanvas');
+      if (offcanvas) {
+        offcanvas.classList.add('translate-x-full', 'rtl:-translate-x-full');
+      }
+
+      if (overlay) {
+        overlay.classList.add('opacity-0');
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+        }, 300);
+      }
+    }
+
 
   </script>
   <!-- file upload -->
@@ -791,41 +845,6 @@
 
     });
   </script>
-
-
-  <!-- Offcanvas Script -->
-  <script>
-    function toggleOffcanvas(id) {
-      const offcanvas = document.getElementById(id);
-      const overlay = document.getElementById('offcanvas-overlay');
-
-      if (offcanvas && overlay) {
-        overlay.classList.remove('hidden');
-        setTimeout(() => {
-          overlay.classList.remove('opacity-0');
-        }, 10);
-
-        offcanvas.classList.remove('translate-x-full', 'rtl:-translate-x-full');
-      }
-    }
-    function closeOffcanvas() {
-      const overlay = document.getElementById('offcanvas-overlay');
-
-      const offcanvas = document.getElementById('pluginOffcanvas');
-      if (offcanvas) {
-        offcanvas.classList.add('translate-x-full', 'rtl:-translate-x-full');
-      }
-
-      if (overlay) {
-        overlay.classList.add('opacity-0');
-        setTimeout(() => {
-          overlay.classList.add('hidden');
-        }, 300);
-      }
-    }
-
-
-  </script>
   <!-- password show hide -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -847,8 +866,6 @@
       });
     });
   </script>
-
-
 
 </body>
 

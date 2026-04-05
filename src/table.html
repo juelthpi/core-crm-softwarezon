@@ -35,7 +35,7 @@
       onclick="toggleSidebar()"></div>
     <!-- Sidebar -->
     <aside id="sidebar" role="navigation" aria-label="Main Sidebar"
-      class="fixed inset-y-0 start-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
+      class="fixed inset-y-0 inset-s-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
       <!-- Logo Branding -->
       <div
         class="px-4 py-6 flex items-center justify-between gap-3 border-b border-sidebar-black/4 dark:border-sidebar-white/4 mb-4">
@@ -241,7 +241,7 @@
             <i class="sz-bars text-2xl text-black dark:text-white"></i>
           </button>
           <div class="relative group hidden sm:block">
-            <div class="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none">
+            <div class="absolute inset-y-0 inset-s-0 ps-3.5 flex items-center pointer-events-none">
               <i
                 class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
             </div>
@@ -264,25 +264,13 @@
               </span>
             </button>
             <div
-              class="absolute top-full mt-2 start-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+              class="absolute top-full mt-2 inset-s-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
                 <a href="#"
                   class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
                   <img src="assets/images/flags/united-states.png" alt="English"
                     class="w-4 h-4 rounded-full object-cover" />
                   English
-                </a>
-                <a href="#"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
-                  <img src="assets/images/flags/saudi-arabia.png" alt="Arabic"
-                    class="w-4 h-4 rounded-full object-cover" />
-                  Arabic
-                </a>
-                <a href="#"
-                  class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
-                  <img src="assets/images/flags/bangladesh.png" alt="Bengali"
-                    class="w-4 h-4 rounded-full object-cover" />
-                  Bengali
                 </a>
               </div>
             </div>
@@ -296,83 +284,8 @@
             <button aria-label="Notifications"
               class="w-11 h-11 shrink-0 rounded-xl bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center justify-center text-sidebar-black/70 dark:hover:text-sidebar-white/70 hover:text-sidebar-black hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-all cursor-pointer">
               <i class="sz-bell text-sidebar-black dark:text-white text-2xl"></i>
-              <span class="absolute top-2 end-2 w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
+              <span class="absolute top-2 inset-e-2 w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
             </button>
-            <!-- Notification Popup -->
-            <div class="notification-popup">
-              <div class="flex items-center justify-between mb-5">
-                <h3 class="text-base font-semibold text-sidebar-black dark:text-sidebar-white m-0">
-                  Notification
-                </h3>
-                <div class="flex items-center gap-2">
-                  <button
-                    class="px-3 py-1.5 bg-sidebar-black/5 dark:bg-white/5 border border-sidebar-black/10 dark:border-white/10 rounded-lg text-xs font-medium dark:text-sidebar-white/70 text-sidebar-black/70 dark:hover:text-sidebar-white/70 hover:text-sidebar-black hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 transition-colors">
-                    Mark all as read
-                  </button>
-                  <button
-                    class="w-8 h-8 flex items-center justify-center rounded-full bg-sidebar-black/5 dark:bg-white/5 border border-sidebar-black/10 dark:border-white/10 hover:bg-sidebar-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer">
-                    <i class="sz-close text-xs dark:text-sidebar-white/70 text-sidebar-black/70"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="space-y-1">
-                <!-- item 1 -->
-                <a href="all-notification.html">
-                  <div class="notification-item">
-                    <div class="notification-icon bg-purple-500/10 border-purple-500/20 text-purple-500">
-                      <i class="sz-user text-lg"></i>
-                    </div>
-                    <div class="notification-content pe-4 relative">
-                      <span class="notification-title">New User Registration</span>
-                      <span class="notification-desc">Lorem ipsum dolor sit amet consectetur.</span>
-                      <span class="notification-time">1h ago</span>
-                      <span class="absolute inset-e-0 top-1 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    </div>
-                  </div>
-                </a>
-                <!-- item 2 -->
-                <a href="all-notification.html">
-                  <div class="notification-item">
-                    <div class="notification-icon bg-amber-500/10 border-amber-500/20 text-amber-500">
-                      <i class="sz-information-circle text-lg"></i>
-                    </div>
-                    <div class="notification-content pe-4 relative">
-                      <span class="notification-title">New User Registration</span>
-                      <span class="notification-desc">Lorem ipsum dolor sit amet consectetur.</span>
-                      <span class="notification-time">3h ago</span>
-                      <span class="absolute inset-e-0 top-1 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    </div>
-                  </div>
-                </a>
-                <!-- item 3 -->
-                <a href="all-notification.html">
-                  <div class="notification-item">
-                    <div class="notification-icon bg-red-500/10 border-red-500/20 text-red-500">
-                      <i class="sz-information-circle text-lg"></i>
-                    </div>
-                    <div class="notification-content pe-4 relative">
-                      <span class="notification-title">New User Registration</span>
-                      <span class="notification-desc">Lorem ipsum dolor sit amet consectetur.</span>
-                      <span class="notification-time">1h ago</span>
-                      <span class="absolute inset-e-0 top-1 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    </div>
-                  </div>
-                </a>
-                <!-- item 4 -->
-                <a href="all-notification.html">
-                  <div class="notification-item">
-                    <div class="notification-icon bg-emerald-500/10 border-emerald-500/20 text-emerald-500">
-                      <i class="sz-information-circle text-lg"></i>
-                    </div>
-                    <div class="notification-content pe-4 relative">
-                      <span class="notification-title">New User Registration</span>
-                      <span class="notification-desc">Lorem ipsum dolor sit amet consectetur.</span>
-                      <span class="notification-time">1h ago</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
           </div>
 
           <!-- User Profile Dropdown -->
@@ -394,23 +307,8 @@
               </span>
             </button>
             <div
-              class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+              class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
-                <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
-                  <i class="sz-pencil-alt text-lg"></i>
-                  Edit Profile
-                </a>
-                <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
-                  <i class="sz-lock-open text-lg"></i>
-                  Update Password
-                </a>
-                <a href="#"
-                  class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
-                  <i class="sz-user text-lg"></i>
-                  Manage 2FA
-                </a>
                 <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-logout text-lg"></i>
@@ -422,12 +320,187 @@
         </div>
       </header>
       <!-- dashboard Content -->
-      <section class="flex-1 p-2 md:p-4 space-y-3"></section>
+      <section class="flex-1 p-4 md:p-6 space-y-6">
+        <!-- Page Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold">Adaptive Responsive Table</h2>
+            <p class="text-white/60 text-sm mt-1">Table dynamically switches to card view only when cramped.</p>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div
+          class="bg-sidebar-black/5 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm">
+          <div class="responsive-table-wrapper">
+            <table class="w-full text-left border-collapse custom-responsive-table">
+              <thead>
+                <tr class="bg-black/5 dark:bg-white/2">
+                  <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40">#SL
+                  </th>
+                  <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40">
+                    Driver Logo</th>
+                  <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40">
+                    Driver Name</th>
+                  <th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40">
+                    Updated Date</th>
+                  <th
+                    class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40 text-center">
+                    Status</th>
+                  <th
+                    class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-black/50 dark:text-white/40 text-end">
+                    Action</th>
+                  <th>test</th>
+                  <th>test 2</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-black/5 dark:divide-white/5">
+                <!-- Row 1 -->
+                <tr class="hover:bg-black/2 dark:hover:bg-white/2 transition-colors duration-200">
+                  <td data-label="#SL" class="px-6 py-4 text-sm font-medium">1</td>
+                  <td data-label="Driver Logo" class="px-6 py-4">
+                    <div
+                      class="w-24 h-12 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-lg flex items-center justify-center p-2 group transition-all">
+                      <img src="assets/images/brand/amazon-ses.png" alt="Amazon SES"
+                        class="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all"
+                        onerror="this.src='https://placehold.co/100x40/0A0F0D/ffffff?text=AWS+SES'" />
+                    </div>
+                  </td>
+                  <td data-label="Driver Name" class="px-6 py-4 text-sm font-semibold">AWS SES</td>
+                  <td data-label="Updated Date" class="px-6 py-4 text-sm text-black/60 dark:text-white/60">08th Feb,
+                    2026</td>
+                  <td data-label="Status" class="px-6 py-4 text-center">
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active
+                    </span>
+                  </td>
+                  <td data-label="Action" class="px-6 py-4 text-end">
+                    <button
+                      class="w-9 h-9 flex items-center justify-center rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-black/60 dark:text-white/60 hover:text-brand hover:border-brand/40 transition-all ml-auto">
+                      <i class="sz-edit text-sm"></i>
+                    </button>
+                  </td>
+                  <td data-label="Test">hello bubt</td>
+
+                  <td data-label="Test2">hello bubt</td>
+                </tr>
+                <!-- More rows here... -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
+
+  <style>
+    /* 
+      Universal Dynamic Responsive Table CSS
+      Uses .table-card-mode (Added via JS) instead of fixed @media
+    */
+    .custom-responsive-table.table-card-mode thead {
+      display: none;
+    }
+
+    .custom-responsive-table.table-card-mode,
+    .custom-responsive-table.table-card-mode tbody,
+    .custom-responsive-table.table-card-mode tr,
+    .custom-responsive-table.table-card-mode td {
+      display: block;
+      width: 100%;
+    }
+
+    .custom-responsive-table.table-card-mode tr {
+      margin-bottom: 1.5rem;
+      padding: 1.25rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.25rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-responsive-table.table-card-mode td {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: right;
+    }
+
+    .custom-responsive-table.table-card-mode td:last-child {
+      border-bottom: 0;
+    }
+
+    .custom-responsive-table.table-card-mode td::before {
+      content: attr(data-label);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: left;
+    }
+
+    .custom-responsive-table.table-card-mode td>* {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Standard Table State */
+    .custom-responsive-table:not(.table-card-mode) th,
+    .custom-responsive-table:not(.table-card-mode) td {
+      white-space: nowrap;
+    }
+
+    .responsive-table-wrapper {
+      position: relative;
+      width: 100%;
+    }
+  </style>
+
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+
+  <script>
+    /**
+     * Adaptive Table Controller
+     * Automatically handles table-to-card transformation based on real available space.
+     */
+    function initAdaptiveTables() {
+      const tables = document.querySelectorAll('.custom-responsive-table');
+
+      tables.forEach(table => {
+        const wrapper = table.parentElement;
+        const columnCount = table.querySelectorAll('thead th').length;
+
+        // Dynamic Breakpoint Logic:
+        // We calculate if the required space (columns * min-width-per-column) 
+        // is more than the actual wrapper width.
+        const minWidthRequired = columnCount * 140; // You can adjust 140 to your preference
+
+        const checkResize = (entries) => {
+          for (let entry of entries) {
+            const containerWidth = entry.contentRect.width;
+            if (containerWidth < minWidthRequired) {
+              table.classList.add('table-card-mode');
+            } else {
+              table.classList.remove('table-card-mode');
+            }
+          }
+        };
+
+        const observer = new ResizeObserver(checkResize);
+        observer.observe(wrapper);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initAdaptiveTables);
+  </script>
 </body>
 
 </html>

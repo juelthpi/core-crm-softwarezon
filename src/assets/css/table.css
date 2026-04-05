@@ -1,0 +1,59 @@
+/* Table Responsive Core */
+.custom-responsive-table.table-card-mode thead {
+    display: none;
+}
+
+.custom-responsive-table.table-card-mode,
+.custom-responsive-table.table-card-mode tbody,
+.custom-responsive-table.table-card-mode tr,
+.custom-responsive-table.table-card-mode td {
+    display: block;
+    width: 100%;
+}
+
+.custom-responsive-table.table-card-mode tr {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.25rem;
+}
+
+.custom-responsive-table.table-card-mode td {
+    display: grid;
+    grid-template-columns: 140px 1fr !important;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: right;
+}
+
+.custom-responsive-table.table-card-mode td:last-child {
+    border-bottom: 0;
+}
+
+.custom-responsive-table.table-card-mode td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--brand);
+    text-align: left;
+}
+
+.custom-responsive-table.table-card-mode td>* {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.custom-responsive-table:not(.table-card-mode) th,
+.custom-responsive-table:not(.table-card-mode) td {
+    white-space: nowrap;
+}
+
+.responsive-table-wrapper {
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trade Analysis dashboard - Smart Tables v2" />
+  <meta name="author" content="Softwarezon" />
+  <title>Smart Table v2 - Auto Labeling</title>
+  <style>
+    :root {
+      --brand-main: #008658;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+  <link href="https://dev.iconly.io/public/wFdRuZcL7WlO/iconly.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-body-light dark:bg-body text-main font-body transition-colors duration-300">
+  <div class="dashboard-container relative">
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay"
+      class="fixed inset-0 bg-side-light dark:bg-side/60 backdrop-blur-md z-40 hidden transition-opacity duration-300 opacity-0 xl:hidden cursor-pointer"
+      onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" role="navigation"
+      class="fixed inset-y-0 inset-s-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
+      <div
+        class="px-4 py-6 flex items-center justify-between gap-3 border-b border-sidebar-black/4 dark:border-sidebar-white/4 mb-4">
+        <div class="flex items-center gap-3 w-full">
+          <img src="assets/images/logo.png" alt="Logo" class="max-h-8 w-auto logo-dark" />
+          <img src="assets/images/logo-black.png" alt="Logo" class="max-h-8 w-auto logo-light hidden" />
+        </div>
+        <button
+          class="shrink-0 xl:hidden w-9 h-9 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center text-main hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer"
+          onclick="toggleSidebar()">
+          <i class="sz-close text-sm"></i>
+        </button>
+      </div>
+
+      <div data-simplebar class="flex-1 min-h-0 h-full w-full">
+        <nav class="space-y-1 px-3 pb-4">
+          <div class="px-3 py-1">
+            <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">MAIN
+              MENU</span>
+          </div>
+          <a href="index.html" class="sidebar-link group">
+            <div class="icon-box"><i class="sz-view-grid-add text-lg"></i></div>
+            <span class="font-base">Dashboard</span>
+          </a>
+          <a href="table.html" class="sidebar-link group">
+            <div class="icon-box"><i class="sz-clipboard-list text-lg"></i></div>
+            <span class="font-base">Basic Table</span>
+          </a>
+          <a href="table-2.html" class="sidebar-link active-item group">
+            <div class="icon-box"><i class="sz-clipboard-list text-lg"></i></div>
+            <span class="font-base">Smart Table v2</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Viewport -->
+    <main class="main-content xl:ms-66 min-h-screen">
+      <!-- Top Header -->
+      <header
+        class="py-4 border-b border-black/4 dark:border-white/4 sticky top-0 z-40 bg-sidebar-black/4 dark:bg-sidebar-white/4 backdrop-blur-md px-2 lg:px-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button class="text-black/70 flex dark:text-white/70 hover:text-black dark:hover:text-white cursor-pointer"
+            onclick="toggleSidebar()">
+            <i class="sz-bars text-2xl text-black dark:text-white"></i>
+          </button>
+          <h5 class="text-lg font-bold hidden sm:block">Smart Auto-Labeling Table</h5>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <section class="flex-1 p-4 md:p-6 space-y-6">
+        <div class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 rounded-3xl p-6">
+
+
+          <div
+            class="bg-sidebar-black/5 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-2xl overflow-hidden shadow-sm">
+            <div class="responsive-table-wrapper">
+              <!-- No data-label attribute here! -->
+              <table class="w-full text-left border-collapse custom-responsive-table">
+                <thead>
+                  <tr class="bg-black/10 dark:bg-white/5">
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40">Reference</th>
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40">User Profile</th>
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40">Subscription Plan
+                    </th>
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40">Last Activity
+                    </th>
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40 text-center">
+                      Payment Status</th>
+                    <th class="px-6 py-4 text-xs font-bold uppercase text-black/50 dark:text-white/40 text-end">Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-black/5 dark:divide-white/5">
+                  <tr>
+                    <td class="px-6 py-5 text-sm font-medium">#REF-8822</td>
+                    <td class="px-6 py-5">
+                      <div class="flex items-center gap-3">
+
+                        <div>
+                          <p class="text-sm font-semibold">Ahmed Fahim</p>
+                          <p class="text-xs text-black/40">Fahim@gmail.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-5 text-sm font-medium">Enterprise VIP</td>
+                    <td class="px-6 py-5 text-sm text-black/60 dark:text-white/60">12 mins ago</td>
+                    <td class="px-6 py-5">
+                      <div class="flex justify-center">
+                        <span
+                          class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">Success</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-5 text-end">
+                      <button
+                        class="w-9 h-9 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:text-brand transition-all"><i
+                          class="sz-dots-vertical"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-5 text-sm font-medium">#REF-9910</td>
+                    <td class="px-6 py-5">
+                      <div class="flex items-center gap-3">
+
+                        <div>
+                          <p class="text-sm font-semibold">Karim Ullah</p>
+                          <p class="text-xs text-black/40">karim@company.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-5 text-sm font-medium">Free Tier</td>
+                    <td class="px-6 py-5 text-sm text-black/60 dark:text-white/60">Yesterday</td>
+                    <td class="px-6 py-5">
+                      <div class="flex justify-center">
+                        <span
+                          class="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-amber-500/10 text-amber-500 border border-amber-500/20">Pending</span>
+                      </div>
+                    </td>
+                    <td class="px-6 py-5 text-end">
+                      <button
+                        class="w-9 h-9 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:text-brand transition-all"><i
+                          class="sz-dots-vertical"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <style>
+    /* Table Responsive Core */
+    .custom-responsive-table.table-card-mode thead {
+      display: none;
+    }
+
+    .custom-responsive-table.table-card-mode,
+    .custom-responsive-table.table-card-mode tbody,
+    .custom-responsive-table.table-card-mode tr,
+    .custom-responsive-table.table-card-mode td {
+      display: block;
+      width: 100%;
+    }
+
+    .custom-responsive-table.table-card-mode tr {
+      margin-bottom: 1.5rem;
+      padding: 1.25rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.25rem;
+    }
+
+    .custom-responsive-table.table-card-mode td {
+      display: grid;
+      grid-template-columns: 140px 1fr !important;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: right;
+    }
+
+    .custom-responsive-table.table-card-mode td:last-child {
+      border-bottom: 0;
+    }
+
+    .custom-responsive-table.table-card-mode td::before {
+      content: attr(data-label);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: left;
+    }
+
+    .custom-responsive-table.table-card-mode td>* {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .custom-responsive-table:not(.table-card-mode) th,
+    .custom-responsive-table:not(.table-card-mode) td {
+      white-space: nowrap;
+    }
+
+    .responsive-table-wrapper {
+      position: relative;
+      width: 100%;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="assets/js/layout.js"></script>
+
+  <script>
+    /**
+     * Auto-Labeling and Adaptive Resize Controller
+     */
+    function initSmartTables() {
+      const tables = document.querySelectorAll('.custom-responsive-table');
+
+      tables.forEach(table => {
+        // Step 1: Extract Headers Text (handling icons/tags if any)
+        const headerCells = table.querySelectorAll('thead th');
+        const labels = Array.from(headerCells).map(th => th.innerText.trim());
+
+        // Step 2: Inject Labels into Rows
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const cells = row.querySelectorAll('td');
+          cells.forEach((cell, i) => {
+            if (labels[i]) {
+              cell.setAttribute('data-label', labels[i]);
+            }
+          });
+        });
+
+        // Step 3: Resize Logic
+        const wrapper = table.parentElement;
+        const breakPoint = labels.length * 140;
+
+        const observer = new ResizeObserver(entries => {
+          for (let entry of entries) {
+            if (entry.contentRect.width < breakPoint) {
+              table.classList.add('table-card-mode');
+            } else {
+              table.classList.remove('table-card-mode');
+            }
+          }
+        });
+        observer.observe(wrapper);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initSmartTables);
+    // Re-run after a small delay in case of dynamic content
+    window.onload = initSmartTables; 
+  </script>
+</body>
+
+</html>
