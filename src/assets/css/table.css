@@ -11,11 +11,19 @@
     width: 100%;
 }
 
-.custom-responsive-table.table-card-mode tr {
+.dark .custom-responsive-table.table-card-mode tr {
     margin-bottom: 1.5rem;
     padding: 1.25rem 1rem;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.25rem;
+}
+
+.custom-responsive-table.table-card-mode tr {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 1.25rem;
 }
 
@@ -25,8 +33,12 @@
     align-items: center;
     gap: 1rem;
     padding: 0.85rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     text-align: right;
+}
+
+.dark .custom-responsive-table.table-card-mode td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .custom-responsive-table.table-card-mode td:last-child {
