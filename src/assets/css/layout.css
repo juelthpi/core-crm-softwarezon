@@ -2,6 +2,30 @@
 
  /* active-item */
  /* active-child */
+ :root {
+   --font-family: "DM Sans", sans-serif;
+   --font-base: 16px;
+   /* Base Colors */
+   --white: #FFFFFF;
+   --soft-white: #F5F5F5;
+   --white-fixed: #FFFFFF;
+   --black: #000000;
+   --dark-green: #0C1110;
+   --dark-black: #050A08;
+   --body: #050A08;
+   --gray: #0F1514;
+   --red: #E02424;
+   --green: #13A10E;
+   --blue: #004FD4;
+   --yellow: #E88000;
+   --purple: #B314C8;
+   /* layout colors */
+   --sidebar: #0C1110;
+   --sidebar-dark-green: #0C1110;
+   --sidebar-white: #FFFFFF;
+   --sidebar-black: #000000;
+ }
+
  @theme {
    /* Site Base Colors */
    --color-brand: var(--brand-main);
@@ -23,30 +47,12 @@
    --color-sidebar-white: var(--sidebar-white);
    --color-sidebar-black: var(--sidebar-black);
    --font-body: var(--font-family);
-   --text-base: 15px;
+
+
  }
 
- :root {
-   --font-family: "DM Sans", sans-serif;
-   /* Base Colors */
-   --white: #FFFFFF;
-   --soft-white: #F5F5F5;
-   --white-fixed: #FFFFFF;
-   --black: #000000;
-   --dark-green: #0C1110;
-   --dark-black: #050A08;
-   --body: #050A08;
-   --gray: #0F1514;
-   --red: #E02424;
-   --green: #13A10E;
-   --blue: #004FD4;
-   --yellow: #E88000;
-   --purple: #B314C8;
-   /* layout colors */
-   --sidebar: #0C1110;
-   --sidebar-dark-green: #0C1110;
-   --sidebar-white: #FFFFFF;
-   --sidebar-black: #000000;
+ html {
+   font-size: var(--font-base);
  }
 
  /* Base style for logo visibility based on dark class */
@@ -492,3 +498,14 @@
  }
 
  /* --- Mini Sidebar End --- */
+ /* Action Dropdown Styles */
+ .action-dropdown .dropdown-menu.show {
+   opacity: 1 !important;
+   visibility: visible !important;
+   transform: translateY(0) !important;
+ }
+
+ .action-dropdown .dropdown-menu {
+   transform: translateY(10px);
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
