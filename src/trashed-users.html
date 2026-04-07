@@ -13,8 +13,7 @@
       --brand-main: #008658;
     }
   </style>
-  <!-- Tom Select CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +26,8 @@
   <!-- <link rel="stylesheet" href="assets/icons/iconly.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+
 </head>
 
 <body class="bg-body-light dark:bg-body text-main font-body transition-colors duration-300">
@@ -429,367 +430,386 @@
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              User Management
+              Trashed Users
             </h5>
-            <p class="text-black/60 text-sm dark:text-white/60">
-              Manage your platform users efficiently
-            </p>
+            <!-- Breadcrumb -->
+            <ul class="flex gap-2 items-center">
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Manage
+                  Users</a>
+              </li>
+              <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Trashed
+                  Users</a></li>
+            </ul>
           </div>
           <div class="flex gap-2">
+            <a href="manage-users.html" class="secondary-btn"> <i class="sz-arrow-left"></i> Back to Manage Users
+            </a>
 
-            <button class="primary-btn" onclick="toggleOffcanvas('driver-offcanvas')"> <i class="sz-plus text-xl"></i>
-              Add New User</button>
           </div>
         </div>
 
-        <div class="space-y-4">
-          <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-              <!-- item 1 -->
-              <div
-                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
-                <!-- Background Gradient -->
-                <div
-                  class="absolute inset-0 w-full h-full pointer-events-none
-  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)]
-  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)]">
-                </div>
 
-                <div class="space-y-1 relative z-10">
-                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">40</h5>
-                  <p class="text-black/60 dark:text-white/60 text-sm">Total Users</p>
-                </div>
-                <div
-                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
-                  <i class="sz-clipboard-list-2 text-brand text-3xl"></i>
-                </div>
-              </div>
-              <!-- item 2 -->
-              <div
-                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
-                <!-- Background Gradient -->
-                <div
-                  class="absolute inset-0 w-full h-full pointer-events-none
-  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]
-  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]">
-                </div>
-
-                <div class="space-y-1 relative z-10">
-                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
-                  <p class="text-black/60 dark:text-white/60 text-sm">Super Admin</p>
-                </div>
-                <div
-                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
-                  <i class="sz-user-circle-2 text-blue text-3xl"></i>
-                </div>
-              </div>
-              <!-- item 3 -->
-              <a href="payment-gateway-awaiting-approval.html"
-                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
-                <!-- Background Gradient -->
-                <div
-                  class="absolute inset-0 w-full h-full pointer-events-none
-  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-yellow)_20%,transparent)_0%,transparent_65%)]
-  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-yellow)_20%,transparent)_0%,transparent_65%)]">
-                </div>
-
-                <div class="space-y-1 relative z-10">
-                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
-                  <p class="text-black/60 dark:text-white/60 text-sm">Users</p>
-                </div>
-                <div
-                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
-                  <i class="sz-user-group-2 text-yellow text-3xl"></i>
-                </div>
-              </a>
-              <!-- item 4 -->
-              <div
-                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
-                <!-- Background Gradient -->
-                <div
-                  class="absolute inset-0 w-full h-full pointer-events-none
-                  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]
-                  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]">
-                </div>
-
-                <div class="space-y-1 relative z-10">
-                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
-                  <p class="text-black/60 dark:text-white/60 text-sm">Trashed Users</p>
-                </div>
-                <div
-                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
-                  <i class="sz-trash-2 text-red text-3xl"></i>
-                </div>
-              </div>
-
+        <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+          <div class="mb-4 flex items-center justify-between gap-2 flex-wrap">
+            <div>
+              <h6 class="text-base text-black font-semibold dark:text-white">Trashed Users</h6>
+              <p class="text-sm text-black/60 dark:text-white/60">Review and manage all trashed users</p>
             </div>
+            <div class="flex items-center gap-3 flex-wrap">
+              <div class="relative group w-full md:w-76">
+                <div class="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none">
+                  <i
+                    class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
+                </div>
+                <input type="text" placeholder="Search Here"
+                  class="w-full md:w-76 bg-black/3 dark:bg-white/4 border border-black/2 dark:border-white/6 rounded-lg py-2.5 ps-11 pe-4 text-sm text-black dark:text-white placeholder:text-black/80 dark:placeholder:text-white/50 hover:text-black dark:hover:text-white focus:outline-none focus:border-brand/40 focus:bg-black/8 dark:focus:bg-white/8 transition-all" />
+              </div>
+              <!-- <button class="primary-btn" onclick="toggleOffcanvas('manual-payment-gateway-offcanvas')"> <i
+                  class="sz-plus text-xl"></i>
+                Add Gateway </button> -->
+            </div>
+
           </div>
-          <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
-            <div class="mb-4">
-              <h6 class="text-base text-black font-semibold dark:text-white">User Management</h6>
+          <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+            <div class="responsive-table-wrapper">
+              <table class="w-full text-left border-collapse custom-responsive-table">
+                <thead>
+                  <tr>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">#SL</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">User</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Deleted At</th>
 
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Role</th>
+
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-black/8 dark:divide-white/8">
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2024-01-15</span>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="status-badge bg-black/10 dark:bg-white/10 text-black/80 dark:text-white/60 border-white/15 ">
+                          User
+                        </div>
+                      </div>
+                    </td>
+
+
+                    <td class="py-3 px-1 text-right">
+                      <div class="flex items-center">
+                        <div class="relative action-dropdown group">
+                          <button
+                            class="h-9 w-9 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-black/40 dark:text-white/60 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 flex items-center justify-center cursor-pointer dropdown-trigger"
+                            title="Actions">
+                            <i class="sz-dots-line text-xl"></i>
+                          </button>
+
+                          <!-- Dropdown Menu -->
+                          <div
+                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            <div class="p-2 space-y-0.5">
+
+
+                              <button data-modal="restore-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-brand hover:bg-brand/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-refresh text-lg"></i> Restore
+                              </button>
+                              <button data-modal="delete-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-trash text-lg"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-9.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2024-01-15</span>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="status-badge bg-black/10 dark:bg-white/10 text-black/80 dark:text-white/60 border-white/15 ">
+                          User
+                        </div>
+                      </div>
+                    </td>
+
+
+                    <td class="py-3 px-1 text-right">
+                      <div class="flex items-center">
+                        <div class="relative action-dropdown group">
+                          <button
+                            class="h-9 w-9 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-black/40 dark:text-white/60 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 flex items-center justify-center cursor-pointer dropdown-trigger"
+                            title="Actions">
+                            <i class="sz-dots-line text-xl"></i>
+                          </button>
+
+                          <!-- Dropdown Menu -->
+                          <div
+                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            <div class="p-2 space-y-0.5">
+
+
+                              <button data-modal="restore-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-brand hover:bg-brand/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-refresh text-lg"></i> Restore
+                              </button>
+                              <button data-modal="delete-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-trash text-lg"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">3</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-9.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2024-01-15</span>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="status-badge bg-black/10 dark:bg-white/10 text-black/80 dark:text-white/60 border-white/15 ">
+                          User
+                        </div>
+                      </div>
+                    </td>
+
+
+                    <td class="py-3 px-1 text-right">
+                      <div class="flex items-center">
+                        <div class="relative action-dropdown group">
+                          <button
+                            class="h-9 w-9 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-black/40 dark:text-white/60 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 flex items-center justify-center cursor-pointer dropdown-trigger"
+                            title="Actions">
+                            <i class="sz-dots-line text-xl"></i>
+                          </button>
+
+                          <!-- Dropdown Menu -->
+                          <div
+                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            <div class="p-2 space-y-0.5">
+
+
+                              <button data-modal="restore-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-brand hover:bg-brand/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-refresh text-lg"></i> Restore
+                              </button>
+                              <button data-modal="delete-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-trash text-lg"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">4</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-5.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2024-01-15</span>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="status-badge bg-black/10 dark:bg-white/10 text-black/80 dark:text-white/60 border-white/15 ">
+                          User
+                        </div>
+                      </div>
+                    </td>
+
+
+                    <td class="py-3 px-1 text-right">
+                      <div class="flex items-center">
+                        <div class="relative action-dropdown group">
+                          <button
+                            class="h-9 w-9 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-black/40 dark:text-white/60 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 flex items-center justify-center cursor-pointer dropdown-trigger"
+                            title="Actions">
+                            <i class="sz-dots-line text-xl"></i>
+                          </button>
+
+                          <!-- Dropdown Menu -->
+                          <div
+                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            <div class="p-2 space-y-0.5">
+
+
+                              <button data-modal="restore-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-brand hover:bg-brand/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-refresh text-lg"></i> Restore
+                              </button>
+                              <button data-modal="delete-confirmation-modal"
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                <i class="sz-trash text-lg"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
 
-              <!-- item 1 -->
-              <div
-                class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-                <div class="flex items-start justify-between mb-4">
-                  <div
-                    class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                    <i class="sz-users text-black dark:text-white text-2xl"></i>
-                  </div>
-                  <a href="all-users.html"
-                    class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    Manage <i class="sz-long-arrow-right text-sm"></i>
-                  </a>
-                </div>
-                <div>
-                  <h5 class="text-lg font-medium text-black dark:text-white tracking-wide">
-                    All Users
-                  </h5>
-                  <p class="text-sm text-black/60 dark:text-white/60">
-                    View and manage all users
-
-                  </p>
-                </div>
-              </div>
-              <!-- item 2 -->
-              <div
-                class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-                <div class="flex items-start justify-between mb-4">
-                  <div
-                    class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                    <i class="sz-trash text-black dark:text-white text-2xl"></i>
-                  </div>
-                  <a href="trashed-users.html"
-                    class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                    Manage <i class="sz-long-arrow-right text-sm"></i>
-                  </a>
-                </div>
-                <div>
-                  <h5 class="text-lg font-medium text-black dark:text-white tracking-wide">
-                    Trashed Users
-                  </h5>
-                  <p class="text-sm text-black/60 dark:text-white/60">
-                    Add a hecutar to the platform
-
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
           </div>
         </div>
       </section>
-      <!-- driver edit offcanvas code start -->
-      <!-- Offcanvas overlay -->
-      <div id="offcanvas-overlay"
-        class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0 cursor-pointer"
-        onclick="closeOffcanvas()"></div>
 
-      <!-- Offcanvas content -->
-      <div id="driver-offcanvas"
-        class="offcanvas-panel fixed inset-y-0 inset-e-0 z-70 w-full max-w-md bg-white dark:bg-dark-green transform translate-x-full rtl:-translate-x-full border-l border-black/10 dark:border-white/10 transition-transform duration-300 ease-in-out flex flex-col">
-        <!-- Header -->
-        <div class="flex items-center justify-between p-4 md:p-6 border-b border-black/10 dark:border-white/10">
-          <div class="flex items-center gap-3">
-            <div
-              class="w-12 h-12 rounded-xl bg-brand/15   border border-brand/15 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-              <i class="sz-user-plus text-black dark:text-white text-2xl"></i>
-            </div>
-            <div>
-              <h5 class="text-base font-bold text-black dark:text-white">Create User</h5>
-              <p class="text-sm text-black/60 dark:text-white/60">Create a new user and configure its details</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-
-            <button onclick="closeOffcanvas()"
-              class="w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors cursor-pointer shrink-0">
-              <i class="sz-close"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Body -->
-        <div class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
-
-
-          <!-- Section 2 -->
-          <div class="space-y-4">
-
-            <div class="form-group">
-              <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" placeholder="Enter your full name">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input type="text" class="form-control" placeholder="Enter your email address">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone Number</label>
-              <input type="text" class="form-control" placeholder="Enter your phone number">
-            </div>
-            <!-- Example 1: Basic Select (Single) -->
-            <div class="space-y-3">
-              <label class="form-label">Country</label>
-              <select id="country" placeholder="Search and Select country...">
-                <option value="">Search and Select country...</option>
-                <option value="bd">Bangladesh</option>
-                <option value="in">India</option>
-                <option value="pk">Pakistan</option>
-                <option value="us">USA</option>
-                <option>test 1</option>
-                <option>test 2</option>
-                <option>test 3</option>
-                <option>test 4</option>
-                <option>test 5</option>
-                <option>test 6</option>
-                <option>test 7</option>
-                <option>test 8</option>
-                <option>test 9</option>
-                <option>test 10</option>
-
-              </select>
-            </div>
-            <!-- Example 1: Basic Select (Single) -->
-            <div class="space-y-3">
-              <label class="form-label">Role</label>
-              <select id="role" placeholder="Search and Select role...">
-                <option value="">Search and Select role...</option>
-                <option value="bd">Admin</option>
-                <option value="in">Manager</option>
-                <option value="pk">User</option>
-                <option value="us">Driver</option>
-                <option>test 1</option>
-                <option>test 2</option>
-                <option>test 3</option>
-                <option>test 4</option>
-                <option>test 5</option>
-                <option>test 6</option>
-                <option>test 7</option>
-                <option>test 8</option>
-                <option>test 9</option>
-                <option>test 10</option>
-
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Password</label>
-              <div class="relative">
-                <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
-                <button type="button"
-                  class="toggle-password absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
-                  <i class="sz-eye text-lg"></i>
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Confirm Password</label>
-              <div class="relative">
-                <input type="password" class="form-control pe-10" value="5f3b1c2d3e4f5a6b7c8d9e0f">
-                <button type="button"
-                  class="toggle-password absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
-                  <i class="sz-eye text-lg"></i>
-                </button>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Section 3 -->
-          <div
-            class="dark:bg-white/4 p-2.5 lg:p-3.5 rounded-xl bg-black/5 flex items-center gap-2 justify-between flex-wrap transition-colors hover:dark:bg-white/6">
-            <span class="text-sm font-medium text-black dark:text-white/90">Email Verify Status</span>
-            <label class="form-switch">
-              <input type="checkbox" checked>
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="p-4 md:p-6 border-t border-black/10 dark:border-white/10 flex items-center justify-end gap-3">
-          <button class="secondary-btn" onclick="closeOffcanvas()">Cancel</button>
-          <button class="primary-btn"><i class="sz-check"></i> Save Changes</button>
-        </div>
-      </div>
-      <!-- driver edit offcanvas code end -->
     </main>
   </div>
+
+  <!-- Delete confirmation Modal -->
+  <div id="delete-confirmation-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+
+
+            <!-- Merchant Information -->
+            <div class="space-y-4">
+              <div class="lg:w-20 lg:h-20 w-10 h-10 rounded-full flex items-center justify-center bg-red/10 mx-auto">
+                <i class="sz-trash lg:text-4xl text-2xl text-red"></i>
+              </div>
+              <h6 class="text-lg font-semibold text-black dark:text-white tracking-wider text-center">Delete User?</h6>
+              <p class="text-sm text-black/70 dark:text-white/70 text-center">This action will move the user to trash.
+                You can restore them later.</p>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-center shrink-0 relative z-1 gap-2 flex-wrap">
+          <button class="secondary-btn modal-close-btn"> <i class="sz-reply text-lg"></i> Cancel</button>
+          <button class="primary-btn bg-red"> <i class="sz-trash text-lg"></i> Delete</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Restore confirmation Modal -->
+  <div id="restore-confirmation-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+
+
+            <!-- Merchant Information -->
+            <div class="space-y-4">
+              <div class="lg:w-20 lg:h-20 w-10 h-10 rounded-full flex items-center justify-center bg-yellow/15 mx-auto">
+                <i class="sz-refresh lg:text-4xl text-2xl text-yellow"></i>
+              </div>
+              <h6 class="text-lg font-semibold text-black dark:text-white tracking-wider text-center">Restore User?</h6>
+              <p class="text-sm text-black/70 dark:text-white/70 text-center">This action will restore the user.</p>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-center shrink-0 relative z-1 gap-2 flex-wrap">
+          <button class="secondary-btn modal-close-btn"> <i class="sz-reply text-lg"></i> Cancel</button>
+          <button class="primary-btn"> <i class="sz-refresh text-lg"></i> Restore</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Core Scripts -->
+
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
-  <!-- Offcanvas Script -->
-  <script>
-    function toggleOffcanvas(id) {
-      const offcanvas = document.getElementById(id);
-      const overlay = document.getElementById('offcanvas-overlay');
+  <script src="assets/js/table.js"></script>
+  <script src="assets/js/modal.js"></script>
 
-      if (offcanvas && overlay) {
-        overlay.classList.remove('hidden');
-        setTimeout(() => {
-          overlay.classList.remove('opacity-0');
-        }, 10);
-
-        offcanvas.classList.remove('translate-x-full', 'rtl:-translate-x-full');
-      }
-    }
-    function closeOffcanvas() {
-      const overlay = document.getElementById('offcanvas-overlay');
-      const offcanvases = document.querySelectorAll('.offcanvas-panel');
-
-      offcanvases.forEach(offcanvas => {
-        offcanvas.classList.add('translate-x-full', 'rtl:-translate-x-full');
-      });
-
-      if (overlay) {
-        overlay.classList.add('opacity-0');
-        setTimeout(() => {
-          overlay.classList.add('hidden');
-        }, 300);
-      }
-    }
-
-
-  </script>
-  <!-- Tom Select JS -->
-  <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-  <script>
-    new TomSelect("#country", {
-      create: true,
-      maxItems: 1,
-      sortField: { field: "text", direction: "asc" }
-    });
-    new TomSelect("#role", {
-      create: true,
-      maxItems: 1,
-      sortField: { field: "text", direction: "asc" }
-    });
-  </script>
-  <!-- password show hide -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.toggle-password').forEach(button => {
-        button.addEventListener('click', function () {
-          const input = this.closest('.relative').querySelector('input');
-          const icon = this.querySelector('i');
-
-          if (input.type === 'password') {
-            input.type = 'text';
-            icon.classList.remove('sz-eye');
-            icon.classList.add('sz-eye-slash');
-          } else {
-            input.type = 'password';
-            icon.classList.remove('sz-eye-slash');
-            icon.classList.add('sz-eye');
-          }
-        });
-      });
-    });
-  </script>
 
 </body>
 

@@ -2637,12 +2637,32 @@
       }
     }
   }
+  .hover\:bg-brand\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-brand);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-brand) 10%, transparent);
+        }
+      }
+    }
+  }
   .hover\:bg-brand\/70 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-brand);
         @supports (color: color-mix(in lab, red, red)) {
           background-color: color-mix(in oklab, var(--color-brand) 70%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-brand\/80 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-brand);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-brand) 80%, transparent);
         }
       }
     }
