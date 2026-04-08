@@ -47,8 +47,6 @@
    --color-sidebar-white: var(--sidebar-white);
    --color-sidebar-black: var(--sidebar-black);
    --font-body: var(--font-family);
-
-
  }
 
  html {
@@ -121,8 +119,6 @@
    position: relative;
  }
 
-
-
  @utility sidebar-link {
    @apply flex items-center gap-2.5 px-3 py-2 text-sidebar-black/60 dark:text-sidebar-white/70 transition-all duration-300 hover:text-brand/60 rounded-xl flex-nowrap relative w-full cursor-pointer;
  }
@@ -190,7 +186,6 @@
  .dropdown-item {
    @apply relative flex items-center gap-3 px-3 py-2 text-black/50 dark:text-white/50 transition-all duration-300 hover:text-brand hover:bg-black/5 dark:hover:bg-white/2 rounded-md text-sm;
  }
-
 
  .dropdown-arrow {
    @apply transition-transform duration-300;

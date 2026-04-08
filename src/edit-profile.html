@@ -393,7 +393,7 @@
               <div class="p-2 space-y-1">
                 <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70  hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
-                  <i class="sz-pencil-alt text-lg"></i>
+                  <i class="sz-edit-alt text-lg"></i>
                   Edit Profile
                 </a>
                 <a href="#"
@@ -436,18 +436,124 @@
             </ul>
             <!-- end breadcrumb -->
           </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 flex-wrap">
             <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
             <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
 
           </div>
         </div>
         <div class="mt-4 grid grid-cols-12 gap-4">
-          <div class="col-span-12  dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+          <aside class="col-span-12 lg:col-span-4 xl:col-span-3 2xl:col-span-2 ">
+            <!-- Mobile Profile Menu Toggle -->
+            <button onclick="toggleProfileNav()"
+              class="lg:hidden w-full flex items-center justify-between p-3 bg-white dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-2xl group transition-all">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 flex items-center justify-center rounded-xl bg-brand/10 text-brand group-hover:bg-brand group-hover:text-white transition-all">
+                  <i class="sz-edit-alt text-lg"></i>
+                </div>
+                <div class="text-left">
+                  <span
+                    class="text-sm font-bold text-black/70 dark:text-white/70 uppercase tracking-widest block leading-none mb-1">Menu</span>
+                  <span class="text-sm font-bold text-black dark:text-white block leading-none">Profile Settings</span>
+                </div>
+              </div>
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 transition-all group-hover:bg-brand/10">
+                <i class="sz-angle-down text-xs transition-transform duration-300" id="profile-nav-arrow"></i>
+              </div>
+            </button>
+
+            <div id="profile-nav-wrapper"
+              class="grid grid-rows-[0fr] lg:grid-rows-[1fr] opacity-0 lg:opacity-100 transition-all duration-300 overflow-hidden lg:sticky lg:top-24">
+              <div class="min-h-0">
+                <nav
+                  class="mt-4 lg:mt-0 dark:bg-dark-green bg-black/5 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 space-y-3">
+                  <!-- ACCOUNT SECTION -->
+                  <div>
+                    <span
+                      class="text-sm font-semibold text-black/40 dark:text-white/30 uppercase mb-4 block px-2">Account</span>
+                    <div class="space-y-1.5">
+                      <a href="edit-profile.html" class="profile-nav-link active">
+                        <div class="flex items-center gap-3">
+                          <i class="sz-edit-alt text-lg"></i>
+                          <span class="text-sm font-semibold">Edit Profile</span>
+                        </div>
+                        <span class="active-indicator"></span>
+                      </a>
+                      <a href="update-password.html" class="profile-nav-link">
+                        <div class="flex items-center gap-3">
+                          <i class="sz-key text-lg"></i>
+                          <span class="text-sm font-semibold">Update Password</span>
+                        </div>
+                        <span class="active-indicator"></span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- SECURITY SECTION -->
+                  <div>
+                    <span
+                      class="text-sm font-semibold text-black/40 dark:text-white/30 uppercase mb-4 block px-2">Security</span>
+                    <div class="space-y-1.5">
+                      <a href="manage-2fa.html" class="profile-nav-link">
+                        <div class="flex items-center gap-3">
+                          <i class="sz-shield-check text-lg"></i>
+                          <span class="text-sm font-semibold">Manage 2FA</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <span class="nav-badge">On</span>
+                          <span class="active-indicator"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- PREFERENCES SECTION -->
+                  <div>
+                    <span
+                      class="text-sm font-semibold text-black/40 dark:text-white/30 uppercase mb-4 block px-2">Preferences</span>
+                    <div class="space-y-1.5">
+                      <a href="manage-notifications.html" class="profile-nav-link">
+                        <div class="flex items-center gap-3">
+                          <i class="sz-bell text-lg"></i>
+                          <span class="text-sm font-semibold">Notifications</span>
+                        </div>
+                        <span class="active-indicator"></span>
+                      </a>
+                      <a href="manage-privacy.html" class="profile-nav-link">
+                        <div class="flex items-center gap-3">
+                          <i class="sz-lock text-lg"></i>
+                          <span class="text-sm font-semibold">Privacy</span>
+                        </div>
+                        <span class="active-indicator"></span>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </aside>
+          <div
+            class="col-span-12 lg:col-span-8 xl:col-span-9 2xl:col-span-10  dark:bg-dark-green bg-black/5 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
             <div>
-              <h6 class="text-base text-black font-semibold dark:text-white">Profile Information</h6>
-              <p class="text-black/60 text-sm dark:text-white/60">Manage your account details and personal preferences
+              <h6 class="text-base text-black font-semibold dark:text-white">Edit Profile</h6>
+              <p class="text-black/60 text-sm dark:text-white/60">Manage your personal information and public profile
+                details.
               </p>
+            </div>
+            <div class="flex-wrap flex items-center gap-3 mt-4 image-upload-group">
+              <div class="w-14 h-14 rounded-full overflow-hidden border border-black/10 dark:border-white/20">
+                <img src="assets/images/users/user-2.png" alt="Profile" class="preview-img w-full h-full object-cover">
+              </div>
+              <div>
+                <h6 class="text-base text-black font-semibold dark:text-white">Profile Photo</h6>
+                <p class="text-black/60 text-sm dark:text-white/60">JPG, PNG or GIF · Max 2MB
+                </p>
+              </div>
+              <input type="file" class="hidden-upload-input hidden" accept="image/*">
+              <button type="button" class="secondary-btn-md upload-trigger"> <i class="sz-upload"></i> Upload
+                Photo</button>
             </div>
             <div class="mt-4">
               <!-- Single Column Block -->
@@ -472,6 +578,13 @@
                 <div class="form-group md:col-span-6">
                   <label class="form-label">Phone Number</label>
                   <input type="text" class="form-control" placeholder="+1 234 567 890">
+                </div>
+              </div>
+              <!-- single Column Grid -->
+              <div class="row">
+                <div class="form-group md:col-span-12">
+                  <label class="form-label">Bio & Description</label>
+                  <textarea class="form-control" placeholder="Enter Bio & Description"></textarea>
                 </div>
               </div>
               <!-- file upload start -->
@@ -541,6 +654,88 @@
       create: true,
       maxItems: 3,
       sortField: { field: "text", direction: "asc" }
+    });
+  </script>
+  <script>
+    // Profile Navigation Toggle (Mobile)
+    function toggleProfileNav() {
+      const wrapper = document.getElementById('profile-nav-wrapper');
+      const arrow = document.getElementById('profile-nav-arrow');
+      if (wrapper && arrow) {
+        wrapper.classList.toggle('grid-rows-[0fr]');
+        wrapper.classList.toggle('grid-rows-[1fr]');
+        wrapper.classList.toggle('opacity-0');
+        wrapper.classList.toggle('opacity-100');
+        arrow.classList.toggle('rotate-180');
+      }
+    }
+  </script>
+  <script>
+
+
+    // Global Image Upload Handler
+    document.addEventListener('click', function (e) {
+      // 1. Handle button-based triggers (.upload-trigger)
+      const trigger = e.target.closest('.upload-trigger');
+      if (trigger) {
+        const group = trigger.closest('.image-upload-group');
+        if (group) {
+          const input = group.querySelector('input[type="file"]');
+          if (input) input.click();
+        }
+      }
+
+      // 2. Handle box-based triggers (.upload-box)
+      const box = e.target.closest('.upload-box');
+      if (box && !e.target.closest('.remove-file') && !e.target.closest('input')) {
+        const input = box.querySelector('input[type="file"]');
+        if (input) input.click();
+      }
+
+      // 3. Handle file removal (.remove-file)
+      const removeBtn = e.target.closest('.remove-file');
+      if (removeBtn) {
+        const box = removeBtn.closest('.upload-box');
+        if (box) {
+          const input = box.querySelector('input[type="file"]');
+          const preview = box.querySelector('.upload-preview');
+          const placeholder = box.querySelector('.upload-placeholder');
+          if (input) input.value = '';
+          if (preview) preview.classList.add('hidden');
+          if (placeholder) placeholder.classList.remove('hidden');
+        }
+      }
+    });
+
+    document.addEventListener('change', function (e) {
+      if (e.target.matches('input[type="file"]')) {
+        const input = e.target;
+        const file = input.files[0];
+        if (!file) return;
+
+        // Find containers
+        const group = input.closest('.image-upload-group');
+        const box = input.closest('.upload-box');
+
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          // Update .image-upload-group preview
+          if (group) {
+            const previewImg = group.querySelector('.preview-img');
+            if (previewImg) previewImg.src = event.target.result;
+          }
+          // Update .upload-box preview
+          if (box) {
+            const previewImg = box.querySelector('.preview-image');
+            const previewContainer = box.querySelector('.upload-preview');
+            const placeholder = box.querySelector('.upload-placeholder');
+            if (previewImg) previewImg.src = event.target.result;
+            if (previewContainer) previewContainer.classList.remove('hidden');
+            if (placeholder) placeholder.classList.add('hidden');
+          }
+        };
+        reader.readAsDataURL(file);
+      }
     });
   </script>
 </body>

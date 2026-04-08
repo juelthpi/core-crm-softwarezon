@@ -1,0 +1,22 @@
+ /* Profile Navigation Sidebar */
+ .profile-nav-link {
+     @apply flex items-center justify-between px-3 py-2.5 rounded-xl text-black/50 dark:text-white/40 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300;
+ }
+
+ .profile-nav-link.active {
+     @apply border border-brand/30 bg-brand/5 text-black dark:text-white;
+ }
+
+ /* Indicator Circle - Shown only when active */
+ .profile-nav-link .active-indicator {
+     @apply w-2 h-2 rounded-full bg-brand hidden;
+     box-shadow: 0 0 10px rgba(0, 134, 88, 0.5);
+ }
+
+ .profile-nav-link.active .active-indicator {
+     @apply block;
+ }
+
+ .nav-badge {
+     @apply px-3 py-1 rounded-full bg-brand/10 border border-brand/30 text-brand text-sm font-semibold transition-all duration-300;
+ }
