@@ -201,7 +201,7 @@
 
    &::after {
      content: '';
-     @apply absolute right-3 top-1/2 -translate-y-1/2 w-2 h-2 bg-brand rounded-full transition-all duration-300;
+     @apply absolute inset-e-3 top-1/2 -translate-y-1/2 w-2 h-2 bg-brand rounded-full transition-all duration-300;
    }
  }
 

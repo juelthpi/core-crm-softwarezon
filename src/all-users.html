@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="rtl">
 
 <head>
   <meta charset="UTF-8" />
@@ -384,7 +384,7 @@
             <button
               class="h-11 min-w-11 shrink-0 px-3 rounded-lg bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center gap-3 text-sidebar-black dark:text-sidebar-white transition-all hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 cursor-pointer">
               <img src="assets/images/users/user-2.png" alt="Profile" class="w-7 h-7 rounded-full object-cover" />
-              <div class="text-left hidden lg:block">
+              <div class="text-start hidden lg:block">
                 <h5 class="text-sm font-semibold leading-none">
                   Super Admin
                 </h5>
@@ -479,7 +479,7 @@
           </div>
           <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
             <div class="responsive-table-wrapper">
-              <table class="w-full text-left border-collapse custom-responsive-table">
+              <table class="w-full text-start border-collapse custom-responsive-table">
                 <thead>
                   <tr>
                     <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">#SL</th>
@@ -493,7 +493,9 @@
                 </thead>
                 <tbody class="divide-y divide-black/8 dark:divide-white/8">
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">1</div>
+                    </td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
@@ -506,7 +508,8 @@
 
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">01700000000</span>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">01700000000</div>
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex flex-wrap">
@@ -524,7 +527,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="py-3 px-1 text-right">
+                    <td class="py-3 px-1 text-end">
                       <div class="flex items-center">
                         <div class="relative action-dropdown group">
                           <button
@@ -535,31 +538,31 @@
 
                           <!-- Dropdown Menu -->
                           <div
-                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            class="dropdown-menu absolute inset-e-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-end">
                             <div class="p-2 space-y-0.5">
                               <button data-modal="user-details-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clipboard-list text-lg text-black/40 dark:text-white/40"></i> Details
                               </button>
                               <button onclick="toggleOffcanvas('add-user-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-edit-alt text-lg text-black/40 dark:text-white/40"></i> Edit
                               </button>
                               <button onclick="toggleOffcanvas('login-history-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clock text-lg text-black/40 dark:text-white/40"></i> Login History
                               </button>
                               <button onclick="toggleOffcanvas('login-devices-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-device-mobile text-lg text-black/40 dark:text-white/40"></i> Devices
                               </button>
                               <div class="h-px bg-black/5 dark:bg-white/5 my-1.5"></div>
                               <button data-modal="suspend-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-ban text-lg"></i> Suspend
                               </button>
                               <button data-modal="delete-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-trash text-lg"></i> Delete
                               </button>
                             </div>
@@ -569,7 +572,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">1</div>
+                    </td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
@@ -582,7 +587,8 @@
 
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">01700000000</span>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">01700000000</div>
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex flex-wrap">
@@ -600,7 +606,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="py-3 px-1 text-right">
+                    <td class="py-3 px-1 text-end">
                       <div class="flex items-center">
                         <div class="relative action-dropdown group">
                           <button
@@ -611,31 +617,31 @@
 
                           <!-- Dropdown Menu -->
                           <div
-                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            class="dropdown-menu absolute inset-e-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-end">
                             <div class="p-2 space-y-0.5">
                               <button data-modal="user-details-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clipboard-list text-lg text-black/40 dark:text-white/40"></i> Details
                               </button>
                               <button onclick="toggleOffcanvas('add-user-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-edit-alt text-lg text-black/40 dark:text-white/40"></i> Edit
                               </button>
                               <button onclick="toggleOffcanvas('login-history-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clock text-lg text-black/40 dark:text-white/40"></i> Login History
                               </button>
                               <button onclick="toggleOffcanvas('login-devices-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-device-mobile text-lg text-black/40 dark:text-white/40"></i> Devices
                               </button>
                               <div class="h-px bg-black/5 dark:bg-white/5 my-1.5"></div>
                               <button data-modal="suspend-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-ban text-lg"></i> Suspend
                               </button>
                               <button data-modal="delete-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-trash text-lg"></i> Delete
                               </button>
                             </div>
@@ -645,7 +651,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">3</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">3</div>
+                    </td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
@@ -658,7 +666,8 @@
 
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">01700000000</span>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">01700000000</div>
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex flex-wrap">
@@ -676,7 +685,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="py-3 px-1 text-right">
+                    <td class="py-3 px-1 text-end">
                       <div class="flex items-center">
                         <div class="relative action-dropdown group">
                           <button
@@ -687,31 +696,31 @@
 
                           <!-- Dropdown Menu -->
                           <div
-                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            class="dropdown-menu absolute inset-e-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-end">
                             <div class="p-2 space-y-0.5">
                               <button data-modal="user-details-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clipboard-list text-lg text-black/40 dark:text-white/40"></i> Details
                               </button>
                               <button onclick="toggleOffcanvas('add-user-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-edit-alt text-lg text-black/40 dark:text-white/40"></i> Edit
                               </button>
                               <button onclick="toggleOffcanvas('login-history-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clock text-lg text-black/40 dark:text-white/40"></i> Login History
                               </button>
                               <button onclick="toggleOffcanvas('login-devices-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-device-mobile text-lg text-black/40 dark:text-white/40"></i> Devices
                               </button>
                               <div class="h-px bg-black/5 dark:bg-white/5 my-1.5"></div>
                               <button data-modal="suspend-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-ban text-lg"></i> Suspend
                               </button>
                               <button data-modal="delete-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-trash text-lg"></i> Delete
                               </button>
                             </div>
@@ -721,7 +730,9 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">4</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">4</div>
+                    </td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
@@ -734,7 +745,8 @@
 
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">01700000000</span>
+                    <td class="py-3 px-1">
+                      <div class="flex  text-black/80 dark:text-white/60">01700000000</div>
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex flex-wrap">
@@ -752,7 +764,7 @@
                         </div>
                       </div>
                     </td>
-                    <td class="py-3 px-1 text-right">
+                    <td class="py-3 px-1 text-end">
                       <div class="flex items-center">
                         <div class="relative action-dropdown group">
                           <button
@@ -763,31 +775,31 @@
 
                           <!-- Dropdown Menu -->
                           <div
-                            class="dropdown-menu absolute right-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-right">
+                            class="dropdown-menu absolute inset-e-0 top-full mt-2 w-52 bg-white dark:bg-dark-green border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 origin-top-end">
                             <div class="p-2 space-y-0.5">
                               <button data-modal="user-details-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clipboard-list text-lg text-black/40 dark:text-white/40"></i> Details
                               </button>
                               <button onclick="toggleOffcanvas('add-user-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-edit-alt text-lg text-black/40 dark:text-white/40"></i> Edit
                               </button>
                               <button onclick="toggleOffcanvas('login-history-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-clock text-lg text-black/40 dark:text-white/40"></i> Login History
                               </button>
                               <button onclick="toggleOffcanvas('login-devices-offcanvas')"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-device-mobile text-lg text-black/40 dark:text-white/40"></i> Devices
                               </button>
                               <div class="h-px bg-black/5 dark:bg-white/5 my-1.5"></div>
                               <button data-modal="suspend-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-orange-500 hover:bg-orange-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-ban text-lg"></i> Suspend
                               </button>
                               <button data-modal="delete-confirmation-modal"
-                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-left cursor-pointer">
+                                class="flex items-center gap-3 w-full px-3 py-2.5 text-sm font-medium text-red-500 hover:bg-red-500/10 rounded-lg transition-colors text-start cursor-pointer">
                                 <i class="sz-trash text-lg"></i> Delete
                               </button>
                             </div>
