@@ -101,10 +101,10 @@
  /* ==========================================================================
     Reusable Form Input Component (Tailwind System)
     ========================================================================== */
-
+ /* 
  @utility form-group {
      @apply mb-3 md:mb-4;
- }
+ } */
 
  @utility form-label {
      @apply block font-medium mb-2 transition-colors duration-300 text-xs text-black dark:text-white/90;
