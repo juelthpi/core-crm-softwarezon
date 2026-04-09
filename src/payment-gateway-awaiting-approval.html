@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -582,12 +582,12 @@
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex items-center gap-2">
-                        <button
+                        <button data-modal="gateway-approval-modal"
                           class="h-8 w-8 rounded-full border border-green-800 bg-green-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
                           title="Approve">
                           <i class="sz-check text-xl"></i>
                         </button>
-                        <button
+                        <button data-modal="gateway-reject-modal"
                           class="h-8 w-8 rounded-full border border-red-800 bg-red-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-red-700 hover:text-white cursor-pointer"
                           title="Reject">
                           <i class="sz-close text-xl"></i>
@@ -728,9 +728,18 @@
                 </div>
                 <!-- Details List -->
                 <div class="space-y-4">
-                  <div class="flex justify-between items-center text-sm">
-                    <span class="text-black/50 dark:text-white/50">Merchant ID</span>
-                    <span class="font-semibold text-black dark:text-white uppercase tracking-wide">MER-847291</span>
+
+                  <!-- Group 1 -->
+                  <div class="form-group">
+                    <label class="form-label">Merchant ID</label>
+                    <div class="relative mt-1">
+                      <input type="text" class="form-control pe-12" value="MER-847291" readonly>
+                      <button type="button"
+                        class="copy-btn absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors cursor-pointer"
+                        title="Copy URL">
+                        <i class="sz-duplicate text-lg pointer-events-none"></i>
+                      </button>
+                    </div>
                   </div>
                   <div class="flex justify-between items-center text-sm">
                     <span class="text-black/50 dark:text-white/50">Company Name</span>
@@ -745,40 +754,26 @@
             </div>
 
             <!-- Gateway Configuration -->
-            <div class="space-y-4 pb-4">
+            <div class="space-y-4  ">
               <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Gateway
                 Configuration
               </h6>
               <div
                 class="space-y-1 bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-3">
-                <div
-                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
-                  <span class="text-sm text-black/50 dark:text-white/50">Gateway Name</span>
-                  <span class="text-sm font-semibold text-black dark:text-white">Payid19</span>
+                <!-- Group 1 -->
+                <div class="form-group">
+                  <label class="form-label">Webhook URL</label>
+                  <div class="relative mt-1">
+                    <input type="text" class="form-control pe-12" value="https://api.tradingpro.com/webhooks/stripe"
+                      readonly>
+                    <button type="button"
+                      class="copy-btn absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors cursor-pointer"
+                      title="Copy URL">
+                      <i class="sz-duplicate text-lg pointer-events-none"></i>
+                    </button>
+                  </div>
                 </div>
-                <div
-                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
-                  <span class="text-sm text-black/50 dark:text-white/50">Gateway Provider</span>
-                  <span class="text-sm font-semibold text-black dark:text-white">Payid19 Inc.</span>
-                </div>
-                <div
-                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
-                  <span class="text-sm text-black/50 dark:text-white/50">API Key</span>
-                  <span
-                    class="text-sm font-semibold text-black dark:text-white truncate max-w-[200px]">pk_live_••••••••••••4f8k</span>
-                </div>
-                <div
-                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
-                  <span class="text-sm text-black/50 dark:text-white/50">Secret Key</span>
-                  <span
-                    class="text-sm font-semibold text-black dark:text-white truncate max-w-[200px]">sk_live_••••••••••••9x2m</span>
-                </div>
-                <div
-                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
-                  <span class="text-sm text-black/50 dark:text-white/50">Webhook URL</span>
-                  <span
-                    class="text-sm font-semibold text-black/80 dark:text-white/80 truncate max-w-[250px]">https://api.tradingpro.com/webhooks/st</span>
-                </div>
+
                 <div
                   class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
                   <span class="text-sm text-black/50 dark:text-white/50">Supported Currency</span>
@@ -793,6 +788,20 @@
                 <div class="flex justify-between items-center py-4 px-2">
                   <span class="text-sm text-black/50 dark:text-white/50">Settlement Period</span>
                   <span class="text-sm font-semibold text-black dark:text-white">T+2 Days</span>
+                </div>
+              </div>
+            </div>
+            <!-- Payment proof -->
+            <div class="space-y-4 pb-4">
+              <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Payment Proof
+              </h6>
+              <div
+                class="space-y-1 bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-3">
+                <div class="flex flex-wrap gap-2.5 items-center py-2 px-2">
+                  <img src="assets/images/thumbnails/login-thumbnails.png" alt="img"
+                    class="max-w-25 w-full h-auto object-cover rounded-xl">
+                  <img src="assets/images/thumbnails/login-thumbnails.png" alt="img"
+                    class="max-w-25 w-full h-auto object-cover rounded-xl">
                 </div>
               </div>
             </div>
@@ -834,6 +843,150 @@
       </div>
     </div>
   </div>
+  <!-- Gateway Approval Modal -->
+  <div id="gateway-approval-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+              <i class="sz-information-circle text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Approve Gateway</h4>
+              <p class="text-xs text-black/50 dark:text-white/50">Are you sure you want to approve this request?</p>
+            </div>
+          </div>
+          <button
+            class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+            <i class="sz-close"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+            <!-- Payment Summary -->
+            <div class="space-y-4  ">
+              <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Payment Summary
+              </h6>
+              <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-3">
+
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50"> Gateway Name</span>
+                  <span class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">Payid19</span>
+                </div>
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50">Merchant</span>
+                  <span class="text-sm font-semibold text-black dark:text-white tracking-wide">John Anderson</span>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2">
+                  <span class="text-sm text-black/50 dark:text-white/50">Request ID</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">REQ-2024-0847</span>
+                </div>
+              </div>
+            </div>
+            <!-- Payment proof -->
+            <div class="form-group">
+              <label class="form-label">Admin Note</label>
+              <textarea name="" id="" class="form-control" placeholder="Add any note about this approval"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+          <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+            Request</button>
+          <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Confirm Approve</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Gateway Reject Modal -->
+  <div id="gateway-reject-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+              <i class="sz-information-circle text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Reject Gateway</h4>
+              <p class="text-xs text-black/50 dark:text-white/50">Please provide a reason for rejection</p>
+            </div>
+          </div>
+          <button
+            class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+            <i class="sz-close"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+            <!-- Payment Summary -->
+            <div class="space-y-4  ">
+              <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Payment Summary
+              </h6>
+              <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-3">
+
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50"> Gateway Name</span>
+                  <span class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">Payid19</span>
+                </div>
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50">Merchant</span>
+                  <span class="text-sm font-semibold text-black dark:text-white tracking-wide">John Anderson</span>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2">
+                  <span class="text-sm text-black/50 dark:text-white/50">Request ID</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">REQ-2024-0847</span>
+                </div>
+              </div>
+            </div>
+            <!-- Payment proof -->
+            <div class="form-group">
+              <label class="form-label">Admin Note</label>
+              <textarea name="" id="" class="form-control" placeholder="Add any note about this approval"></textarea>
+              <span class="text-xs text-black/50 dark:text-white/50">This message will be sent to the user</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+          <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+            Request</button>
+          <button class="modal-close-btn primary-btn bg-red"> <i class="sz-close-circle text-lg"></i> Confirm
+            Reject</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- Core Scripts -->
 
@@ -842,7 +995,31 @@
   <script src="assets/js/table.js"></script>
   <script src="assets/js/modal.js"></script>
 
+  <!-- input copy js -->
+  <script>
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".copy-btn");
+      if (!btn) return;
 
+      const container = btn.parentElement;
+      const input = container.querySelector("input");
+      if (!input) return;
+
+      navigator.clipboard.writeText(input.value).then(() => {
+        const icon = btn.querySelector("i");
+        if (icon) {
+          const originalClass = icon.className;
+          icon.className = "sz-check text-brand text-lg pointer-events-none";
+
+          setTimeout(() => {
+            icon.className = originalClass;
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+    });
+  </script>
 </body>
 
 </html>
