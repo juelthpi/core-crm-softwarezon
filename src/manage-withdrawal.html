@@ -59,7 +59,7 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">MAIN
               MENU</span>
           </div>
-          <a href="index.html" class="sidebar-link group active-item" data-tooltip="Dashboard">
+          <a href="index.html" class="sidebar-link group" data-tooltip="Dashboard">
             <div class="icon-box transition-colors">
               <i class="sz-view-grid-add text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -67,7 +67,7 @@
           </a>
           <!-- Blog Dropdown -->
           <div class="sidebar-dropdown">
-            <button onclick="toggleDropdown(this)" class="sidebar-link group w-full" aria-expanded="false">
+            <button onclick="toggleDropdown(this)" class="sidebar-link   group w-full" aria-expanded="false">
               <div class="icon-box transition-colors">
                 <i class="sz-clipboard-list text-lg group-hover:text-brand/80 duration-500"></i>
               </div>
@@ -79,7 +79,7 @@
                 <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> All Blogs
                 </a>
-                <a href="#" class="dropdown-item  transition-colors">
+                <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> Add Blog
                 </a>
               </div>
@@ -90,7 +90,7 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">USER
               MANAGEMENT</span>
           </div>
-          <a href="manage-users.html" class="sidebar-link group" data-tooltip="Manage User">
+          <a href="#" class="sidebar-link group" data-tooltip="Manage User">
             <div class="icon-box transition-colors">
               <i class="sz-user text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -119,31 +119,6 @@
               </div>
             </div>
           </div>
-          <!-- Deposit/Withdrawal MANAGEMENT -->
-          <div class="px-3 py-1">
-            <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">DEPOSIT &
-              WITHDRAWAL
-            </span>
-          </div>
-          <a href="manage-deposit.html" class="sidebar-link group" data-tooltip="Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Deposit</span>
-          </a>
-          <a href="user-deposit.html" class="sidebar-link group" data-tooltip="User Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User Deposit</span>
-          </a>
-          <a href="manage-withdrawal.html" class="sidebar-link group" data-tooltip="Withdrawal">
-            <div class="icon-box transition-colors">
-              <i class="sz-library text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Withdrawal</span>
-          </a>
-
 
           <!-- SYSTEM SETTINGS -->
           <div class="px-3 py-1">
@@ -151,7 +126,7 @@
               SETTINGS</span>
           </div>
 
-          <a href="index.html" class="sidebar-link group" data-tooltip="General Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="General Settings">
             <div class="icon-box transition-colors">
               <i class="sz-setting text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -187,14 +162,14 @@
             </button>
             <div class="dropdown-content">
               <div class="dropdown-inner">
-                <a href="payment-gateway.html" class="dropdown-item transition-colors">
+                <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-server text-sm"></i> Gateways
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="notification-settings.html" class="sidebar-link group" data-tooltip="Notification Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="Notification Settings">
             <div class="icon-box transition-colors">
               <i class="sz-bell text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -421,12 +396,12 @@
             <div
               class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
-                <a href="edit-profile.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-edit-alt text-lg"></i>
                   Edit Profile
                 </a>
-                <a href="update-password.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-lock-open text-lg"></i>
                   Update Password
@@ -452,10 +427,10 @@
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              General Settings
+              Withdraw Management
             </h5>
             <p class="text-black/60 text-sm dark:text-white/60">
-              Configure core application settings
+              Manage withdraw requests, pending approvals, and automated gateway withdraws.
             </p>
           </div>
           <!-- <div class="flex gap-2">
@@ -464,248 +439,167 @@
           </div> -->
         </div>
 
-        <div
-          class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          <!-- item 1 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
+        <div class="space-y-4">
+          <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+              <!-- item 1 -->
               <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-setting text-black dark:text-white text-2xl"></i>
+                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+                <!-- Background Gradient -->
+                <div
+                  class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)]">
+                </div>
+
+                <div class="space-y-1 relative z-10">
+                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">40</h5>
+                  <p class="text-black/60 dark:text-white/60 text-sm">Completed</p>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                  <i class="sz-check-circle text-brand text-3xl"></i>
+                </div>
               </div>
-              <a href="general-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
+              <!-- item 2 -->
+              <div
+                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+                <!-- Background Gradient -->
+                <div
+                  class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]">
+                </div>
+
+                <div class="space-y-1 relative z-10">
+                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
+                  <p class="text-black/60 dark:text-white/60 text-sm">Active Methods</p>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                  <i class="sz-credit-card text-blue text-3xl"></i>
+                </div>
+              </div>
+              <!-- item 3 -->
+              <a href="payment-gateway-awaiting-approval.html"
+                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+                <!-- Background Gradient -->
+                <div
+                  class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-yellow)_20%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-yellow)_20%,transparent)_0%,transparent_65%)]">
+                </div>
+
+                <div class="space-y-1 relative z-10">
+                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">30</h5>
+                  <p class="text-black/60 dark:text-white/60 text-sm">Pending Requests</p>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                  <i class="sz-clock text-yellow text-3xl"></i>
+                </div>
               </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Basic Setting
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configured: site, CST time zone, preferences.
-              </p>
+              <!-- item 4 -->
+              <div
+                class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+                <!-- Background Gradient -->
+                <div
+                  class="absolute inset-0 w-full h-full pointer-events-none
+                  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]
+                  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]">
+                </div>
+
+                <div class="space-y-1 relative z-10">
+                  <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
+                  <p class="text-black/60 dark:text-white/60 text-sm">Refunded Requests</p>
+                </div>
+                <div
+                  class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                  <i class="sz-refresh text-red text-3xl"></i>
+                </div>
+              </div>
+
             </div>
           </div>
-          <!-- item 2 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
+          <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+            <div class="mb-4">
+              <h6 class="text-base text-black font-semibold dark:text-white">Payment Gateway Management</h6>
+
+            </div>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+
+              <!-- item 1 -->
               <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-photograph text-black dark:text-white text-2xl"></i>
+                class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+                    <i class="sz-document-text text-black dark:text-white text-2xl"></i>
+                  </div>
+                  <a href="all-withdrawals.html"
+                    class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
+                    Manage <i class="sz-long-arrow-right text-sm"></i>
+                  </a>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium text-black dark:text-white tracking-wide">
+                    All Withdrawals
+                  </h5>
+                  <p class="text-sm text-black/60 dark:text-white/60">
+                    View and manage all deposit transactions across all gateways.
+
+                  </p>
+                </div>
               </div>
-              <a href="logo-appearance.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Logo & Appearance
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Upload logos and customize visual identity
-              </p>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
+              <!-- item 2 -->
               <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cash text-black dark:text-white text-2xl"></i>
+                class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+                    <i class="sz-clock text-black dark:text-white text-2xl"></i>
+                  </div>
+                  <a href="pending-manual-deposits.html"
+                    class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
+                    Manage <i class="sz-long-arrow-right text-sm"></i>
+                  </a>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium text-black dark:text-white tracking-wide">
+                    Pending Withdrawals
+                  </h5>
+                  <p class="text-sm text-black/60 dark:text-white/60">
+                    Review and process pending withdrawal requests awaiting approval.
+
+                  </p>
+                </div>
               </div>
-              <a href="financial-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Financial Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configure financial settings
-              </p>
-            </div>
-          </div>
-          <!-- item 4 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
+              <!-- item 3 -->
               <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-collection text-black dark:text-white text-2xl"></i>
+                class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+                    <i class="sz-credit-card text-black dark:text-white text-2xl"></i>
+                  </div>
+                  <a href="automated-deposits.html"
+                    class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
+                    Manage <i class="sz-long-arrow-right text-sm"></i>
+                  </a>
+                </div>
+                <div>
+                  <h5 class="text-lg font-medium text-black dark:text-white tracking-wide">
+                    Withdrawal Methods
+                  </h5>
+                  <p class="text-sm text-black/60 dark:text-white/60">
+                    Configure available withdrawal methods, fees, and processing rules.
+
+                  </p>
+
+                </div>
               </div>
-              <a href="gdrp-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                GDPR Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cube text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="maintenance-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Maintenance Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Enable/disable site maintenance mode
-              </p>
-            </div>
-          </div>
-          <!-- item 6 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="seo-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                SEO Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Meta tags, sitemap, and optimization
-              </p>
-            </div>
-          </div>
-          <!-- item 7 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-plugin-line text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="plugins-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Plugins Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 8 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-database text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cache-manage.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cache Manage
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 9 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-briefcase text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cron-job-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cron Job Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 10 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud-download text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="update-system.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Update System
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 11 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-annotation text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="social-media-login.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Social Media Login
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
+
+
             </div>
           </div>
         </div>

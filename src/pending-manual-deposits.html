@@ -510,9 +510,8 @@
         <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
           <div class="mb-4 flex items-center justify-between gap-2 flex-wrap">
             <div>
-              <h6 class="text-base text-black font-semibold dark:text-white">Gateway Approval Requests</h6>
-              <p class="text-sm text-black/60 dark:text-white/60">Review and manage pending payment gateway submissions
-              </p>
+              <h6 class="text-base text-black font-semibold dark:text-white">Pending Manual Deposits</h6>
+              <p class="text-sm text-black/60 dark:text-white/60">Review and manage pending manual deposits</p>
             </div>
             <div class="flex items-center gap-3 flex-wrap">
               <div class="relative group w-full md:w-76">
@@ -520,7 +519,7 @@
                   <i
                     class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
                 </div>
-                <input type="text" placeholder="Search Payment Gateways"
+                <input type="text" placeholder="Search Manual Deposits"
                   class="w-full md:w-76 bg-black/3 dark:bg-white/4 border border-black/2 dark:border-white/6 rounded-lg py-2.5 ps-11 pe-4 text-sm text-black dark:text-white placeholder:text-black/80 dark:placeholder:text-white/50 hover:text-black dark:hover:text-white focus:outline-none focus:border-brand/40 focus:bg-black/8 dark:focus:bg-white/8 transition-all" />
               </div>
               <!-- <button class="primary-btn" onclick="toggleOffcanvas('manual-payment-gateway-offcanvas')"> <i
@@ -606,11 +605,11 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
-                          <img src="assets/images/users/user-4.png" alt="img" class="w-full h-auto rounded-md">
+                          <img src="assets/images/users/user-7.png" alt="img" class="w-full h-auto rounded-md">
                         </div>
                         <div class="flex flex-col">
                           <p class="text-sm">John Doe</p>
@@ -625,7 +624,7 @@
                         <img src="assets/images/driver/2.png" alt="img">
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Midtrans</span>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Web money USD Wallet</span>
                     </td>
 
                     <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">REQ-10245</span></td>
@@ -639,18 +638,23 @@
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex items-center flex-wrap gap-2">
-                        <div class="status-badge bg-green/10 text-green border-green/15 ">
-                          <span class="w-2 h-2 rounded-full bg-green"></span> Completed
+                        <div class="status-badge bg-yellow/10 text-yellow border-yellow/15 ">
+                          <span class="w-2 h-2 rounded-full bg-yellow"></span> Pending
                         </div>
                       </div>
                     </td>
                     <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
                     <td class="py-3 px-1">
                       <div class="flex items-center gap-2">
-                        <button
-                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
+                        <button data-modal="deposit-approval-modal"
+                          class="h-8 w-8 rounded-full border border-green-800 bg-green-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
                           title="Approve">
-                          <i class="sz-check-circle-2 text-xl"></i>
+                          <i class="sz-check text-xl"></i>
+                        </button>
+                        <button data-modal="deposit-reject-modal"
+                          class="h-8 w-8 rounded-full border border-red-800 bg-red-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-red-700 hover:text-white cursor-pointer"
+                          title="Reject">
+                          <i class="sz-close text-xl"></i>
                         </button>
                       </div>
                     </td>
@@ -660,11 +664,11 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">3</span></td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
                     <td>
                       <div class="flex items-center gap-2.5">
                         <div class="max-w-[35px] shrink-0">
-                          <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                          <img src="assets/images/users/user-7.png" alt="img" class="w-full h-auto rounded-md">
                         </div>
                         <div class="flex flex-col">
                           <p class="text-sm">John Doe</p>
@@ -676,10 +680,10 @@
                     <td class="py-3 px-1">
                       <div
                         class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
-                        <img src="assets/images/driver/1.png" alt="img">
+                        <img src="assets/images/driver/2.png" alt="img">
                       </div>
                     </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Midtrans</span>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Web money USD Wallet</span>
                     </td>
 
                     <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">REQ-10245</span></td>
@@ -693,18 +697,23 @@
                     </td>
                     <td class="py-3 px-1">
                       <div class="flex items-center flex-wrap gap-2">
-                        <div class="status-badge bg-red/10 text-red border-red/15 ">
-                          <span class="w-2 h-2 rounded-full bg-red"></span> Rejected
+                        <div class="status-badge bg-yellow/10 text-yellow border-yellow/15 ">
+                          <span class="w-2 h-2 rounded-full bg-yellow"></span> Pending
                         </div>
                       </div>
                     </td>
                     <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
                     <td class="py-3 px-1">
                       <div class="flex items-center gap-2">
-                        <button
-                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
+                        <button data-modal="deposit-approval-modal"
+                          class="h-8 w-8 rounded-full border border-green-800 bg-green-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
                           title="Approve">
-                          <i class="sz-x-circle-2 text-xl"></i>
+                          <i class="sz-check text-xl"></i>
+                        </button>
+                        <button data-modal="deposit-reject-modal"
+                          class="h-8 w-8 rounded-full border border-red-800 bg-red-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-red-700 hover:text-white cursor-pointer"
+                          title="Reject">
+                          <i class="sz-close text-xl"></i>
                         </button>
                       </div>
                     </td>
@@ -713,6 +722,66 @@
                           class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
                     </td>
                   </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-7.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div
+                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                        <img src="assets/images/driver/2.png" alt="img">
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Web money USD Wallet</span>
+                    </td>
+
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">REQ-10245</span></td>
+                    <td class="py-3 px-1">
+                      <div>
+                        <p class="text-black/90 dark:text-white/90 text-sm"> $2,500<span
+                            class="text-black/80 dark:text-white/60">
+                            (Payable-
+                            )</span> $2,500 <br /><span class="text-black/80 dark:text-white/60">Fee-</span> $2,500 </p>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-yellow/10 text-yellow border-yellow/15 ">
+                          <span class="w-2 h-2 rounded-full bg-yellow"></span> Pending
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center gap-2">
+                        <button data-modal="deposit-approval-modal"
+                          class="h-8 w-8 rounded-full border border-green-800 bg-green-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
+                          title="Approve">
+                          <i class="sz-check text-xl"></i>
+                        </button>
+                        <button data-modal="deposit-reject-modal"
+                          class="h-8 w-8 rounded-full border border-red-800 bg-red-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-red-700 hover:text-white cursor-pointer"
+                          title="Reject">
+                          <i class="sz-close text-xl"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button data-modal="deposit-details-modal" class="cursor-pointer"> <i
+                          class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+
                 </tbody>
               </table>
             </div>

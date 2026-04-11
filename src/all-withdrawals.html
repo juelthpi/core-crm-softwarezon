@@ -427,17 +427,17 @@
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              All Deposits
+              All Withdrawals
             </h5>
             <!-- Breadcrumb -->
             <ul class="flex gap-2 items-center">
               <li><a href="#"
-                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Deposits</a>
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">Withdrawals</a>
               </li>
               <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
               <li><a href="#"
                   class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">All
-                  Deposits</a></li>
+                  Withdrawals</a></li>
             </ul>
           </div>
           <div class="flex gap-2">
@@ -497,11 +497,11 @@
 
               <div class="space-y-1 relative z-10">
                 <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
-                <p class="text-black/60 dark:text-white/60 text-sm">Rejected</p>
+                <p class="text-black/60 dark:text-white/60 text-sm">Refunded</p>
               </div>
               <div
                 class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
-                <i class="sz-close-circle text-red text-3xl"></i>
+                <i class="sz-reply text-red text-3xl"></i>
               </div>
             </div>
 
@@ -588,15 +588,11 @@
                     <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
                     <td class="py-3 px-1">
                       <div class="flex items-center gap-2">
-                        <button data-modal="deposit-approval-modal"
-                          class="h-8 w-8 rounded-full border border-green-800 bg-green-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
-                          title="Approve">
-                          <i class="sz-check text-xl"></i>
-                        </button>
+
                         <button data-modal="deposit-reject-modal"
                           class="h-8 w-8 rounded-full border border-red-800 bg-red-900 text-white duration-500 flex items-center justify-center action-btn  hover:bg-red-700 hover:text-white cursor-pointer"
                           title="Reject">
-                          <i class="sz-close text-xl"></i>
+                          <i class="sz-trash text-xl"></i>
                         </button>
                       </div>
                     </td>
@@ -605,114 +601,7 @@
                           class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
                     </td>
                   </tr>
-                  <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2</span></td>
-                    <td>
-                      <div class="flex items-center gap-2.5">
-                        <div class="max-w-[35px] shrink-0">
-                          <img src="assets/images/users/user-4.png" alt="img" class="w-full h-auto rounded-md">
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-sm">John Doe</p>
-                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
-                        </div>
 
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <div
-                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
-                        <img src="assets/images/driver/2.png" alt="img">
-                      </div>
-                    </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Midtrans</span>
-                    </td>
-
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">REQ-10245</span></td>
-                    <td class="py-3 px-1">
-                      <div>
-                        <p class="text-black/90 dark:text-white/90 text-sm"> $2,500<span
-                            class="text-black/80 dark:text-white/60">
-                            (Payable-
-                            )</span> $2,500 <br /><span class="text-black/80 dark:text-white/60">Fee-</span> $2,500 </p>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <div class="flex items-center flex-wrap gap-2">
-                        <div class="status-badge bg-green/10 text-green border-green/15 ">
-                          <span class="w-2 h-2 rounded-full bg-green"></span> Completed
-                        </div>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
-                    <td class="py-3 px-1">
-                      <div class="flex items-center gap-2">
-                        <button
-                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
-                          title="Approve">
-                          <i class="sz-check-circle-2 text-xl"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <button data-modal="deposit-details-modal" class="cursor-pointer"> <i
-                          class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">3</span></td>
-                    <td>
-                      <div class="flex items-center gap-2.5">
-                        <div class="max-w-[35px] shrink-0">
-                          <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-sm">John Doe</p>
-                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
-                        </div>
-
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <div
-                        class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
-                        <img src="assets/images/driver/1.png" alt="img">
-                      </div>
-                    </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Midtrans</span>
-                    </td>
-
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">REQ-10245</span></td>
-                    <td class="py-3 px-1">
-                      <div>
-                        <p class="text-black/90 dark:text-white/90 text-sm"> $2,500<span
-                            class="text-black/80 dark:text-white/60">
-                            (Payable-
-                            )</span> $2,500 <br /><span class="text-black/80 dark:text-white/60">Fee-</span> $2,500 </p>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <div class="flex items-center flex-wrap gap-2">
-                        <div class="status-badge bg-red/10 text-red border-red/15 ">
-                          <span class="w-2 h-2 rounded-full bg-red"></span> Rejected
-                        </div>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
-                    <td class="py-3 px-1">
-                      <div class="flex items-center gap-2">
-                        <button
-                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
-                          title="Approve">
-                          <i class="sz-x-circle-2 text-xl"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="py-3 px-1">
-                      <button data-modal="deposit-details-modal" class="cursor-pointer"> <i
-                          class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -735,7 +624,7 @@
               <i class="sz-information-circle text-2xl"></i>
             </div>
             <div>
-              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Deposit Details</h4>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Withdrawal Request Details</h4>
               <p class="text-xs text-black/50 dark:text-white/50">Lorem ipsum dolor sit amet consectetur. Gravida.</p>
             </div>
           </div>
@@ -772,7 +661,7 @@
             <!-- Deposit Method Details -->
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
               <div class="space-y-4 flex flex-col">
-                <h6 class="text-sm font-semibold text-black dark:text-white tracking-wider">Deposit Method Details
+                <h6 class="text-sm font-semibold text-black dark:text-white tracking-wider">Withdrawal Method Details
                 </h6>
                 <div
                   class="bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-5 space-y-6 flex-1">
@@ -891,8 +780,8 @@
                       <div
                         class="flex justify-between items-center py-4 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
                         <span class="text-sm text-black/50 dark:text-white/50">Status</span>
-                        <span class="status-badge bg-yellow/10 text-yellow border-yellow/15 "><span
-                            class="w-2 h-2 rounded-full bg-yellow"></span> Pending</span>
+                        <span class="status-badge bg-green/10 text-green border-green/15 "><span
+                            class="w-2 h-2 rounded-full bg-green"></span> Completed</span>
                       </div>
 
                     </div>
@@ -902,26 +791,33 @@
             </div>
             <!-- Payment proof -->
             <div class="space-y-4">
-              <div class="row">
-                <div class="form-group col-span-12">
-                  <label class="form-label">Transaction Note</label>
-                  <textarea class="form-control"
-                    placeholder="User requested withdrawal for settlement of active trading positions."
-                    rows="3"></textarea>
-                </div>
+              <h6 class="text-sm font-semibold text-black dark:text-white tracking-wider">Admin Action Details
+              </h6>
+              <div
+                class="bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-5 space-y-6">
 
-              </div>
-              <div class="space-y-4">
-                <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Payment Proof
-                </h6>
-                <div
-                  class="space-y-1 bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-3">
-                  <div class="flex flex-wrap gap-2.5 items-center py-2 px-2">
-                    <img src="assets/images/thumbnails/login-thumbnails.png" alt="img"
-                      class="max-w-25 w-full h-auto object-cover rounded-xl">
-                    <img src="assets/images/thumbnails/login-thumbnails.png" alt="img"
-                      class="max-w-25 w-full h-auto object-cover rounded-xl">
+                <!-- Details List -->
+                <div class="space-y-4">
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-black/50 dark:text-white/50">Reviewed By</span>
+                    <span class="font-semibold text-black dark:text-white uppercase tracking-wide">John Doe</span>
                   </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-black/50 dark:text-white/50">Admin Role</span>
+                    <span class="font-semibold text-black dark:text-white uppercase tracking-wide">Super Admin</span>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-black/50 dark:text-white/50">Action Date</span>
+                    <span class="font-semibold text-black dark:text-white uppercase tracking-wide">2024-01-15
+                      14:32</span>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-black/50 dark:text-white/50">Transaction ID</span>
+                    <span class="font-semibold text-black dark:text-white">TXN-2024-00847</span>
+                  </div>
+
+
+
                 </div>
               </div>
             </div>
@@ -1030,7 +926,7 @@
               <i class="sz-information-circle text-2xl"></i>
             </div>
             <div>
-              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Reject Deposit</h4>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Reject Withdrawal</h4>
               <p class="text-xs text-black/50 dark:text-white/50">Please provide a reason for rejection</p>
             </div>
           </div>
