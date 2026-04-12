@@ -440,218 +440,712 @@
         </div>
         <div
           class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 gap-4 grid grid-cols-12 md:p-4">
-          <div class="dark:bg-white/2 bg-black/2 rounded-xl p-2 md:p-4 col-span-12 md:col-span-8 space-y-4">
-            <div>
-              <h6 class="text-base text-black font-semibold dark:text-white">Manual Methods</h6>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                <!-- Midtrans -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+
+          <div class="dark:bg-white/5 bg-black/5 rounded-xl p-2 md:p-4 col-span-12 md:col-span-8 space-y-4">
+            <div class="bg-black/5 dark:bg-white/5 rounded-xl p-4">
+              <h6 class="text-base text-black font-semibold dark:text-white mb-2">Manual Methods</h6>
+              <div data-simplebar class="max-h-[200px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <!-- Midtrans -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2.5 border border-white/5">
-                      <div class="flex gap-0.5 items-end h-full w-full">
-                        <div class="w-1.5 h-1/2 bg-brand/40 rounded-full"></div>
-                        <div class="w-1.5 h-full bg-brand rounded-full"></div>
-                        <div class="w-1.5 h-1/2 bg-brand/40 rounded-full"></div>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
                       </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Konnect -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Konnect -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2.5 border border-white/5">
-                      <i class="sz-view-grid text-lg text-white/80"></i>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Uddoktapay -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Uddoktapay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2.5 border border-white/5">
-                      <span class="text-blue-500 font-black italic text-base">u</span>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Payid19 -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Payid19 -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Payid19</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Payid19</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Paymongo -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Paymongo -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <img src="assets/images/payment-logo/3.png" alt="Paymongo" class="w-full h-full object-contain">
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/3.png" alt="Paymongo" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Paymongo</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Paymongo</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Binance Pay -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Binance Pay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <img src="assets/images/payments/tether.png" alt="Binance" class="w-full h-full object-contain">
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payments/tether.png" alt="Binance" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Binance
+                          Pay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Binance
-                        Pay</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- PAYPAL -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- PAYPAL -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <img src="assets/images/payments/paypal.png" alt="Paypal" class="w-full h-full object-contain">
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payments/paypal.png" alt="Paypal" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">PAYPAL</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">PAYPAL</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Skrill -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Skrill -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <span class="text-brand font-black italic text-base">S</span>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Skrill</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Skrill</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Perfect Money -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Perfect Money -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <span class="text-red-500 font-black italic text-xs">PM</span>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Perfect
+                          Money</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Perfect
-                        Money</span>
-                    </div>
-                    <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
-                    </div>
-                  </div>
-                </label>
+                  </label>
 
-                <!-- Webmoney -->
-                <label class="relative cursor-pointer group block">
-                  <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
-                  <div
-                    class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm">
+                  <!-- Webmoney -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
-                      <i class="sz-wallet text-brand text-lg"></i>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Webmoney</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                      <span
-                        class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Webmoney</span>
-                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="bg-black/5 dark:bg-white/5 rounded-xl p-4">
+              <h6 class="text-base text-black font-semibold dark:text-white mb-2">Automated Methods</h6>
+              <div data-simplebar="" class="h-[350px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  <!-- Midtrans -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
                     <div
-                      class="w-7 h-7 rounded-xl bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 peer-checked:scale-100 opacity-0 peer-checked:opacity-100 shrink-0 shadow-lg shadow-brand/20">
-                      <i class="sz-check text-xs text-white"></i>
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
                     </div>
+                  </label>
+
+                  <!-- Konnect -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Uddoktapay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Midtrans -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Konnect -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Uddoktapay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Midtrans -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Konnect -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Uddoktapay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Midtrans -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" checked class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Midtrans</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Konnect -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Konnect</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Uddoktapay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Uddoktapay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Payid19 -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Payid19</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Paymongo -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/3.png" alt="Paymongo" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Paymongo</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Binance Pay -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payments/tether.png" alt="Binance" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Binance
+                          Pay</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- PAYPAL -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payments/paypal.png" alt="Paypal" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">PAYPAL</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Skrill -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Skrill</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Perfect Money -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Perfect
+                          Money</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Webmoney -->
+                  <label class="relative cursor-pointer group block">
+                    <input type="radio" name="payment_method" class="peer h-0 w-0 opacity-0 absolute" />
+                    <div
+                      class="flex items-center gap-3 p-3 bg-white dark:bg-sidebar-black/40 border border-black/5 dark:border-white/5 rounded-2xl transition-all duration-300 peer-checked:border-brand peer-checked:bg-brand/10 group-hover:dark:bg-white/5 shadow-sm peer-checked:[&_.check-indicator]:scale-100 peer-checked:[&_.check-indicator]:opacity-100">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-black/5 dark:bg-black/60 flex items-center justify-center shrink-0 p-2 border border-white/5">
+                        <img src="assets/images/payment-logo/2.png" alt="Payid19" class="w-full h-full object-contain">
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <span
+                          class="block text-sm font-bold text-black dark:text-white truncate tracking-wide">Webmoney</span>
+                      </div>
+                      <div
+                        class="check-indicator w-7 h-7 rounded-md bg-brand flex items-center justify-center transition-all duration-300 transform scale-0 opacity-0 shrink-0 shadow-lg shadow-brand/20">
+                        <i class="sz-check-circle-2 text-xl text-white"></i>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div
+            class="dark:bg-white/2 bg-black/2 border border-black/5 dark:border-white/5 rounded-xl p-4 col-span-12 md:col-span-4 space-y-4">
+            <div class="space-y-4">
+              <h6 class="text-base text-black font-semibold dark:text-white">Manual Methods</h6>
+
+              <div class="form-group">
+                <label for="amount" class="form-label">Input Amount</label>
+                <div class="relative group">
+                  <div class="absolute inset-y-0 inset-s-0 ps-4 flex items-center pointer-events-none">
+                    <span
+                      class="text-lg font-medium text-black/40 dark:text-white/40 group-focus-within:text-brand transition-colors">$</span>
                   </div>
+                  <input type="number" id="amount" class="form-control ps-8" placeholder="0.00">
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between px-1">
+                <span class="text-sm font-medium text-black/40 dark:text-white/40 tracking-wider">Mini: <span
+                    class="text-black/60 dark:text-white/60">$10.00</span></span>
+                <span class="text-sm font-medium text-black/40 dark:text-white/40 tracking-wider">Available: <span
+                    class="text-brand">$12,450</span></span>
+              </div>
+
+              <div class="flex items-center flex-wrap gap-2">
+                <!-- Min -->
+                <label class="cursor-pointer group">
+                  <input type="radio" name="quick_amount" value="10" onclick="setAmount(10)" class="peer hidden">
+                  <div
+                    class="py-3 px-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold text-black dark:text-white transition-all peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand hover:bg-black/10 dark:hover:bg-white/10 text-center">
+                    Min</div>
+                </label>
+                <!-- 200 -->
+                <label class="cursor-pointer group">
+                  <input type="radio" name="quick_amount" value="200" onclick="setAmount(200)" class="peer hidden">
+                  <div
+                    class="py-3 px-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold text-black dark:text-white transition-all peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand hover:bg-black/10 dark:hover:bg-white/10 text-center">
+                    $ 200</div>
+                </label>
+                <!-- 500 -->
+                <label class="cursor-pointer group">
+                  <input type="radio" name="quick_amount" value="500" onclick="setAmount(500)" class="peer hidden">
+                  <div
+                    class="py-3 px-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold text-black dark:text-white transition-all peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand hover:bg-black/10 dark:hover:bg-white/10 text-center">
+                    $ 500</div>
+                </label>
+                <!-- 1000 -->
+                <label class="cursor-pointer group">
+                  <input type="radio" name="quick_amount" value="1000" onclick="setAmount(1000)" class="peer hidden">
+                  <div
+                    class="py-3 px-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold text-black dark:text-white transition-all peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand hover:bg-black/10 dark:hover:bg-white/10 text-center">
+                    $ 1000</div>
+                </label>
+                <!-- Max -->
+                <label class="cursor-pointer group">
+                  <input type="radio" name="quick_amount" value="12450" onclick="setAmount(12450)" class="peer hidden">
+                  <div
+                    class="py-3 px-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm font-bold text-black dark:text-white transition-all peer-checked:bg-brand peer-checked:text-white peer-checked:border-brand hover:bg-black/10 dark:hover:bg-white/10 text-center">
+                    Max</div>
                 </label>
               </div>
 
+
             </div>
-          </div>
-          <div class="col-span-12 md:col-span-4 space-y-6">
+            <h6 class="text-base text-black font-semibold dark:text-white">Deposit Summary</h6>
+            <div
+              class="space-y-4 dark:bg-white/2 bg-black/2 border border-black/5 dark:border-white/5 rounded-xl p-2 lg:p-4">
+              <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-2">
+                <div class="flex flex-wrap items-center gap-3 justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="border border-black/5 dark:bg-white/5 bg-black/5 rounded-md py-1 px-2 dark:border-white/5 max-w-[120px]">
+                      <img src="assets/images/driver/2.png" alt="img">
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-sm">Midtrans</p>
+                      <span class="text-black/80 dark:text-white/60 text-xs">Midtrans</span>
+                    </div>
+
+                  </div>
+                  <span
+                    class="status-badge bg-white/10 dark:text-white text-black dark:border-white/10 border border-black/10 ">Automated</span>
+
+                </div>
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50"> Amount</span>
+                  <span class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">$5000</span>
+                </div>
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50">Processing Fee</span>
+                  <span class="text-sm font-semibold text-red tracking-wide">$50</span>
+                </div>
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <span class="text-sm text-black/50 dark:text-white/50">Processing</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">$4950</span>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2">
+                  <span class="text-sm text-black/50 dark:text-white/50">You Will Receive</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">$$492.50</span>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="space-y-2">
+              <button class="primary-btn w-full py-3 md:py-4">Deposit Now</button>
+              <p class="text-center text-xs text-black/50 dark:text-white/50">By depositing, you agree to our Terms of
+                Service</p>
+            </div>
 
           </div>
 
@@ -669,6 +1163,21 @@
   <script src="assets/js/modal.js"></script>
 
 
+  <script>
+    function setAmount(val) {
+      const input = document.getElementById('amount');
+      if (input) {
+        input.value = val;
+      }
+    }
+
+    // Deselect quick amount radios when typing manually
+    document.getElementById('amount')?.addEventListener('input', () => {
+      document.querySelectorAll('input[name="quick_amount"]').forEach(radio => {
+        radio.checked = false;
+      });
+    });
+  </script>
 </body>
 
 </html>
