@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,6 +13,7 @@
       --brand-main: #008658;
     }
   </style>
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +36,7 @@
       onclick="toggleSidebar()"></div>
     <!-- Sidebar -->
     <aside id="sidebar" role="navigation" aria-label="Main Sidebar"
-      class="fixed inset-y-0 start-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
+      class="fixed inset-y-0 inset-s-0 z-50 w-66 bg-sidebar-black/4 backdrop-blur-3xl dark:bg-sidebar flex flex-col">
       <!-- Logo Branding -->
       <div
         class="px-4 py-6 flex items-center justify-between gap-3 border-b border-sidebar-black/4 dark:border-sidebar-white/4 mb-4">
@@ -59,7 +60,7 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">MAIN
               MENU</span>
           </div>
-          <a href="index.html" class="sidebar-link group active-item" data-tooltip="Dashboard">
+          <a href="index.html" class="sidebar-link group" data-tooltip="Dashboard">
             <div class="icon-box transition-colors">
               <i class="sz-view-grid-add text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -67,7 +68,7 @@
           </a>
           <!-- Blog Dropdown -->
           <div class="sidebar-dropdown">
-            <button onclick="toggleDropdown(this)" class="sidebar-link group w-full" aria-expanded="false">
+            <button onclick="toggleDropdown(this)" class="sidebar-link active-item group w-full" aria-expanded="false">
               <div class="icon-box transition-colors">
                 <i class="sz-clipboard-list text-lg group-hover:text-brand/80 duration-500"></i>
               </div>
@@ -79,7 +80,7 @@
                 <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> All Blogs
                 </a>
-                <a href="#" class="dropdown-item  transition-colors">
+                <a href="#" class="dropdown-item active-child transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> Add Blog
                 </a>
               </div>
@@ -90,19 +91,13 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">USER
               MANAGEMENT</span>
           </div>
-          <a href="manage-users.html" class="sidebar-link group" data-tooltip="Manage User">
+          <a href="#" class="sidebar-link group" data-tooltip="Manage User">
             <div class="icon-box transition-colors">
               <i class="sz-user text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
             <span class="font-base">Manage User</span>
           </a>
-          <a href="user-kyc.html" class="sidebar-link group" data-tooltip="KYC Verifications">
-            <div class="icon-box transition-colors">
-              <i class="sz-shield-check text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User KYC</span>
-          </a>
-          <a href="manage-kyc.html" class="sidebar-link group" data-tooltip="KYC Verifications">
+          <a href="#" class="sidebar-link group" data-tooltip="KYC Verifications">
             <div class="icon-box transition-colors">
               <i class="sz-shield-check text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -125,45 +120,13 @@
               </div>
             </div>
           </div>
-          <!-- Deposit/Withdrawal MANAGEMENT -->
-          <div class="px-3 py-1">
-            <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">DEPOSIT &
-              WITHDRAWAL
-            </span>
-          </div>
-          <a href="manage-deposit.html" class="sidebar-link group" data-tooltip="Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Deposit</span>
-          </a>
-          <a href="user-deposit.html" class="sidebar-link group" data-tooltip="User Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User Deposit</span>
-          </a>
-          <a href="manage-withdrawal.html" class="sidebar-link group" data-tooltip="Withdrawal">
-            <div class="icon-box transition-colors">
-              <i class="sz-library text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Withdrawal</span>
-          </a>
-          <a href="user-withdrawal.html" class="sidebar-link group" data-tooltip="User Withdrawal">
-            <div class="icon-box transition-colors">
-              <i class="sz-library text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User Withdrawal</span>
-          </a>
-
-
           <!-- SYSTEM SETTINGS -->
           <div class="px-3 py-1">
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">SYSTEM
               SETTINGS</span>
           </div>
 
-          <a href="index.html" class="sidebar-link group" data-tooltip="General Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="General Settings">
             <div class="icon-box transition-colors">
               <i class="sz-setting text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -199,14 +162,14 @@
             </button>
             <div class="dropdown-content">
               <div class="dropdown-inner">
-                <a href="payment-gateway.html" class="dropdown-item transition-colors">
+                <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-server text-sm"></i> Gateways
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="notification-settings.html" class="sidebar-link group" data-tooltip="Notification Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="Notification Settings">
             <div class="icon-box transition-colors">
               <i class="sz-bell text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -232,7 +195,6 @@
             </div>
             <span class="font-base">Manage Language</span>
           </a>
-
           <a href="#" class="sidebar-link group" data-tooltip="Pages">
             <div class="icon-box transition-colors">
               <i class="sz-book-open text-lg group-hover:text-brand/80 duration-500"></i>
@@ -241,7 +203,6 @@
           </a>
         </nav>
       </div>
-
       <!-- User Profile at bottom -->
       <div class="p-4 mt-auto mb-2 shrink-0">
         <div
@@ -278,7 +239,7 @@
             <i class="sz-bars text-3xl text-black dark:text-white"></i>
           </button>
           <div class="relative group hidden sm:block">
-            <div class="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none">
+            <div class="absolute inset-y-0 inset-s-0 ps-3.5 flex items-center pointer-events-none">
               <i
                 class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
             </div>
@@ -301,7 +262,7 @@
               </span>
             </button>
             <div
-              class="absolute top-full mt-2 start-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+              class="absolute top-full mt-2 inset-s-0 w-36 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
                 <a href="#"
                   class="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-black/70 dark:text-white/70 hover:text-sidebar-black hover:bg-sidebar-black/5 dark:hover:bg-sidebar-white/5 dark:hover:text-sidebar-white rounded-lg transition-colors">
@@ -417,7 +378,7 @@
             <button
               class="h-11 min-w-11 shrink-0 px-3 rounded-lg bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center gap-3 text-sidebar-black dark:text-sidebar-white transition-all hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 cursor-pointer">
               <img src="assets/images/users/user-2.png" alt="Profile" class="w-7 h-7 rounded-full object-cover" />
-              <div class="text-left hidden lg:block">
+              <div class="text-start hidden lg:block">
                 <h5 class="text-sm font-semibold leading-none">
                   Super Admin
                 </h5>
@@ -431,14 +392,14 @@
               </span>
             </button>
             <div
-              class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
+              class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:inset-s-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
-                <a href="edit-profile.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-edit-alt text-lg"></i>
                   Edit Profile
                 </a>
-                <a href="update-password.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-lock-open text-lg"></i>
                   Update Password
@@ -464,269 +425,350 @@
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              General Settings
+              Login History
             </h5>
             <p class="text-black/60 text-sm dark:text-white/60">
-              Configure core application settings
+              Manage and track all your login history
             </p>
           </div>
-          <!-- <div class="flex gap-2">
-            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
-            <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
-          </div> -->
+          <div class="flex gap-2">
+            <a href="manage-deposit.html" class="secondary-btn"> <i class="sz-arrow-left"></i> Back to Deposit
+            </a>
+          </div>
         </div>
+        <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+            <!-- item 1 -->
+            <div
+              class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+              <!-- Background Gradient -->
+              <div
+                class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-brand)_40%,transparent)_0%,transparent_65%)] ">
+              </div>
 
+              <div class="space-y-1 relative z-10">
+                <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
+                <p class="text-black/60 dark:text-white/60 text-sm">Total Devices</p>
+              </div>
+              <div
+                class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                <i class="sz-logout-2 text-brand  text-3xl"></i>
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div
+              class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+              <!-- Background Gradient -->
+              <div
+                class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-blue)_40%,transparent)_0%,transparent_65%)]">
+              </div>
+
+              <div class="space-y-1 relative z-10">
+                <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
+                <p class="text-black/60 dark:text-white/60 text-sm">Active Devices</p>
+              </div>
+              <div
+                class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                <i class="sz-desktop-computer text-blue text-3xl"></i>
+              </div>
+            </div>
+
+
+            <!-- item 3 -->
+            <div
+              class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+              <!-- Background Gradient -->
+              <div
+                class="absolute inset-0 w-full h-full pointer-events-none
+  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-purple)_20%,transparent)_0%,transparent_65%)]
+  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-purple)_20%,transparent)_0%,transparent_65%)]">
+              </div>
+
+              <div class="space-y-1 relative z-10">
+                <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">MacBook Pr</h5>
+                <p class="text-black/60 dark:text-white/60 text-sm">Last Active</p>
+              </div>
+              <div
+                class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                <i class="sz-exclamation   text-purple text-3xl"></i>
+              </div>
+            </div>
+            <!-- item 4 -->
+            <div
+              class="overflow-hidden bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex justify-between items-center relative">
+              <!-- Background Gradient -->
+              <div
+                class="absolute inset-0 w-full h-full pointer-events-none
+                  bg-[image:linear-gradient(to_right,white_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]
+                  dark:bg-[image:linear-gradient(to_right,var(--color-dark-green)_0%,transparent_30%),linear-gradient(to_bottom_left,color-mix(in_srgb,var(--color-red)_20%,transparent)_0%,transparent_65%)]">
+              </div>
+
+              <div class="space-y-1 relative z-10">
+                <h5 class="text-black text-xl lg:text-2xl dark:text-white font-bold">3</h5>
+                <p class="text-black/60 dark:text-white/60 text-sm"> Suspicious</p>
+              </div>
+              <div
+                class="w-14 h-14 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0 relative z-10">
+                <i class="sz-x-circle-2 text-red text-3xl"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
         <div
-          class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          <!-- item 1 -->
+          class="overflow-hidden bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-4 md:p-6 flex flex-wrap items-center justify-between gap-4 relative group transition-all duration-300 hover:border-brand/30">
+          <!-- Background Gradient -->
           <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-setting text-black dark:text-white text-2xl"></i>
+            class="absolute inset-0 w-full h-full pointer-events-none bg-[linear-gradient(to_right,rgba(0,134,88,0.1)_0%,transparent_100%)] dark:bg-[linear-gradient(to_right,rgba(0,134,88,0.05)_0%,transparent_100%)]">
+          </div>
+
+          <div class="flex items-center gap-4 relative z-10 w-full md:w-auto">
+            <div class="flex items-center gap-3">
+              <img src="assets/images/users/user-4.png" alt="Merchant"
+                class="w-14 h-14 rounded-lg border border-black/5 dark:border-white/5">
+              <div>
+                <h5 class="text-lg font-bold text-black dark:text-white">John Anderson</h5>
+                <p class="text-sm text-black/50 dark:text-white/50">john@tradingpro.com</p>
               </div>
-              <a href="general-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
             </div>
+
+
+          </div>
+
+          <div class="relative z-10 w-full md:w-auto">
+            <button data-modal="suspend-modal" class="secondary-btn-md bg-yellow/10 border-yellow/15 text-yellow">
+              <i class="sz-ban text-yellow text-xl"></i>
+              Suspend
+            </button>
+
+          </div>
+        </div>
+        <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+          <div class="mb-4 flex items-center justify-between gap-2 flex-wrap">
             <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Basic Setting
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configured: site, CST time zone, preferences.
+              <h6 class="text-base text-black font-semibold dark:text-white">User Login History</h6>
+              <p class="text-sm text-black/60 dark:text-white/60">Track and manage your login history
               </p>
+            </div>
+            <div class="flex items-center gap-3 flex-wrap">
+              <div class="relative group w-full md:w-76">
+                <div class="absolute inset-y-0 inset-s-0 ps-3.5 flex items-center pointer-events-none">
+                  <i
+                    class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
+                </div>
+                <input type="text" placeholder="Search Login History"
+                  class="w-full md:w-76 bg-black/3 dark:bg-white/4 border border-black/2 dark:border-white/6 rounded-lg py-2.5 ps-11 pe-4 text-sm text-black dark:text-white placeholder:text-black/80 dark:placeholder:text-white/50 hover:text-black dark:hover:text-white focus:outline-none focus:border-brand/40 focus:bg-black/8 dark:focus:bg-white/8 transition-all" />
+              </div>
+              <!-- <button class="primary-btn" onclick="toggleOffcanvas('manual-payment-gateway-offcanvas')"> <i
+                  class="sz-plus text-xl"></i>
+                Add Gateway </button> -->
             </div>
           </div>
-          <!-- item 2 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-photograph text-black dark:text-white text-2xl"></i>
+          <div class="space-y-4">
+            <!-- item -->
+            <div
+              class="dark:bg-white/2 bg-black/4 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-3 flex items-center flex-wrap gap-4 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-black/5   border border-black/10 dark:border-white/5 dark:bg-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+                  <i class="sz-device-mobile text-black dark:text-white text-2xl"></i>
+                </div>
+                <div>
+                  <h5 class="text-base font-bold text-black dark:text-white">Safari / iOS</h5>
+                  <ul class="flex items-center gap-1 flex-wrap">
+
+                    <li> <i class="sz-clock text-sm text-black/60 dark:text-white/60"></i> <span
+                        class="text-black text-sm dark:text-white/60">2 days ago</span></li>
+                    <li> <i class="sz-calendar text-sm text-black/60 dark:text-white/60"></i> <span
+                        class="text-black text-sm dark:text-white/60">San Francisco, US 192.168.1.42</span></li>
+
+                  </ul>
+                </div>
               </div>
-              <a href="logo-appearance.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Logo & Appearance
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Upload logos and customize visual identity
-              </p>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cash text-black dark:text-white text-2xl"></i>
+              <div class="flex items-center gap-2">
+                <div class="status-badge bg-green/10 text-green dark:border-green/15 ">
+                  <span class="w-2 h-2 rounded-full bg-green"></span> Active
+                </div>
+                <button data-modal="logout-confirmation-modal"
+                  class="status-badge cursor-pointer bg-red/10 text-red dark:border-red/15 ">
+                  <span class="w-2 h-2 rounded-full bg-red"></span> Logged out
+                </button>
+                <button class="status-badge text-black/60 dark:text-white/60 ">
+                  <i class="sz-ban text-lg"></i>
+                  Logout
+                </button>
+
               </div>
-              <a href="financial-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
+
             </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Financial Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configure financial settings
-              </p>
-            </div>
-          </div>
-          <!-- item 4 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-collection text-black dark:text-white text-2xl"></i>
+            <!-- item -->
+            <div
+              class="dark:bg-white/2 bg-black/4 border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-3 flex items-center flex-wrap gap-4 justify-between">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-black/5   border border-black/10 dark:border-white/5 dark:bg-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
+                  <i class="sz-desktop-computer text-black dark:text-white text-2xl"></i>
+                </div>
+                <div>
+                  <h5 class="text-base font-bold text-black dark:text-white">Safari / iOS</h5>
+                  <ul class="flex items-center gap-1">
+
+                    <li> <i class="sz-clock text-xs text-black/60 dark:text-white/60"></i> <span
+                        class="text-black text-xs dark:text-white/60">2 days ago</span></li>
+
+                  </ul>
+                </div>
               </div>
-              <a href="gdrp-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
+              <button data-modal="logout-confirmation-modal"
+                class="status-badge cursor-pointer bg-red/10 text-red dark:border-red/15 ">
+                <span class="w-2 h-2 rounded-full bg-red"></span> Logged out
+              </button>
+
             </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                GDPR Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cube text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="maintenance-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Maintenance Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Enable/disable site maintenance mode
-              </p>
-            </div>
-          </div>
-          <!-- item 6 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="seo-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                SEO Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Meta tags, sitemap, and optimization
-              </p>
-            </div>
-          </div>
-          <!-- item 7 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-plugin-line text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="plugins-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Plugins Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 8 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-database text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cache-manage.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cache Manage
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 9 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-briefcase text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cron-job-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cron Job Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 10 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud-download text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="update-system.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Update System
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 11 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-annotation text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="social-media-login.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Social Media Login
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
+
           </div>
         </div>
       </section>
-    </main>
+      <!-- Logout confirmation Modal -->
+      <div id="logout-confirmation-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+
+
+                <!-- Merchant Information -->
+                <div class="space-y-4">
+                  <div
+                    class="lg:w-20 lg:h-20 w-10 h-10 rounded-full flex items-center justify-center bg-red/10 mx-auto">
+                    <i class="sz-logout lg:text-4xl text-2xl text-red"></i>
+                  </div>
+                  <h6 class="text-lg font-semibold text-black dark:text-white tracking-wider text-center">Logout device?
+                  </h6>
+                  <p class="text-sm text-black/70 dark:text-white/70 text-center">Chrome / macOS</p>
+
+                </div>
+
+
+
+              </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-center shrink-0 relative z-1 gap-2 flex-wrap">
+              <button class="secondary-btn modal-close-btn"> <i class="sz-reply text-lg"></i> Cancel</button>
+              <button class="primary-btn bg-red"> <i class="sz-logout text-lg"></i> Logout</button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- start suspend modal -->
+      <div id="suspend-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-10 h-10 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+                  <i class="sz-information-circle text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Suspend User Account</h4>
+                  <p class="text-xs text-black/50 dark:text-white/50">Are you sure you want to suspend this user
+                    account?
+                  </p>
+                </div>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close"></i>
+              </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+
+                <div class="space-y-4  ">
+
+                  <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-3">
+
+
+                    <div
+                      class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-center py-4 px-2">
+                      <span class="text-sm text-black/50 dark:text-white/50">Status</span>
+                      <div class="status-badge bg-green/20 text-green border-green/30 ">
+                        <span class="w-2 h-2 rounded-full bg-green"></span> Active
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Reason for suspension (optional)</label>
+                  <textarea name="" id="" class="form-control"
+                    placeholder="Add any note about this suspension"></textarea>
+                  <span class="text-xs text-black/50 dark:text-white/50">Note will be visible to the user</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+              <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+              </button>
+              <button class="modal-close-btn primary-btn bg-red"> <i class="sz-check text-lg"></i> Suspend</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
   </div>
+
   <!-- Core Scripts -->
+
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script src="assets/js/table.js"></script>
+  <script src="assets/js/modal.js"></script>
+
+
 </body>
 
 </html>

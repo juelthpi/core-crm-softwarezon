@@ -592,6 +592,9 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2 flex-wrap">
+                      <button data-modal="enable-2fa-modal" class="primary-btn-md">
+                        Modal View
+                      </button>
                       <span
                         class="bg-red/10 border border-red/20 text-sm font-medium px-3 py-1 rounded-full text-red">Disabled</span>
                       <label class="form-switch">
@@ -615,6 +618,9 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2 flex-wrap">
+                      <button data-modal="enable-sms-modal" class="primary-btn-md">
+                        Modal View
+                      </button>
                       <span
                         class="bg-red/10 border border-red/20 text-sm font-medium px-3 py-1 rounded-full text-red">Disabled</span>
                       <label class="form-switch">
@@ -638,6 +644,9 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2 flex-wrap">
+                      <button data-modal="enable-email-modal" class="primary-btn-md">
+                        Modal View
+                      </button>
                       <span
                         class="bg-red/10 border border-red/20 text-sm font-medium px-3 py-1 rounded-full text-red">Disabled</span>
                       <label class="form-switch">
@@ -668,6 +677,9 @@
                       </div>
                     </div>
                     <div class="flex items-center gap-2 flex-wrap">
+                      <button data-modal="disable-2fa-modal" class="primary-btn-md">
+                        Disable 2FA
+                      </button>
                       <span
                         class="bg-red/10 border border-red/20 text-sm font-medium px-3 py-1 rounded-full text-red">Disabled</span>
                       <label class="form-switch">
@@ -831,6 +843,379 @@
 
         </div>
       </section>
+      <!-- Enable 2FA Modal -->
+      <div id="enable-2fa-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+                  <i class="sz-device-mobile text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Set Up Authenticator App</h4>
+                  <p class="text-sm text-black/50 dark:text-white/50">Scan QR with your auth app
+                  </p>
+                </div>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close"></i>
+              </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+
+                <div class="space-y-4  ">
+                  <p class="text-sm text-black/60 dark:text-white/60  tracking-wider">Scan the QR code below
+                    with Google Authenticator, Authy, or any compatible TOTP app.
+                  </p>
+                  <div class="max-w-[220px] mx-auto border border-black/10 dark:border-white/10 rounded-2xl p-3">
+                    <img src="assets/images/thumbnails/qr-code.png" alt="img" class="w-full h-auto rounded-md">
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Manual entry key</label>
+                  <div class="relative mt-1">
+                    <input type="text" class="form-control pe-12" value="JBSW Y3DP EHPK 3PXP" readonly>
+                    <button type="button"
+                      class="copy-btn absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors cursor-pointer"
+                      title="Copy URL">
+                      <i class="sz-duplicate text-lg pointer-events-none"></i>
+                    </button>
+                  </div>
+                  <span class="text-xs text-black/50 dark:text-white/50 mt-1 ">This appears in browser tabs and
+                    search
+                    results</span>
+                </div>
+                <!-- OTP Form -->
+                <form data-otp>
+                  <div class="row">
+                    <div class="form-group md:col-span-12">
+                      <label class="form-label mb-4 block">Verification Code</label>
+                      <!-- 6-digit OTP inputs -->
+                      <div id="otp-wrapper" class="flex items-center gap-2 sm:gap-3 justify-center lg:justify-start">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center" autocomplete="one-time-code">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+
+                        <!-- Separator dash -->
+                        <span class="text-white/30 text-2xl font-light select-none">—</span>
+
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                      </div>
+
+                      <!-- Error message -->
+                      <p id="otp-error" class="text-red-400 text-sm mt-3 hidden">Invalid code. Please try
+                        again.</p>
+                    </div>
+                  </div>
+
+                  <!-- Countdown Timer -->
+                  <div class="row mt-2">
+                    <div class="form-group md:col-span-12">
+                      <div class="flex items-center justify-between">
+                        <p class="dark:text-white/40 text-black/40 text-sm">Code expires in</p>
+                        <p data-otp-timer class="text-brand text-sm font-semibold tabular-nums">02:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+              <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+              </button>
+              <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Verify & Enable</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Enable sms Modal -->
+      <div id="enable-sms-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+                  <i class="sz-chat-alt text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Set Up SMS Verification</h4>
+                  <p class="text-sm text-black/50 dark:text-white/50">We'll text you a code on login
+                  </p>
+                </div>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close"></i>
+              </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+
+
+                <div class="row items-center">
+                  <div class="form-group md:col-span-9">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" placeholder="+1 234 567 8901">
+                  </div>
+                  <div class="form-group md:col-span-3">
+                    <button class="w-full primary-btn mt-6">Send Code</button>
+                  </div>
+                </div>
+                <!-- OTP Form -->
+                <form data-otp>
+                  <div class="row">
+                    <div class="form-group md:col-span-12">
+                      <label class="form-label mb-4 block">Verification Code</label>
+                      <!-- 6-digit OTP inputs -->
+                      <div id="otp-wrapper" class="flex items-center gap-2 sm:gap-3 justify-center lg:justify-start">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center" autocomplete="one-time-code">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+
+                        <!-- Separator dash -->
+                        <span class="text-white/30 text-2xl font-light select-none">—</span>
+
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                      </div>
+
+                      <!-- Error message -->
+                      <p id="otp-error" class="text-red-400 text-sm mt-3 hidden">Invalid code. Please try
+                        again.</p>
+                    </div>
+                  </div>
+
+                  <!-- Countdown Timer -->
+                  <div class="row mt-2">
+                    <div class="form-group md:col-span-12">
+                      <div class="flex items-center justify-between">
+                        <p class="dark:text-white/40 text-black/40 text-sm">Code expires in</p>
+                        <p data-otp-timer class="text-brand text-sm font-semibold tabular-nums">02:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+              <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+              </button>
+              <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Verify & Enable</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Enable email Modal -->
+      <div id="enable-email-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+                  <i class="sz-mail-open text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Set Up Email Verification</h4>
+                  <p class="text-sm text-black/50 dark:text-white/50">We'll email you a code on login
+                  </p>
+                </div>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close"></i>
+              </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+
+
+                <div class="row items-center">
+                  <div class="form-group md:col-span-9">
+                    <label class="form-label">Email Address</label>
+                    <input type="text" class="form-control" placeholder=" user@example.com">
+                  </div>
+                  <div class="form-group md:col-span-3">
+                    <button class="w-full primary-btn mt-6">Send Code</button>
+                  </div>
+                </div>
+                <!-- OTP Form -->
+                <form data-otp>
+                  <div class="row">
+                    <div class="form-group md:col-span-12">
+                      <label class="form-label mb-4 block">Verification Code</label>
+                      <!-- 6-digit OTP inputs -->
+                      <div id="otp-wrapper" class="flex items-center gap-2 sm:gap-3 justify-center lg:justify-start">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center" autocomplete="one-time-code">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+
+                        <!-- Separator dash -->
+                        <span class="text-white/30 text-2xl font-light select-none">—</span>
+
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                        <input type="text" maxlength="1"
+                          class="otp-input form-control rounded-xl text-white text-center">
+                      </div>
+
+                      <!-- Error message -->
+                      <p id="otp-error" class="text-red-400 text-sm mt-3 hidden">Invalid code. Please try
+                        again.</p>
+                    </div>
+                  </div>
+
+                  <!-- Countdown Timer -->
+                  <div class="row mt-2">
+                    <div class="form-group md:col-span-12">
+                      <div class="flex items-center justify-between">
+                        <p class="dark:text-white/40 text-black/40 text-sm">Code expires in</p>
+                        <p data-otp-timer class="text-brand text-sm font-semibold tabular-nums">02:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+              <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+              </button>
+              <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Verify & Enable</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Disable 2FA Modal -->
+      <div id="disable-2fa-modal" class="modal hidden fixed inset-0 z-100">
+        <div
+          class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        </div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+          <div
+            class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 border border-red/40 rounded-xl bg-red/15 flex items-center justify-center text-black dark:text-white">
+                  <i class="sz-ban text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Disable 2FA</h4>
+                  <p class="text-sm text-black/50 dark:text-white/50">Enter your password to confirm disabling 2FA
+                  </p>
+                </div>
+              </div>
+              <button
+                class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                <i class="sz-close"></i>
+              </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div data-simplebar class="flex-1 min-h-0">
+              <div class="p-6 space-y-4">
+                <div class="bg-red/10 border border-red/20 rounded-2xl p-4 flex items-start gap-3">
+                  <div class="mt-0.5 text-red">
+                    <i class="sz-exclamation-circle-2 text-xl"></i>
+                  </div>
+                  <div>
+
+                    <p class="text-xs text-black/50 dark:text-white/50 mt-1">Your account will be significantly less
+                      secure without 2FA. All authentication methods and recovery options will be removed.</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group md:col-span-12">
+                    <label class="form-label">Password</label>
+                    <div class="relative">
+                      <input type="password" class="form-control pe-10" value="test test">
+                      <button type="button"
+                        class="toggle-password absolute inset-y-0 inset-e-0 flex items-center justify-center w-10 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white cursor-pointer">
+                        <i class="sz-eye text-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div
+              class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+              <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+              </button>
+              <button class="modal-close-btn primary-btn bg-red"> <i class="sz-trash text-lg"></i>Disable</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </main>
   </div>
   <!-- Tom Select JS -->
@@ -839,6 +1224,7 @@
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script src="assets/js/modal.js"></script>
 
   <script>
     // Profile Navigation Toggle (Mobile)
@@ -854,6 +1240,145 @@
       }
     }
   </script>
+  <!-- input copy js -->
+  <script>
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".copy-btn");
+      if (!btn) return;
+
+      const container = btn.parentElement;
+      const input = container.querySelector("input");
+      if (!input) return;
+
+      navigator.clipboard.writeText(input.value).then(() => {
+        const icon = btn.querySelector("i");
+        if (icon) {
+          const originalClass = icon.className;
+          icon.className = "sz-check text-brand text-lg pointer-events-none";
+
+          setTimeout(() => {
+            icon.className = originalClass;
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+    });
+  </script>
+  <script>
+
+    function initOTP(container, options = {}) {
+      const {
+        duration = 120,
+        onComplete = (code) => console.log('OTP entered:', code),
+        onResend = () => console.log('Resend requested'),
+      } = options;
+
+      // DOM refs
+      const inputs = [...container.querySelectorAll('.otp-input')];
+      const verifyBtn = container.querySelector('[data-otp-submit]');
+      const timerEl = container.querySelector('[data-otp-timer]');
+      const resendBtn = container.querySelector('[data-otp-resend]');
+
+      // Helpers
+      function getCode() { return inputs.map(inp => inp.value).join(''); }
+      function reset() { inputs.forEach(inp => { inp.value = ''; inp.classList.remove('filled'); }); }
+      function setSubmit(enabled) {
+        verifyBtn.disabled = !enabled;
+        verifyBtn.style.opacity = enabled ? '1' : '0.5';
+      }
+
+      // Input navigation
+      inputs.forEach((input, i) => {
+        input.addEventListener('input', () => {
+          input.value = input.value.replace(/\D/g, '');
+          input.classList.toggle('filled', !!input.value);
+          if (input.value && i < inputs.length - 1) inputs[i + 1].focus();
+          const code = getCode();
+          const done = code.length === inputs.length;
+          setSubmit(done);
+          if (done) onComplete(code);
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !input.value && i > 0) {
+            inputs[i - 1].value = '';
+            inputs[i - 1].classList.remove('filled');
+            inputs[i - 1].focus();
+            setSubmit(false);
+          }
+        });
+
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          e.clipboardData.getData('text').replace(/\D/g, '').slice(0, inputs.length)
+            .split('').forEach((d, j) => {
+              if (inputs[j]) { inputs[j].value = d; inputs[j].classList.add('filled'); }
+            });
+          (inputs.find(inp => !inp.value) || inputs.at(-1)).focus();
+          const code = getCode();
+          const done = code.length === inputs.length;
+          setSubmit(done);
+          if (done) onComplete(code);
+        });
+      });
+
+      // Countdown timer
+      let seconds = duration;
+      const timer = setInterval(() => {
+        seconds--;
+        timerEl.textContent = `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          timerEl.classList.replace('text-brand', 'text-red-400');
+          if (resendBtn) { resendBtn.disabled = false; resendBtn.style.opacity = '1'; resendBtn.style.cursor = 'pointer'; }
+        }
+      }, 1000);
+
+      // Resend
+      resendBtn?.addEventListener('click', () => {
+        reset();
+        setSubmit(false);
+        inputs[0].focus();
+        onResend();
+      });
+
+      inputs[0].focus();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-otp]').forEach(container => {
+        initOTP(container, {
+          duration: 120,
+          onComplete: (code) => console.log('OTP entered:', code), // TODO: API call here
+          onResend: () => console.log('Resend clicked'),
+        });
+      });
+    });
+  </script>
+
+  <!-- password show hide -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.toggle-password').forEach(button => {
+        button.addEventListener('click', function () {
+          const input = this.closest('.relative').querySelector('input');
+          const icon = this.querySelector('i');
+
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('sz-eye');
+            icon.classList.add('sz-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('sz-eye-slash');
+            icon.classList.add('sz-eye');
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
 </html>

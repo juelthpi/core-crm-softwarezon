@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,6 +13,7 @@
       --brand-main: #008658;
     }
   </style>
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,6 +26,8 @@
   <!-- <link rel="stylesheet" href="assets/icons/iconly.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+
 </head>
 
 <body class="bg-body-light dark:bg-body text-main font-body transition-colors duration-300">
@@ -59,7 +62,7 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">MAIN
               MENU</span>
           </div>
-          <a href="index.html" class="sidebar-link group active-item" data-tooltip="Dashboard">
+          <a href="index.html" class="sidebar-link group" data-tooltip="Dashboard">
             <div class="icon-box transition-colors">
               <i class="sz-view-grid-add text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -67,7 +70,7 @@
           </a>
           <!-- Blog Dropdown -->
           <div class="sidebar-dropdown">
-            <button onclick="toggleDropdown(this)" class="sidebar-link group w-full" aria-expanded="false">
+            <button onclick="toggleDropdown(this)" class="sidebar-link active-item group w-full" aria-expanded="false">
               <div class="icon-box transition-colors">
                 <i class="sz-clipboard-list text-lg group-hover:text-brand/80 duration-500"></i>
               </div>
@@ -79,7 +82,7 @@
                 <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> All Blogs
                 </a>
-                <a href="#" class="dropdown-item  transition-colors">
+                <a href="#" class="dropdown-item active-child transition-colors">
                   <i class="sz-clipboard-list text-sm"></i> Add Blog
                 </a>
               </div>
@@ -90,19 +93,13 @@
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">USER
               MANAGEMENT</span>
           </div>
-          <a href="manage-users.html" class="sidebar-link group" data-tooltip="Manage User">
+          <a href="#" class="sidebar-link group" data-tooltip="Manage User">
             <div class="icon-box transition-colors">
               <i class="sz-user text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
             <span class="font-base">Manage User</span>
           </a>
-          <a href="user-kyc.html" class="sidebar-link group" data-tooltip="KYC Verifications">
-            <div class="icon-box transition-colors">
-              <i class="sz-shield-check text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User KYC</span>
-          </a>
-          <a href="manage-kyc.html" class="sidebar-link group" data-tooltip="KYC Verifications">
+          <a href="#" class="sidebar-link group" data-tooltip="KYC Verifications">
             <div class="icon-box transition-colors">
               <i class="sz-shield-check text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -125,45 +122,13 @@
               </div>
             </div>
           </div>
-          <!-- Deposit/Withdrawal MANAGEMENT -->
-          <div class="px-3 py-1">
-            <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">DEPOSIT &
-              WITHDRAWAL
-            </span>
-          </div>
-          <a href="manage-deposit.html" class="sidebar-link group" data-tooltip="Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Deposit</span>
-          </a>
-          <a href="user-deposit.html" class="sidebar-link group" data-tooltip="User Deposit">
-            <div class="icon-box transition-colors">
-              <i class="sz-credit-card text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User Deposit</span>
-          </a>
-          <a href="manage-withdrawal.html" class="sidebar-link group" data-tooltip="Withdrawal">
-            <div class="icon-box transition-colors">
-              <i class="sz-library text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">Withdrawal</span>
-          </a>
-          <a href="user-withdrawal.html" class="sidebar-link group" data-tooltip="User Withdrawal">
-            <div class="icon-box transition-colors">
-              <i class="sz-library text-lg group-hover:text-brand/80 duration-500"></i>
-            </div>
-            <span class="font-base">User Withdrawal</span>
-          </a>
-
-
           <!-- SYSTEM SETTINGS -->
           <div class="px-3 py-1">
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">SYSTEM
               SETTINGS</span>
           </div>
 
-          <a href="index.html" class="sidebar-link group" data-tooltip="General Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="General Settings">
             <div class="icon-box transition-colors">
               <i class="sz-setting text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -199,14 +164,14 @@
             </button>
             <div class="dropdown-content">
               <div class="dropdown-inner">
-                <a href="payment-gateway.html" class="dropdown-item transition-colors">
+                <a href="#" class="dropdown-item transition-colors">
                   <i class="sz-server text-sm"></i> Gateways
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="notification-settings.html" class="sidebar-link group" data-tooltip="Notification Settings">
+          <a href="#" class="sidebar-link group" data-tooltip="Notification Settings">
             <div class="icon-box transition-colors">
               <i class="sz-bell text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
@@ -232,7 +197,6 @@
             </div>
             <span class="font-base">Manage Language</span>
           </a>
-
           <a href="#" class="sidebar-link group" data-tooltip="Pages">
             <div class="icon-box transition-colors">
               <i class="sz-book-open text-lg group-hover:text-brand/80 duration-500"></i>
@@ -241,7 +205,6 @@
           </a>
         </nav>
       </div>
-
       <!-- User Profile at bottom -->
       <div class="p-4 mt-auto mb-2 shrink-0">
         <div
@@ -417,7 +380,7 @@
             <button
               class="h-11 min-w-11 shrink-0 px-3 rounded-lg bg-sidebar-black/4 dark:bg-sidebar-black/4 border border-sidebar-black/10 dark:border-sidebar-white/10 flex items-center gap-3 text-sidebar-black dark:text-sidebar-white transition-all hover:bg-sidebar-black/10 dark:hover:bg-sidebar-white/10 cursor-pointer">
               <img src="assets/images/users/user-2.png" alt="Profile" class="w-7 h-7 rounded-full object-cover" />
-              <div class="text-left hidden lg:block">
+              <div class="text-start hidden lg:block">
                 <h5 class="text-sm font-semibold leading-none">
                   Super Admin
                 </h5>
@@ -433,12 +396,12 @@
             <div
               class="absolute top-full mt-2 inset-e-0 w-64 bg-sidebar-white dark:bg-sidebar-dark-green border border-sidebar-black/10 dark:border-sidebar-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 before:absolute before:-top-4 before:start-0 before:w-full before:h-4">
               <div class="p-2 space-y-1">
-                <a href="edit-profile.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-edit-alt text-lg"></i>
                   Edit Profile
                 </a>
-                <a href="update-password.html"
+                <a href="#"
                   class="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-sidebar-black/70 hover:text-black dark:text-sidebar-white hover:dark:text-sidebar-white hover:dark:bg-sidebar-white/5 hover:bg-sidebar-white/5 rounded-lg transition-colors">
                   <i class="sz-lock-open text-lg"></i>
                   Update Password
@@ -459,274 +422,440 @@
         </div>
       </header>
       <!-- dashboard Content -->
-      <section class="flex-1 p-2 md:p-4 space-y-3">
+      <section class="flex-1 p-2 md:p-4 space-y-4">
         <!-- page info -->
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              General Settings
+              KYC Verification Management
             </h5>
-            <p class="text-black/60 text-sm dark:text-white/60">
-              Configure core application settings
-            </p>
+            <!-- Breadcrumb -->
+            <ul class="flex gap-2 items-center">
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">KYC
+                  Verification</a>
+              </li>
+              <li><i class="sz-angle-right text-[8px] text-black/60 dark:text-white/60"></i></li>
+              <li><a href="#"
+                  class="hover:text-brand/80 duration-500 font-semibold text-sm text-black/60 dark:text-white/60">All
+                  KYC Requests</a></li>
+            </ul>
           </div>
-          <!-- <div class="flex gap-2">
-            <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
-            <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
-          </div> -->
+          <div class="flex gap-2">
+            <a href="manage-kyc.html" class="secondary-btn"> <i class="sz-arrow-left"></i> Back to KYC
+              Verification</a>
+          </div>
         </div>
 
-        <div
-          class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          <!-- item 1 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-setting text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="general-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
+        <div class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+          <div class="mb-4 flex items-center justify-between gap-2 flex-wrap">
             <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Basic Setting
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configured: site, CST time zone, preferences.
+              <h6 class="text-base text-black font-semibold dark:text-white">Rejected requests</h6>
+              <p class="text-sm text-black/60 dark:text-white/60">View and manage all KYC verification requests across
+                the platform
               </p>
+            </div>
+            <div class="flex items-center gap-3 flex-wrap">
+              <div class="relative group w-full md:w-76">
+                <div class="absolute inset-y-0 start-0 ps-3.5 flex items-center pointer-events-none">
+                  <i
+                    class="sz-search text-black/80 dark:text-white/80 text-lg group-focus-within:text-brand transition-colors"></i>
+                </div>
+                <input type="text" placeholder="Search KYC Requests"
+                  class="w-full md:w-76 bg-black/3 dark:bg-white/4 border border-black/2 dark:border-white/6 rounded-lg py-2.5 ps-11 pe-4 text-sm text-black dark:text-white placeholder:text-black/80 dark:placeholder:text-white/50 hover:text-black dark:hover:text-white focus:outline-none focus:border-brand/40 focus:bg-black/8 dark:focus:bg-white/8 transition-all" />
+              </div>
+              <!-- <button class="primary-btn" onclick="toggleOffcanvas('manual-payment-gateway-offcanvas')"> <i
+                  class="sz-plus text-xl"></i>
+                Add Gateway </button> -->
             </div>
           </div>
-          <!-- item 2 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-photograph text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="logo-appearance.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Logo & Appearance
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Upload logos and customize visual identity
-              </p>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cash text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="financial-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Financial Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configure financial settings
-              </p>
-            </div>
-          </div>
-          <!-- item 4 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-collection text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="gdrp-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                GDPR Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cube text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="maintenance-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Maintenance Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Enable/disable site maintenance mode
-              </p>
-            </div>
-          </div>
-          <!-- item 6 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="seo-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                SEO Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Meta tags, sitemap, and optimization
-              </p>
-            </div>
-          </div>
-          <!-- item 7 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-plugin-line text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="plugins-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Plugins Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 8 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-database text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cache-manage.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cache Manage
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 9 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-briefcase text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cron-job-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cron Job Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 10 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud-download text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="update-system.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Update System
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 11 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-annotation text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="social-media-login.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Social Media Login
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
+          <div class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4">
+            <div class="responsive-table-wrapper">
+              <table class="w-full text-start border-collapse custom-responsive-table">
+                <thead>
+                  <tr>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">#SL</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">User</th>
+
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">KYC Type</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Status</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Submitted</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Action</th>
+                    <th class="dark:text-white/80 text-black/80 text-base font-semibold py-4">Details</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-black/8 dark:divide-white/8">
+
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">1</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-9.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Passport</span>
+                    </td>
+
+
+
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-red/10 text-red border-red/15 ">
+                          <span class="w-2 h-2 rounded-full bg-red"></span> Rejected
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
+                          title="Approve">
+                          <i class="sz-x-circle-2 text-xl"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button data-modal="kyc-details-modal" class="cursor-pointer"> <i
+                          class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2</span></td>
+                    <td>
+                      <div class="flex items-center gap-2.5">
+                        <div class="max-w-[35px] shrink-0">
+                          <img src="assets/images/users/user-8.png" alt="img" class="w-full h-auto rounded-md">
+                        </div>
+                        <div class="flex flex-col">
+                          <p class="text-sm">John Doe</p>
+                          <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                        </div>
+
+                      </div>
+                    </td>
+
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">Passport</span>
+                    </td>
+
+
+
+                    <td class="py-3 px-1">
+                      <div class="flex items-center flex-wrap gap-2">
+                        <div class="status-badge bg-red/10 text-red border-red/15 ">
+                          <span class="w-2 h-2 rounded-full bg-red"></span> Rejected
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1"><span class="text-black/80 dark:text-white/60">2026-04-06</span></td>
+                    <td class="py-3 px-1">
+                      <div class="flex items-center gap-2">
+                        <button
+                          class="h-8 w-8 rounded-full border border-black/10 dark:border-white/15 bg-black/10 dark:bg-white/10 text-black/30 dark:text-white/30 duration-500 flex items-center justify-center action-btn  hover:bg-green-700 hover:text-white cursor-pointer"
+                          title="Approve">
+                          <i class="sz-x-circle-2 text-xl"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="py-3 px-1">
+                      <button data-modal="kyc-details-modal" class="cursor-pointer"> <i
+                          class="sz-document-text text-xl dark:text-white/80 text-black/80"></i> </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </section>
-    </main>
   </div>
+  <!-- KYC Details Modal -->
+  <div id="kyc-details-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-5xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center text-brand">
+              <i class="sz-information-circle text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">KYC Verification Details</h4>
+              <p class="text-xs text-black/50 dark:text-white/50">Lorem ipsum dolor sit amet consectetur. Gravida.</p>
+            </div>
+          </div>
+          <button
+            class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+            <i class="sz-close"></i>
+          </button>
+        </div>
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-4 space-y-4">
+
+            <!-- Deposit Method Details -->
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+              <div class="space-y-4 flex flex-col">
+                <h6 class="text-sm font-semibold text-black dark:text-white tracking-wider">Personal Information
+                </h6>
+                <div
+                  class="bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-5 space-y-4 flex-1">
+                  <!-- Profile Info -->
+                  <div class="flex flex-wrap items-center gap-3 justify-between">
+                    <div class="flex items-center gap-2.5">
+                      <div class="max-w-[35px] shrink-0">
+                        <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                      </div>
+                      <div class="flex flex-col">
+                        <p class="text-sm">John Doe</p>
+                        <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Details List -->
+                  <div class="space-y-4">
+                    <div
+                      class="flex justify-between items-center py-3 px-2 border-b border-black/5 dark:border-white/5 transition-all bg-black/4 dark:bg-white/4 hover:bg-black/1 dark:hover:bg-white/1 rounded-lg">
+                      <span class="text-sm text-black/50 dark:text-white/50">Date of Birth</span>
+                      <span
+                        class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">1992-03-15</span>
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-3 px-2 border-b border-black/5 dark:border-white/5 transition-all bg-black/4 dark:bg-white/4 hover:bg-black/1 dark:hover:bg-white/1 rounded-lg">
+                      <span class="text-sm text-black/50 dark:text-white/50">Country</span>
+                      <span
+                        class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">Nepal</span>
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-3 px-2 border-b border-black/5 dark:border-white/5 transition-all bg-black/4 dark:bg-white/4 hover:bg-black/1 dark:hover:bg-white/1 rounded-lg">
+                      <span class="text-sm text-black/50 dark:text-white/50">Phone</span>
+                      <span
+                        class="text-sm font-semibold text-black dark:text-white uppercase tracking-wider">+977-9800000000</span>
+                    </div>
+
+
+                  </div>
+                  <div class="space-y-4">
+                    <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Request Information
+                    </h6>
+                    <div
+                      class="space-y-1 bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-3">
+                      <div
+                        class="flex justify-between items-center py-2 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                        <span class="text-sm text-black/50 dark:text-white/50">Status</span>
+                        <span class="status-badge bg-yellow/10 text-yellow border-yellow/15 "><span
+                            class="w-2 h-2 rounded-full bg-yellow"></span> Pending</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4 flex flex-col">
+                <h6 class="text-sm font-semibold text-black dark:text-white tracking-wider">Document Information
+                </h6>
+                <div
+                  class="bg-black/3 dark:bg-white/4 border border-black/5 dark:border-white/5 rounded-2xl p-5 space-y-4 flex-1">
+                  <p class="text-sm font-semibold text-black dark:text-white tracking-wider">Front Side</p>
+                  <div class="h-50 p-2 dark:bg-white/5 bg-black/5 overflow-hidden rounded-md">
+                    <img src="assets/images/thumbnails/nid-1.png" alt="img" class="  w-full h-auto   ">
+                  </div>
+                  <p class="text-sm font-semibold text-black dark:text-white tracking-wider">Back Side</p>
+                  <div class="h-50 p-2 dark:bg-white/5 bg-black/5 overflow-hidden rounded-md">
+                    <img src="assets/images/thumbnails/nid-2.png" alt="img" class="  w-full h-auto    ">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Footer -->
+          <div
+            class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+            <button class="modal-close-btn secondary-btn"> <i class="sz-close text-lg"></i> Cancel</button>
+            <button class="modal-close-btn primary-btn bg-red"> <i class="sz-x-circle-2 text-lg"></i> Reject</button>
+            <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Approve</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- KYC Approval Modal -->
+  <div id="kyc-approval-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+              <i class="sz-information-circle text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Approve KYC</h4>
+              <p class="text-xs text-black/50 dark:text-white/50">Are you sure you want to approve this KYC
+                request?
+              </p>
+            </div>
+          </div>
+          <button
+            class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+            <i class="sz-close"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+
+            <div class="space-y-4  ">
+              <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Short Information
+              </h6>
+              <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-3">
+
+
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <div class="flex items-center gap-2.5">
+                    <div class="max-w-[35px] shrink-0">
+                      <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-sm">John Doe</p>
+                      <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2">
+                  <span class="text-sm text-black/50 dark:text-white/50">KYC Type</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">Passport</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Admin Note</label>
+              <textarea name="" id="" class="form-control" placeholder="Add any note about this approval"></textarea>
+              <span class="text-xs text-black/50 dark:text-white/50">Note will be visible to the user</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+          <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel
+            Request</button>
+          <button class="modal-close-btn primary-btn"> <i class="sz-check text-lg"></i> Confirm Approve</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- KYC Reject Modal -->
+  <div id="kyc-reject-modal" class="modal hidden fixed inset-0 z-100">
+    <div class="modal-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    </div>
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div
+        class="modal-content scale w-full max-w-xl bg-white/80 border  border-black/8 dark:border-white/10 dark:bg-dark-green rounded-2xl shadow-xl overflow-hidden relative z-10 transition-all duration-400 h-full max-h-[90vh] flex flex-col">
+
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 border border-brand/40 rounded-xl bg-brand/15 flex items-center justify-center text-black dark:text-white">
+              <i class="sz-information-circle text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-black dark:text-white leading-tight">Reject KYC</h4>
+              <p class="text-xs text-black/50 dark:text-white/50">Please provide a reason for rejection</p>
+            </div>
+          </div>
+          <button
+            class="modal-close-btn w-8 h-8 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+            <i class="sz-close"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body (Scrollable) -->
+        <div data-simplebar class="flex-1 min-h-0">
+          <div class="p-6 space-y-4">
+
+            <div class="space-y-4  ">
+              <h6 class="text-sm font-semibold text-black dark:text-white  tracking-wider">Short Information
+              </h6>
+              <div class="space-y-1 bg-white/80 dark:bg-white/4 border border-brand/60   rounded-2xl p-3">
+
+
+                <div
+                  class="flex justify-between items-center py-4 border-b border-black/5 dark:border-white/5 transition-all hover:bg-black/1 dark:hover:bg-white/1 px-2 rounded-lg">
+                  <div class="flex items-center gap-2.5">
+                    <div class="max-w-[35px] shrink-0">
+                      <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-sm">John Doe</p>
+                      <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2">
+                  <span class="text-sm text-black/50 dark:text-white/50">KYC Type</span>
+                  <span class="text-sm font-semibold text-black dark:text-white">Passport</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Rejection Reason</label>
+              <textarea name="" id="" class="form-control" placeholder="Add any note about this rejection"></textarea>
+              <span class="text-xs text-black/50 dark:text-white/50">Note will be visible to the user</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-6 border-t border-black/5 dark:border-white/5 flex justify-end shrink-0 relative z-1 gap-2 flex-wrap">
+
+          <button class="modal-close-btn secondary-btn"> <i class="sz-x-circle-2 text-lg"></i> Cancel</button>
+          <button class="modal-close-btn primary-btn bg-red"> <i class="sz-close-circle text-lg"></i> Confirm
+            Reject</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Core Scripts -->
+
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script src="assets/js/table.js"></script>
+  <script src="assets/js/modal.js"></script>
+
 </body>
 
 </html>
