@@ -53,7 +53,7 @@
         <!-- Right Panel -->
         <div class="bg-black py-10 lg:py-16 flex justify-center lg:justify-start items-center px-4 md:px-10">
             <div
-                class="w-full max-w-[520px] dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-3 md:p-6">
+                class="w-full max-w-[520px] bg-white dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-3 md:p-6">
                 <div class="space-y-6">
 
                     <!-- Authenticator Icon -->
@@ -66,19 +66,22 @@
 
                     <!-- Heading -->
                     <div class="text-center lg:text-start">
-                        <h2 class="text-lg lg:text-xl font-bold text-white leading-tight">Two-Factor Authentication</h2>
-                        <p class="text-white/50 text-sm lg:text-base leading-relaxed mt-1">
-                            Open your <span class="text-white/80 font-medium">Google Authenticator</span> app and enter
+                        <h2 class="text-lg lg:text-xl font-bold text-black dark:text-white leading-tight">Two-Factor
+                            Authentication</h2>
+                        <p class="text-black/80 dark:text-white/50 text-sm lg:text-base leading-relaxed mt-1">
+                            Open your <span class="text-black/80 dark:text-white/80 font-medium">Google
+                                Authenticator</span> app and enter
                             the 6-digit code shown for ForexSignal.
                         </p>
                     </div>
 
                     <!-- App badge -->
-                    <div class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3">
+                    <div
+                        class="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 flex items-center gap-3">
                         <i class="sz-shield-check text-brand text-xl"></i>
                         <div>
-                            <p class="text-white/70 text-sm font-medium">Google Authenticator</p>
-                            <p class="text-white/40 text-xs">Code refreshes every 30 seconds</p>
+                            <p class="text-black/80 dark:text-white/70 text-sm font-medium">Google Authenticator</p>
+                            <p class="text-black/80 dark:text-white/40 text-xs">Code refreshes every 30 seconds</p>
                         </div>
                     </div>
 
@@ -89,25 +92,28 @@
                                 class="w-6 h-6 rounded-full bg-brand/15 border border-brand/30 flex items-center justify-center shrink-0 mt-0.5">
                                 <span class="text-brand text-xs font-bold">1</span>
                             </div>
-                            <p class="text-white/50 text-sm leading-relaxed">Open <span
-                                    class="text-white/80 font-medium">Google Authenticator</span> on your phone.</p>
+                            <p class="text-black/80 dark:text-white/50 text-sm leading-relaxed">Open <span
+                                    class="text-black/80 dark:text-white/80 font-medium">Google Authenticator</span> on
+                                your phone.</p>
                         </div>
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-6 h-6 rounded-full bg-brand/15 border border-brand/30 flex items-center justify-center shrink-0 mt-0.5">
                                 <span class="text-brand text-xs font-bold">2</span>
                             </div>
-                            <p class="text-white/50 text-sm leading-relaxed">Find <span
-                                    class="text-white/80 font-medium">ForexSignal</span> in the list and copy the
-                                6-digit code.</p>
+                            <p class="text-black/80 dark:text-white/50 text-sm leading-relaxed">Find <span
+                                    class="text-black/80 dark:text-white/80 font-medium">ForexSignal</span> in the list
+                                and copy the 6-digit code.</p>
                         </div>
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-6 h-6 rounded-full bg-brand/15 border border-brand/30 flex items-center justify-center shrink-0 mt-0.5">
                                 <span class="text-brand text-xs font-bold">3</span>
                             </div>
-                            <p class="text-white/50 text-sm leading-relaxed">Enter it below and click <span
-                                    class="text-white/80 font-medium">Verify</span> — make sure it hasn't expired.</p>
+                            <p class="text-black/80 dark:text-white/50 text-sm leading-relaxed">Enter it below and click
+                                <span class="text-black/80 dark:text-white/80 font-medium">Verify</span> — make sure it
+                                hasn't expired.
+                            </p>
                         </div>
                     </div>
 
@@ -121,19 +127,19 @@
                                 <label class="form-label mb-4 block">Authenticator Code</label>
                                 <div class="flex items-center gap-2 sm:gap-3 justify-center lg:justify-start">
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center"
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center"
                                         autocomplete="one-time-code">
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center">
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center">
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center">
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center">
                                     <span class="text-white/30 text-2xl font-light select-none">—</span>
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center">
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center">
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center">
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center">
                                     <input type="text" maxlength="1"
-                                        class="otp-input form-control rounded-xl text-white text-center">
+                                        class="otp-input form-control rounded-xl text-black/80 dark:text-white text-center">
                                 </div>
                             </div>
                         </div>
@@ -142,7 +148,7 @@
                         <div class="row mt-2">
                             <div class="form-group md:col-span-12">
                                 <div class="flex items-center justify-between">
-                                    <p class="text-white/40 text-sm">Code refreshes in</p>
+                                    <p class="text-black/80 dark:text-white/40 text-sm">Code refreshes in</p>
                                     <p data-otp-timer class="text-brand text-sm font-semibold tabular-nums">00:30</p>
                                 </div>
                             </div>
@@ -160,7 +166,7 @@
 
                     <!-- Use backup code -->
                     <div class="text-center lg:text-start">
-                        <p class="text-white/50 text-sm">
+                        <p class="text-black/80 dark:text-white/50 text-sm">
                             Lost access to your app?
                             <a href="#" class="text-brand font-medium hover:text-brand/80 transition-colors">Use backup
                                 code</a>
@@ -170,7 +176,7 @@
                     <!-- Back link -->
                     <div class="text-center lg:text-start">
                         <a href="login.html"
-                            class="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-sm transition-colors">
+                            class="inline-flex items-center gap-1.5 text-black/80 dark:text-white/40 hover:text-white/70 text-sm transition-colors">
                             <i class="sz-arrow-left text-brand text-lg"></i>
                             Back to Login
                         </a>
@@ -262,5 +268,6 @@
         });
     });
 </script>
+<script src="assets/js/layout.js"></script>
 
 </html>
