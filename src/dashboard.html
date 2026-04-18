@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -24,6 +24,8 @@
   <link href="https://dev.iconly.io/public/wFdRuZcL7WlO/iconly.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="assets/icons/iconly.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
+
+  <link rel="stylesheet" href="assets/css/table.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -155,21 +157,18 @@
             </div>
             <span class="font-base">User Withdrawal</span>
           </a>
-
-
           <!-- SYSTEM SETTINGS -->
           <div class="px-3 py-1">
             <span class="text-sm font-medium text-sidebar-black/40 dark:text-sidebar-white/30 uppercase">SYSTEM
               SETTINGS</span>
           </div>
 
-          <a href="index.html" class="sidebar-link group" data-tooltip="General Settings">
+          <a href="dashboard.html" class="sidebar-link group" data-tooltip="Welcome back, Admin!">
             <div class="icon-box transition-colors">
               <i class="sz-setting text-lg group-hover:text-brand/80 duration-500"></i>
             </div>
-            <span class="font-base">General Settings</span>
+            <span class="font-base">Welcome back, Admin!</span>
           </a>
-
           <!-- Role & Permission Dropdown -->
           <div class="sidebar-dropdown">
             <button onclick="toggleDropdown(this)" class="sidebar-link group w-full" aria-expanded="false">
@@ -187,7 +186,6 @@
               </div>
             </div>
           </div>
-
           <!-- Payment Gateway Dropdown -->
           <div class="sidebar-dropdown">
             <button onclick="toggleDropdown(this)" class="sidebar-link group w-full" aria-expanded="false">
@@ -468,262 +466,818 @@
         <div class="flex items-center gap-3 justify-between flex-wrap">
           <div>
             <h5 class="text-xl text-black font-semibold dark:text-white">
-              General Settings
+              Welcome back, Admin!
             </h5>
-            <p class="text-black/60 text-sm dark:text-white/60">
-              Configure core application settings
-            </p>
+
           </div>
           <!-- <div class="flex gap-2">
             <button class="secondary-btn"> <i class="sz-arrow-left"></i> Back to General Settings </button>
             <button class="primary-btn"> <i class="sz-check"></i> Save Changes</button>
           </div> -->
         </div>
+        <div class="space-y-4">
+          <!-- parent item -->
+          <div
+            class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-4">
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center bg-brand/15 h-10 w-10 rounded-lg">
+                  <i class="sz-user-group text-brand text-2xl"></i>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="sz-trending-up text-xl text-green"></i> <span
+                    class="text-sm text-green font-medium">+10%</span>
 
-        <div
-          class="mt-4 dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          <!-- item 1 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-setting text-black dark:text-white text-2xl"></i>
+                </div>
               </div>
-              <a href="general-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">14,283</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Total Platform Users</p>
+              </div>
             </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Basic Setting
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configured: site, CST time zone, preferences.
-              </p>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center bg-blue/15 h-10 w-10 rounded-lg">
+                  <i class="sz-user-group text-blue text-2xl"></i>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="sz-chart-square-bar text-xl text-green"></i> <span
+                    class="text-sm text-green font-medium">+12%</span>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">9,847</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Active Trading Accounts</p>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+
+                <div class="flex items-center justify-center bg-yellow/15 h-10 w-10 rounded-lg">
+                  <i class="sz-shield-check text-yellow text-2xl"></i>
+                </div>
+
+
+                <div class="flex items-center gap-1">
+
+                  <i class="sz-exclamation-circle text-yellow text-xl"></i>
+                  <p class="text-sm text-yellow font-medium"> Need Review
+                  </p>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">24</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Pending KYC Requests</p>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center bg-purple/15 h-10 w-10 rounded-lg">
+                  <i class="sz-credit-card text-purple text-2xl"></i>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="sz-trending-up text-xl text-green"></i> <span
+                    class="text-sm text-green font-medium">+12%</span>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">$2.4M</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Total Platform Balance</p>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center bg-blue/15 h-10 w-10 rounded-lg">
+                  <i class="sz-sort-descending text-blue text-2xl"></i>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="sz-trending-up text-xl text-green"></i> <span
+                    class="text-sm text-green font-medium">+12%</span>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">$2.4M</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Today Deposit Amount</p>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center bg-yellow/15 h-10 w-10 rounded-lg">
+                  <i class="sz-arrow-circle-up text-yellow text-2xl"></i>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="sz-trending-up text-xl text-green"></i> <span
+                    class="text-sm text-green font-medium">+12%</span>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="lg:text-2xl text-xl font-semibold text-black dark:text-white">$2.4M</h4>
+                <p class="text-sm text-black/70 dark:text-white/70">Today Withdrawal Amount</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- parent item -->
+          <div
+            class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-12 gap-4">
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4 col-span-12 md:col-span-6 2xl:col-span-5">
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <div>
+                  <h6 class="text-base text-black font-semibold dark:text-white">Financial Overview</h6>
+                  <p class="text-sm text-black/70 dark:text-white/70">Deposit vs Withdrawal — Last 12 months</p>
+                </div>
+                <div class="relative group/dropdown">
+                  <button type="button"
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border border-black/10 dark:border-white/5 bg-black/4 dark:bg-white/4 text-sm font-medium text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all cursor-pointer">
+                    <span id="selectedRange">Last 12 months</span>
+                    <i class="sz-angle-down text-[10px] transition-transform group-hover/dropdown:rotate-180"></i>
+                  </button>
+                  <div
+                    class="absolute top-full mt-2 inset-e-0 w-44 bg-white dark:bg-[#0a0a0a] border border-black/10 dark:border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all z-50 overflow-hidden">
+                    <div class="p-1.5 space-y-0.5">
+                      <button type="button" onclick="updateFinancialChart('Last 12 months', 12)"
+                        class="w-full text-start px-3 py-2 text-sm rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors cursor-pointer capitalize">Last
+                        12 months</button>
+                      <button type="button" onclick="updateFinancialChart('Last 6 months', 6)"
+                        class="w-full text-start px-3 py-2 text-sm rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors cursor-pointer capitalize">Last
+                        6 months</button>
+                      <button type="button" onclick="updateFinancialChart('Last 3 months', 3)"
+                        class="w-full text-start px-3 py-2 text-sm rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors cursor-pointer capitalize">Last
+                        3 months</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-60 relative w-full pt-4">
+                <canvas id="financialChart"></canvas>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-2 col-span-12 md:col-span-6 2xl:col-span-3">
+              <h6 class="text-base text-black font-semibold dark:text-white">User Analytics</h6>
+              <div class="grid grid-cols-2 gap-3">
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">New Today</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">24</span>
+                </div>
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">This Month</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">2354</span>
+                </div>
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">Active Users</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">60.8%</span>
+                </div>
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">Total Users</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">24</span>
+                </div>
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">Avg Session</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">8m 42s</span>
+                </div>
+                <!-- inner item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1">
+                  <p class="text-sm text-black/80 dark:text-white/80">Returning</p>
+                  <span class="text-xl font-semibold text-black dark:text-white">67.6%</span>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div
+              class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-2 col-span-12 md:col-span-12 2xl:col-span-4">
+              <h6 class="text-base text-black font-semibold dark:text-white">Top Countries</h6>
+              <div class="space-y-4 pt-2">
+                <!-- item 1 -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-black/15 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <img src="assets/images/flags/united kingdom.png" class="w-5 h-5 rounded-full object-cover"
+                      alt="United Kingdom">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="text-sm font-medium text-black/70 dark:text-white/60">United Kingdom</span>
+                      <span class="text-sm font-semibold text-black dark:text-white">89.3%</span>
+                    </div>
+                    <div class="w-full bg-black/10 dark:bg-white/5 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-brand h-full rounded-full" style="width: 89.3%"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- item 2 -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-black/15 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <img src="assets/images/flags/united-states.png" class="w-5 h-5 rounded-full object-cover"
+                      alt="United States">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="text-sm font-medium text-black/70 dark:text-white/60">United States</span>
+                      <span class="text-sm font-semibold text-black dark:text-white">65.4%</span>
+                    </div>
+                    <div class="w-full bg-black/10 dark:bg-white/5 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-brand h-full rounded-full" style="width: 65.4%"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- item 3 -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-black/15 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <img src="assets/images/flags/bangladesh.png" class="w-5 h-5 rounded-full object-cover"
+                      alt="Bangladesh">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="text-sm font-medium text-black/70 dark:text-white/60">Bangladesh</span>
+                      <span class="text-sm font-semibold text-black dark:text-white">45.2%</span>
+                    </div>
+                    <div class="w-full bg-black/10 dark:bg-white/5 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-brand h-full rounded-full" style="width: 45.2%"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- item 4 -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-black/15 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <img src="assets/images/flags/saudi-arabia.png" class="w-5 h-5 rounded-full object-cover"
+                      alt="Saudi Arabia">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="text-sm font-medium text-black/70 dark:text-white/60">Saudi Arabia</span>
+                      <span class="text-sm font-semibold text-black dark:text-white">32.8%</span>
+                    </div>
+                    <div class="w-full bg-black/10 dark:bg-white/5 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-brand h-full rounded-full" style="width: 32.8%"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- item 4 -->
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-black/15 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <img src="assets/images/flags/saudi-arabia.png" class="w-5 h-5 rounded-full object-cover"
+                      alt="Saudi Arabia">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <span class="text-sm font-medium text-black/70 dark:text-white/60">Saudi Arabia</span>
+                      <span class="text-sm font-semibold text-black dark:text-white">12.8%</span>
+                    </div>
+                    <div class="w-full bg-black/10 dark:bg-white/5 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-brand h-full rounded-full" style="width: 12.8%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- item 2 -->
+          <!-- parent item -->
           <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-photograph text-black dark:text-white text-2xl"></i>
+            class="dark:bg-dark-green border border-black/10 dark:border-white/5 rounded-xl p-2 md:p-4 grid grid-cols-1 2xl:grid-cols-2 gap-4">
+            <!-- left box -->
+            <div class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4">
+              <div class="grid grid-cols-12 gap-4">
+                <!-- item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-4 col-span-12 md:col-span-6 2xl:col-span-6">
+                  <h6 class="text-base text-black font-semibold dark:text-white">KYC Insights</h6>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <!-- inner item -->
+                    <div
+                      class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1 text-center">
+
+                      <span class="text-xl font-semibold text-green">32,841</span>
+                      <p class="text-sm text-black/80 dark:text-white/80">Approved</p>
+                    </div>
+                    <!-- inner item -->
+                    <div
+                      class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1 text-center">
+                      <span class="text-xl font-semibold text-black dark:text-white">254</span>
+                      <p class="text-sm text-black/80 dark:text-white/80">Pending</p>
+
+                    </div>
+                    <!-- inner item -->
+                    <div
+                      class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-1 text-center">
+                      <span class="text-xl font-semibold text-red">609</span>
+                      <p class="text-sm text-black/80 dark:text-white/80">Rejected</p>
+
+                    </div>
+
+
+                  </div>
+                  <div
+                    class="border dark:border-white/5 border-black/5 rounded-xl p-1.5 md:p-2 dark:bg-white/4 bg-black/4 flex items-center justify-between">
+                    <p class="text-sm text-black/80 dark:text-white/80">Avg Approval Time</p>
+                    <div class="flex items-center gap-1">
+                      <i class="sz-trending-up text-xl text-green"></i> <span
+                        class="text-sm text-green font-medium">24h</span>
+
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between mb-1.5">
+                        <span class="text-sm font-medium text-black/70 dark:text-white/60">Success Rate</span>
+                        <span class="text-sm flex items-center gap-1 font-semibold text-black dark:text-white"> <i
+                            class="sz-trending-up text-xl text-green"></i> 89.3%</span>
+                      </div>
+                      <div class="w-full bg-black/10 dark:bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-brand h-full rounded-full" style="width: 89.3%"></div>
+                      </div>
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between mb-1.5">
+                        <span class="text-sm font-medium text-black/70 dark:text-white/60">Rejection Rate</span>
+                        <span class="text-sm flex items-center gap-1 font-semibold text-red dark:text-red"> <i
+                            class="sz-trending-down text-xl text-red"></i> 10.7%</span>
+                      </div>
+                      <div class="w-full bg-black/10 dark:bg-white/5 h-2 rounded-full overflow-hidden">
+                        <div class="bg-red h-full rounded-full" style="width: 10.7%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-2 col-span-12 md:col-span-6 2xl:col-span-6">
+                  <h6 class="text-base text-black font-semibold dark:text-white">Smart Insights</h6>
+                  <div class="space-y-2">
+                    <!-- inner item -->
+                    <div class="border dark:border-white/3 border-black/3 rounded-lg p-2 dark:bg-white/2 bg-black/2 ">
+                      <h6 class="text-base font-medium text-green flex items-center gap-1"><i
+                          class="sz-trending-up text-xl "></i>Growth
+                        Alert</h6>
+                      <p class="text-xs text-black/80 dark:text-white/80">Users from UAE increased by 18% this week</p>
+
+                    </div>
+                    <!-- inner item -->
+                    <div class="border dark:border-white/3 border-black/3 rounded-lg p-2 dark:bg-white/2 bg-black/2 ">
+                      <h6 class="text-base font-medium text-blue flex items-center gap-1"><i
+                          class="sz-globe-alt text-xl  "></i>
+                        Traffic</h6>
+                      <p class="text-xs text-black/80 dark:text-white/80">Chrome dominates 72% of all browser traffic
+                      </p>
+
+                    </div>
+                    <!-- inner item -->
+                    <div class="border dark:border-white/3 border-black/3 rounded-lg p-2 dark:bg-white/2 bg-black/2 ">
+                      <h6 class="text-base font-medium text-yellow flex items-center gap-1"><i
+                          class="sz-cash text-xl  "></i>
+                        Deposits</h6>
+                      <p class="text-xs text-black/80 dark:text-white/80">Deposit volume up 15.2% — highest in Q4</p>
+
+                    </div>
+                    <!-- inner item -->
+                    <div class="border dark:border-white/3 border-black/3 rounded-lg p-2 dark:bg-white/2 bg-black/2 ">
+                      <h6 class="text-base font-medium text-red flex items-center gap-1"><i
+                          class="sz-shield-exclamation text-xl  "></i>
+                        KYC</h6>
+                      <p class="text-xs text-black/80 dark:text-white/80">KYC verification time reduced by 24%</p>
+
+                    </div>
+
+                  </div>
+                </div>
+                <!-- item -->
+                <div
+                  class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-4 dark:bg-white/4 bg-black/4 space-y-6 col-span-12">
+                  <h6 class="text-base text-black font-semibold dark:text-white">Browser & Device</h6>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Left Side: Doughnut Chart -->
+                    <div class="flex flex-col items-center lg:items-start xl:items-center">
+                      <div class="relative w-44 h-44">
+                        <canvas id="browserChart"></canvas>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                          <span class="text-2xl font-bold text-black dark:text-white">75%</span>
+                          <span class="text-xs text-black/60 dark:text-white/60">Chrome</span>
+                        </div>
+                      </div>
+                      <!-- Custom Legend -->
+                      <div class="flex items-center justify-center gap-4 mt-8 flex-wrap">
+                        <div class="flex items-center gap-2">
+                          <span class="w-3 h-3 rounded-full bg-green"></span>
+                          <span class="text-sm font-medium text-green">Chrome</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <span class="w-3 h-3 rounded-full bg-blue"></span>
+                          <span class="text-sm font-medium text-blue">Firefox</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                          <span class="w-3 h-3 rounded-full bg-yellow"></span>
+                          <span class="text-sm font-medium text-yellow">Safari</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Right Side: Devices List -->
+                    <div class="space-y-6">
+                      <h6 class="text-base font-semibold text-black dark:text-white">Devices</h6>
+                      <div class="space-y-5">
+                        <!-- Desktop -->
+                        <div class="space-y-2">
+                          <div class="flex items-center justify-between text-sm">
+                            <span class="text-black/60 dark:text-white/60 font-medium">Desktop</span>
+                            <span class="text-black dark:text-white font-semibold">89.3%</span>
+                          </div>
+                          <div class="w-full bg-black/10 dark:bg-white/5 h-2 rounded-full overflow-hidden">
+                            <div class="bg-green h-full rounded-full" style="width: 89.3%"></div>
+                          </div>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="space-y-2">
+                          <div class="flex items-center justify-between text-sm">
+                            <span class="text-black/60 dark:text-white/60 font-medium">Mobile</span>
+                            <span class="text-black dark:text-white font-semibold">70.8%</span>
+                          </div>
+                          <div class="w-full bg-black/10 dark:bg-white/5 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue h-full rounded-full" style="width: 70.8%"></div>
+                          </div>
+                        </div>
+                        <!-- Tablet -->
+                        <div class="space-y-2">
+                          <div class="flex items-center justify-between text-sm">
+                            <span class="text-black/60 dark:text-white/60 font-medium">Tablet</span>
+                            <span class="text-black dark:text-white font-semibold">50.5%</span>
+                          </div>
+                          <div class="w-full bg-black/10 dark:bg-white/5 h-2 rounded-full overflow-hidden">
+                            <div class="bg-yellow h-full rounded-full" style="width: 50.5%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <a href="logo-appearance.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
             </div>
+            <!-- right box -->
             <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Logo & Appearance
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Upload logos and customize visual identity
-              </p>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
               <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cash text-black dark:text-white text-2xl"></i>
+                class="border dark:border-white/5 border-black/5 rounded-xl p-2 md:p-3 dark:bg-white/4 bg-black/4 space-y-2 col-span-12 md:col-span-12 2xl:col-span-6">
+                <div class="flex items-center justify-between flex-wrap gap-1">
+                  <h6 class="text-base text-black font-semibold dark:text-white">Recent Transactions</h6>
+                  <a href="#" class="primary-btn-md text-sm">View All</a>
+                </div>
+                <div class="mt-4 border border-black/10 dark:border-white/5 rounded-lg p-2 md:p-4 md:pt-0">
+                  <div class="responsive-table-wrapper">
+                    <table class="w-full text-start border-collapse custom-responsive-table">
+                      <thead>
+                        <tr>
+
+                          <th class="dark:text-white/80 text-black/80 text-sm font-semibold py-2 px-1">User</th>
+                          <th class="dark:text-white/80 text-black/80 text-sm font-semibold py-2 px-1">Type</th>
+                          <th class="dark:text-white/80 text-black/80 text-sm font-semibold py-2 px-1">Amount</th>
+                          <th class="dark:text-white/80 text-black/80 text-sm font-semibold py-2 px-1">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y   divide-black/8 dark:divide-white/8">
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-2.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-green/10 text-green border-green/15 ">
+                                <span class="w-2 h-2 rounded-full bg-green"></span> Success
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-7.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-yellow/10 text-yellow border-yellow/15 ">
+                                <span class="w-2 h-2 rounded-full bg-yellow"></span> Pending
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-7.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-yellow/10 text-yellow border-yellow/15 ">
+                                <span class="w-2 h-2 rounded-full bg-yellow"></span> Pending
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-1">
+                            <div class="flex items-center gap-2.5">
+                              <div class="max-w-[35px] shrink-0">
+                                <img src="assets/images/users/user-3.png" alt="img" class="w-full h-auto rounded-md">
+                              </div>
+                              <div class="flex flex-col">
+                                <p class="text-sm">John Doe</p>
+                                <span class="text-black/80 dark:text-white/60 text-xs">john.doe@example.com</span>
+                              </div>
+
+                            </div>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">Deposit</span>
+                          </td>
+
+                          <td class="py-2 px-1"><span class=" text-sm text-black/80 dark:text-white/60">$2,500</span>
+                          </td>
+
+                          <td class="py-2 px-1">
+                            <div class="flex items-center flex-wrap gap-2">
+                              <div class="status-badge bg-blue/10 text-blue border-blue/15 ">
+                                <span class="w-2 h-2 rounded-full bg-blue"></span> New
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
               </div>
-              <a href="financial-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
             </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Financial Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Configure financial settings
-              </p>
-            </div>
+
           </div>
-          <!-- item 4 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-collection text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="gdrp-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                GDPR Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cube text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="maintenance-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Maintenance Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Enable/disable site maintenance mode
-              </p>
-            </div>
-          </div>
-          <!-- item 6 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="seo-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                SEO Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Meta tags, sitemap, and optimization
-              </p>
-            </div>
-          </div>
-          <!-- item 7 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-plugin-line text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="plugins-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Plugins Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 8 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-database text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cache-manage.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cache Manage
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 9 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-briefcase text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="cron-job-settings.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Cron Job Settings
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 10 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-cloud-download text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="update-system.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Update System
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
-          <!-- item 11 -->
-          <div
-            class="bg-black/3 dark:bg-white/2 border border-black/3 dark:border-white/5 rounded-2xl p-4 md:p-5 hover:border-brand dark:hover:border-brand transition-all duration-300 group flex flex-col">
-            <div class="flex items-start justify-between mb-4">
-              <div
-                class="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shrink-0">
-                <i class="sz-annotation text-black dark:text-white text-2xl"></i>
-              </div>
-              <a href="social-media-login.html"
-                class="px-4 py-2 bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-black dark:text-white text-sm font-medium flex items-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-colors shrink-0">
-                Manage <i class="sz-long-arrow-right text-sm"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="text-lg font-bold text-black dark:text-white tracking-wide">
-                Social Media Login
-              </h5>
-              <p class="text-sm text-black/60 dark:text-white/60">
-                Privacy compliance and cookie settings
-              </p>
-            </div>
-          </div>
+
         </div>
       </section>
     </main>
@@ -731,6 +1285,171 @@
   <!-- Core Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="assets/js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    let financialChart;
+    document.addEventListener('DOMContentLoaded', function () {
+      const getStyle = (prop) => getComputedStyle(document.documentElement).getPropertyValue(prop).trim();
+      const brandColor = getStyle('--brand-main') || '#008658';
+      const yellowColor = getStyle('--color-yellow') || '#f59e0b';
+
+      const ctx = document.getElementById('financialChart').getContext('2d');
+      financialChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          datasets: [
+            {
+              label: 'Deposits',
+              data: [60, 44, 55, 60, 18, 55, 44, 43, 60, 18, 49, 60],
+              backgroundColor: brandColor,
+              borderRadius: { topLeft: 10, topRight: 10, bottomLeft: 0, bottomRight: 0 },
+              borderSkipped: false,
+              barThickness: 5,
+              categoryPercentage: 0.5,
+              barPercentage: 0.8
+            },
+            {
+              label: 'Withdrawals',
+              data: [44, 22, 33, 44, 6, 33, 24, 22, 44, 6, 24, 44],
+              backgroundColor: yellowColor,
+              borderRadius: { topLeft: 10, topRight: 10, bottomLeft: 0, bottomRight: 0 },
+              borderSkipped: false,
+              barThickness: 5,
+              categoryPercentage: 0.5,
+              barPercentage: 0.8
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+              align: 'start',
+              labels: {
+                usePointStyle: true,
+                pointStyle: 'circle',
+                boxWidth: 20,
+                padding: 20,
+                generateLabels: (chart) => {
+                  const datasets = chart.data.datasets;
+                  return datasets.map((dataset, i) => ({
+                    text: dataset.label,
+                    fillStyle: dataset.backgroundColor,
+                    strokeStyle: dataset.backgroundColor,
+                    pointStyle: 'circle',
+                    hidden: !chart.isDatasetVisible(i),
+                    index: i,
+                    fontColor: dataset.backgroundColor
+                  }));
+                },
+                font: {
+                  size: 14,
+                  weight: '500'
+                }
+              }
+            },
+            tooltip: {
+              backgroundColor: '#1e293b',
+              padding: 12,
+              titleColor: '#f8fafc',
+              bodyColor: '#f8fafc',
+              displayColors: true,
+              usePointStyle: true,
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: 'rgba(255, 255, 255, 0.05)',
+                drawBorder: false,
+              },
+              ticks: {
+                color: '#64748b',
+                stepSize: 20,
+                font: {
+                  size: 12
+                }
+              },
+              border: {
+                display: false
+              }
+            },
+            x: {
+              grid: {
+                display: false,
+                drawBorder: false
+              },
+              ticks: {
+                color: '#64748b',
+                font: {
+                  size: 12
+                }
+              },
+              border: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+    });
+
+    function updateFinancialChart(rangeText, months) {
+      document.getElementById('selectedRange').innerText = rangeText;
+
+      const allLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const allDeposits = [60, 44, 55, 60, 18, 55, 44, 43, 60, 18, 49, 60];
+      const allWithdrawals = [44, 22, 33, 44, 6, 33, 24, 22, 44, 6, 24, 44];
+
+      financialChart.data.labels = allLabels.slice(12 - months);
+      financialChart.data.datasets[0].data = allDeposits.slice(12 - months);
+      financialChart.data.datasets[1].data = allWithdrawals.slice(12 - months);
+      financialChart.update();
+    }
+    // Browser Chart initialization
+    document.addEventListener('DOMContentLoaded', function () {
+      const getStyle = (prop) => getComputedStyle(document.documentElement).getPropertyValue(prop).trim();
+      const greenColor = getStyle('--green') || '#13A10E';
+      const blueColor = getStyle('--blue') || '#004FD4';
+      const yellowColor = getStyle('--yellow') || '#E88000';
+
+      const browserCtx = document.getElementById('browserChart').getContext('2d');
+      new Chart(browserCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Chrome', 'Firefox', 'Safari'],
+          datasets: [{
+            data: [75, 15, 10],
+            backgroundColor: [greenColor, blueColor, yellowColor],
+            borderWidth: 0,
+            hoverOffset: 4,
+            cutout: '80%'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: true,
+              backgroundColor: '#1e293b',
+              padding: 10,
+              usePointStyle: true
+            }
+          }
+        }
+      });
+    });
+  </script>
+  <script src="assets/js/table.js"></script>
 </body>
 
 </html>

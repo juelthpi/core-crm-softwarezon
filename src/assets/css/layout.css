@@ -223,7 +223,7 @@
  }
 
  .notification-popup {
-   @apply absolute top-[calc(100%+15px)] -right-[60px] sm:right-0 w-[300px] sm:w-[400px] bg-sidebar-light dark:bg-sidebar-dark-green rounded-2xl shadow-2xl p-4 sm:p-5 z-50 transition-all duration-300 ease-out transform scale-95 opacity-0 invisible origin-top-right;
+   @apply absolute top-[calc(100%+15px)] -inset-e-[60px] sm:inset-e-0 w-[300px] sm:w-[400px] bg-sidebar-light dark:bg-sidebar-dark-green rounded-2xl shadow-2xl p-4 sm:p-5 z-50 transition-all duration-300 ease-out transform scale-95 opacity-0 invisible origin-top-right;
  }
 
  .notification-wrapper:hover .notification-popup {
