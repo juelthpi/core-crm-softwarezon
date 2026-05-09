@@ -788,7 +788,7 @@
     padding-block: calc(var(--spacing) * 1);
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
-    color: var(--color-black);
+    color: var(--color-white-fixed);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -809,9 +809,6 @@
     }
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 2);
-    }
-    &:where(.dark, .dark *) {
-      color: var(--color-white-fixed);
     }
   }
   .primary-btn {
@@ -1011,6 +1008,10 @@
       border-color: var(--color-red-500);
       box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
     }
+  }
+  .size-5 {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
   }
   .h-0 {
     height: calc(var(--spacing) * 0);

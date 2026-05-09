@@ -17,7 +17,7 @@
  }
 
  @utility primary-btn-md {
-     @apply px-2 md:px-3 cursor-pointer py-1 md:py-2 min-w-[110px] rounded-xl text-black dark:text-white-fixed font-normal flex gap-2 justify-center items-center transition-all duration-500 ease-in-out bg-brand hover:bg-brand/70;
+     @apply px-2 md:px-3 cursor-pointer py-1 md:py-2 min-w-[110px] rounded-xl text-white-fixed font-normal flex gap-2 justify-center items-center transition-all duration-500 ease-in-out bg-brand hover:bg-brand/70;
  }
 
  @utility secondary-btn {
@@ -27,7 +27,6 @@
  @utility secondary-btn-md {
      @apply px-2 md:px-3 py-1 md:py-2 border text-sm min-w-[110px] border-black/15 dark:border-white/15 rounded-xl text-black dark:text-white font-normal flex gap-2 justify-center items-center hover:bg-brand/10 cursor-pointer;
  }
-
 
  @utility badge {
      @apply py-1.5 px-4 text-sm font-medium rounded-2xl flex items-center gap-1.5 border dark:bg-white/2 dark:border-white/2 border-black/5;
